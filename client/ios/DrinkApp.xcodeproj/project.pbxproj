@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		706AA2E0137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
+		706AA2E2137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
+		706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
+		706AA2EA137711F800FBAF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2E8137711F800FBAF2E /* InfoPlist.strings */; };
+		706AA2ED137711F800FBAF2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2EC137711F800FBAF2E /* main.m */; };
+		706AA2F0137711F800FBAF2E /* DrinkAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */; };
+		706AA2F3137711F800FBAF2E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2F1137711F800FBAF2E /* MainWindow.xib */; };
+		706AA2F6137711F800FBAF2E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2F5137711F800FBAF2E /* FirstViewController.m */; };
+		706AA2F9137711F800FBAF2E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2F8137711F800FBAF2E /* SecondViewController.m */; };
+		706AA2FC137711F800FBAF2E /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2FA137711F800FBAF2E /* FirstView.xib */; };
+		706AA2FF137711F800FBAF2E /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2FD137711F800FBAF2E /* SecondView.xib */; };
+		706AA306137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
+		706AA307137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
+		706AA308137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
+		706AA310137711F800FBAF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 706AA30E137711F800FBAF2E /* InfoPlist.strings */; };
+		706AA313137711F800FBAF2E /* DrinkAppTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 706AA312137711F800FBAF2E /* DrinkAppTests.h */; };
+		706AA315137711F800FBAF2E /* DrinkAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA314137711F800FBAF2E /* DrinkAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		706AA309137711F800FBAF2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 706AA2D2137711F700FBAF2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 706AA2DA137711F800FBAF2E;
+			remoteInfo = DrinkApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		706AA2DB137711F800FBAF2E /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		706AA2DF137711F800FBAF2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		706AA2E1137711F800FBAF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		706AA2E3137711F800FBAF2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		706AA2E7137711F800FBAF2E /* DrinkApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
+		706AA2E9137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		706AA2EB137711F800FBAF2E /* DrinkApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrinkApp-Prefix.pch"; sourceTree = "<group>"; };
+		706AA2EC137711F800FBAF2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		706AA2EE137711F800FBAF2E /* DrinkAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkAppAppDelegate.h; sourceTree = "<group>"; };
+		706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkAppAppDelegate.m; sourceTree = "<group>"; };
+		706AA2F2137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		706AA2F4137711F800FBAF2E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		706AA2F5137711F800FBAF2E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		706AA2F7137711F800FBAF2E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		706AA2F8137711F800FBAF2E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		706AA2FB137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		706AA2FE137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		706AA305137711F800FBAF2E /* DrinkAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		706AA30D137711F800FBAF2E /* DrinkAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrinkAppTests-Info.plist"; sourceTree = "<group>"; };
+		706AA30F137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		706AA311137711F800FBAF2E /* DrinkAppTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrinkAppTests-Prefix.pch"; sourceTree = "<group>"; };
+		706AA312137711F800FBAF2E /* DrinkAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkAppTests.h; sourceTree = "<group>"; };
+		706AA314137711F800FBAF2E /* DrinkAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		706AA2D8137711F800FBAF2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA2E0137711F800FBAF2E /* UIKit.framework in Frameworks */,
+				706AA2E2137711F800FBAF2E /* Foundation.framework in Frameworks */,
+				706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		706AA301137711F800FBAF2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA306137711F800FBAF2E /* UIKit.framework in Frameworks */,
+				706AA307137711F800FBAF2E /* Foundation.framework in Frameworks */,
+				706AA308137711F800FBAF2E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		706AA2D0137711F700FBAF2E = {
+			isa = PBXGroup;
+			children = (
+				706AA2E5137711F800FBAF2E /* DrinkApp */,
+				706AA30B137711F800FBAF2E /* DrinkAppTests */,
+				706AA2DE137711F800FBAF2E /* Frameworks */,
+				706AA2DC137711F800FBAF2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		706AA2DC137711F800FBAF2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				706AA2DB137711F800FBAF2E /* DrinkApp.app */,
+				706AA305137711F800FBAF2E /* DrinkAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		706AA2DE137711F800FBAF2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706AA2DF137711F800FBAF2E /* UIKit.framework */,
+				706AA2E1137711F800FBAF2E /* Foundation.framework */,
+				706AA2E3137711F800FBAF2E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		706AA2E5137711F800FBAF2E /* DrinkApp */ = {
+			isa = PBXGroup;
+			children = (
+				706AA2EE137711F800FBAF2E /* DrinkAppAppDelegate.h */,
+				706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */,
+				706AA2F1137711F800FBAF2E /* MainWindow.xib */,
+				706AA2F4137711F800FBAF2E /* FirstViewController.h */,
+				706AA2F5137711F800FBAF2E /* FirstViewController.m */,
+				706AA2F7137711F800FBAF2E /* SecondViewController.h */,
+				706AA2F8137711F800FBAF2E /* SecondViewController.m */,
+				706AA2FA137711F800FBAF2E /* FirstView.xib */,
+				706AA2FD137711F800FBAF2E /* SecondView.xib */,
+				706AA2E6137711F800FBAF2E /* Supporting Files */,
+			);
+			path = DrinkApp;
+			sourceTree = "<group>";
+		};
+		706AA2E6137711F800FBAF2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				706AA2E7137711F800FBAF2E /* DrinkApp-Info.plist */,
+				706AA2E8137711F800FBAF2E /* InfoPlist.strings */,
+				706AA2EB137711F800FBAF2E /* DrinkApp-Prefix.pch */,
+				706AA2EC137711F800FBAF2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		706AA30B137711F800FBAF2E /* DrinkAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				706AA312137711F800FBAF2E /* DrinkAppTests.h */,
+				706AA314137711F800FBAF2E /* DrinkAppTests.m */,
+				706AA30C137711F800FBAF2E /* Supporting Files */,
+			);
+			path = DrinkAppTests;
+			sourceTree = "<group>";
+		};
+		706AA30C137711F800FBAF2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				706AA30D137711F800FBAF2E /* DrinkAppTests-Info.plist */,
+				706AA30E137711F800FBAF2E /* InfoPlist.strings */,
+				706AA311137711F800FBAF2E /* DrinkAppTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		706AA2DA137711F800FBAF2E /* DrinkApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 706AA318137711F800FBAF2E /* Build configuration list for PBXNativeTarget "DrinkApp" */;
+			buildPhases = (
+				706AA2D7137711F800FBAF2E /* Sources */,
+				706AA2D8137711F800FBAF2E /* Frameworks */,
+				706AA2D9137711F800FBAF2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DrinkApp;
+			productName = DrinkApp;
+			productReference = 706AA2DB137711F800FBAF2E /* DrinkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		706AA304137711F800FBAF2E /* DrinkAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 706AA31B137711F800FBAF2E /* Build configuration list for PBXNativeTarget "DrinkAppTests" */;
+			buildPhases = (
+				706AA300137711F800FBAF2E /* Sources */,
+				706AA301137711F800FBAF2E /* Frameworks */,
+				706AA302137711F800FBAF2E /* Resources */,
+				706AA303137711F800FBAF2E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				706AA30A137711F800FBAF2E /* PBXTargetDependency */,
+			);
+			name = DrinkAppTests;
+			productName = DrinkAppTests;
+			productReference = 706AA305137711F800FBAF2E /* DrinkAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		706AA2D2137711F700FBAF2E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 706AA2D5137711F700FBAF2E /* Build configuration list for PBXProject "DrinkApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 706AA2D0137711F700FBAF2E;
+			productRefGroup = 706AA2DC137711F800FBAF2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				706AA2DA137711F800FBAF2E /* DrinkApp */,
+				706AA304137711F800FBAF2E /* DrinkAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		706AA2D9137711F800FBAF2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA2EA137711F800FBAF2E /* InfoPlist.strings in Resources */,
+				706AA2F3137711F800FBAF2E /* MainWindow.xib in Resources */,
+				706AA2FC137711F800FBAF2E /* FirstView.xib in Resources */,
+				706AA2FF137711F800FBAF2E /* SecondView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		706AA302137711F800FBAF2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA310137711F800FBAF2E /* InfoPlist.strings in Resources */,
+				706AA313137711F800FBAF2E /* DrinkAppTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		706AA303137711F800FBAF2E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		706AA2D7137711F800FBAF2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA2ED137711F800FBAF2E /* main.m in Sources */,
+				706AA2F0137711F800FBAF2E /* DrinkAppAppDelegate.m in Sources */,
+				706AA2F6137711F800FBAF2E /* FirstViewController.m in Sources */,
+				706AA2F9137711F800FBAF2E /* SecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		706AA300137711F800FBAF2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				706AA315137711F800FBAF2E /* DrinkAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		706AA30A137711F800FBAF2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 706AA2DA137711F800FBAF2E /* DrinkApp */;
+			targetProxy = 706AA309137711F800FBAF2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		706AA2E8137711F800FBAF2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706AA2E9137711F800FBAF2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		706AA2F1137711F800FBAF2E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706AA2F2137711F800FBAF2E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		706AA2FA137711F800FBAF2E /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706AA2FB137711F800FBAF2E /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		706AA2FD137711F800FBAF2E /* SecondView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706AA2FE137711F800FBAF2E /* en */,
+			);
+			name = SecondView.xib;
+			sourceTree = "<group>";
+		};
+		706AA30E137711F800FBAF2E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				706AA30F137711F800FBAF2E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		706AA316137711F800FBAF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		706AA317137711F800FBAF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		706AA319137711F800FBAF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrinkApp/DrinkApp-Prefix.pch";
+				INFOPLIST_FILE = "DrinkApp/DrinkApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		706AA31A137711F800FBAF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrinkApp/DrinkApp-Prefix.pch";
+				INFOPLIST_FILE = "DrinkApp/DrinkApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		706AA31C137711F800FBAF2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrinkApp.app/DrinkApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrinkAppTests/DrinkAppTests-Prefix.pch";
+				INFOPLIST_FILE = "DrinkAppTests/DrinkAppTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		706AA31D137711F800FBAF2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DrinkApp.app/DrinkApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DrinkAppTests/DrinkAppTests-Prefix.pch";
+				INFOPLIST_FILE = "DrinkAppTests/DrinkAppTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		706AA2D5137711F700FBAF2E /* Build configuration list for PBXProject "DrinkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706AA316137711F800FBAF2E /* Debug */,
+				706AA317137711F800FBAF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		706AA318137711F800FBAF2E /* Build configuration list for PBXNativeTarget "DrinkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706AA319137711F800FBAF2E /* Debug */,
+				706AA31A137711F800FBAF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		706AA31B137711F800FBAF2E /* Build configuration list for PBXNativeTarget "DrinkAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706AA31C137711F800FBAF2E /* Debug */,
+				706AA31D137711F800FBAF2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 706AA2D2137711F700FBAF2E /* Project object */;
+}
