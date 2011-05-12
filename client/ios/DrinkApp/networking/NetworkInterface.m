@@ -10,16 +10,19 @@
 
 #define kFBAppId @"165584076834065"
 @interface NetworkInterface ()
+- (void)postStatusChange;
 @property (nonatomic, readonly) Facebook * facebook;
 @end
 
 @implementation NetworkInterface
+@synthesize loggedIn;
 
 - (id)init
 {
 	if((self = [super init]))
 	{
 		facebook_ = [[Facebook alloc] initWithAppId:kFBAppId];
+		loggedIn = NO;
 	}
 	return self;
 }
@@ -31,7 +34,7 @@
 
 - (void)login
 {
-	NSArray * permissions = [NSArray arrayWithObjects:@"read_stream", @"offline_access", nil];
+	NSArray * permissions = [NSArray arrayWithObjects:@"offline_access", nil];
 	[self.facebook authorize:permissions delegate:self];
 }
 - (void)logout
@@ -51,20 +54,30 @@
 	return facebook_;
 }
 
+- (void)postStatusChange
+{
+	NSDictionary * status = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:self.loggedIn], @"status", nil];
+	[[NSNotificationCenter defaultCenter] postNotificationName:kLoggedInStatusChangedNotif object:status];
+	
+}
+
 #pragma FBSessionDelegate methods
 - (void)fbDidLogin
 {
-	
+	loggedIn = YES;
+	[self postStatusChange];
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled
 {
-	
+	loggedIn = NO;
+	[self postStatusChange];
 }
 
 - (void)fbDidLogout
 {
-	
+	loggedIn = NO;
+	[self postStatusChange];
 }
 
 
