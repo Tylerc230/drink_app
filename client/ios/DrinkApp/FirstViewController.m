@@ -81,10 +81,15 @@
 {
 	if(loggedIn)
 	{
+		NSNumber * fbid = [[NSUserDefaults standardUserDefaults] objectForKey:kFBID];
+		NSString * firstName = [[NSUserDefaults standardUserDefaults] objectForKey:kFirstName];
+		NSString * lastName = [[NSUserDefaults standardUserDefaults] objectForKey:kLastName];
+		userInfo_.text = [NSString stringWithFormat:@"id: %@\n %@ %@", fbid, firstName, lastName];
 		[logginButton_ setTitle:@"logout" forState:UIControlStateNormal];
 		getFriendsButton_.enabled = YES;
 	}else{
 		[logginButton_ setTitle:@"login" forState:UIControlStateNormal];
+		userInfo_.text = @"Please log in";
 		getFriendsButton_.enabled = NO;
 	}
 	

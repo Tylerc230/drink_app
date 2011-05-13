@@ -11,6 +11,9 @@
 
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
 #define kLoggedInStatus @"LoggedInStatus"
+#define kFBID @"FBID"
+#define kFirstName @"FirstName"
+#define kLastName @"LastName"
 
 @interface NetworkInterface : NSObject<FBSessionDelegate, FBRequestDelegate> {
     @private

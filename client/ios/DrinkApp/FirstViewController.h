@@ -13,6 +13,7 @@
 	DrinkAppAppDelegate * appDelegate_;
 	IBOutlet UIButton * logginButton_;
 	IBOutlet UIButton * getFriendsButton_;
+	IBOutlet UILabel * userInfo_;
 }
 - (IBAction)fbLogin:(id)sender;
 - (IBAction)getFriends:(id)sender;
