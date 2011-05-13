@@ -11,8 +11,11 @@
 
 @interface FirstViewController : UIViewController {
 	DrinkAppAppDelegate * appDelegate_;
+	IBOutlet UIButton * logginButton_;
+	IBOutlet UIButton * getFriendsButton_;
 }
 - (IBAction)fbLogin:(id)sender;
+- (IBAction)getFriends:(id)sender;
 
 
 @end

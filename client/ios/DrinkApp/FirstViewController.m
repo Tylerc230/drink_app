@@ -8,8 +8,20 @@
 
 #import "FirstViewController.h"
 
+@interface FirstViewController ()
+- (void)setLoggedIn:(BOOL)loggedIn;
+@end
 
 @implementation FirstViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	if((self = [super initWithCoder:aDecoder]))
+	{
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusChanged:) name:kLoggedInStatusChangedNotif object:nil];
+	}
+	return self;
+}
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -17,6 +29,7 @@
 {
     [super viewDidLoad];
 	appDelegate_ = (DrinkAppAppDelegate*)[UIApplication sharedApplication].delegate;
+	[self setLoggedIn:appDelegate_.networkInterface.loggedIn];
 }
 
 
@@ -28,7 +41,15 @@
 
 - (IBAction)fbLogin:(id)sender
 {
-	[appDelegate_.networkInterface login];
+	if(appDelegate_.networkInterface.loggedIn)
+		[appDelegate_.networkInterface logout];
+	else
+		[appDelegate_.networkInterface login];
+}
+
+- (IBAction)getFriends:(id)sender
+{
+	[appDelegate_.networkInterface getFriends];
 }
 
 
@@ -52,7 +73,30 @@
 
 - (void)dealloc
 {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
+}
+
+- (void)setLoggedIn:(BOOL)loggedIn
+{
+	if(loggedIn)
+	{
+		[logginButton_ setTitle:@"logout" forState:UIControlStateNormal];
+		getFriendsButton_.enabled = YES;
+	}else{
+		[logginButton_ setTitle:@"login" forState:UIControlStateNormal];
+		getFriendsButton_.enabled = NO;
+	}
+	
+}
+
+
+#pragma Notification callback
+- (void)statusChanged:(NSNotification *)notification
+{
+	NSDictionary * userInfo = [notification userInfo];
+	BOOL loggedIn = [[userInfo objectForKey:kLoggedInStatus] boolValue];
+	[self setLoggedIn:loggedIn];
 }
 
 @end

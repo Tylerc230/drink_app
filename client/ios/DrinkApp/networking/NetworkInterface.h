@@ -10,8 +10,9 @@
 #import "Facebook.h"
 
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
+#define kLoggedInStatus @"LoggedInStatus"
 
-@interface NetworkInterface : NSObject<FBSessionDelegate> {
+@interface NetworkInterface : NSObject<FBSessionDelegate, FBRequestDelegate> {
     @private
 	Facebook * facebook_;
 	BOOL loggedIn_;
@@ -19,5 +20,7 @@
 @property (nonatomic, readonly) BOOL loggedIn;
 - (void)login;
 - (void)logout;
+- (void)getFriends;
+
 - (BOOL)handleOpenURL:(NSURL *)url;
 @end
