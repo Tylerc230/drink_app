@@ -15,16 +15,19 @@
 @interface NetworkInterface ()
 - (void)postStatusChange;
 @property (nonatomic, readonly) Facebook * facebook;
+@property (nonatomic, readonly) RESTInterface * restInterface;
 @end
 
 @implementation NetworkInterface
 @synthesize loggedIn = loggedIn_;
+@synthesize restInterface = restInterface_;
 
-- (id)init
+- (id)initWithBaseUrl:(NSString *)baseURL
 {
 	if((self = [super init]))
 	{
 		facebook_ = [[Facebook alloc] initWithAppId:kFBAppId];
+		restInterface_ = [[RESTInterface alloc] initWithBaseURL:baseURL];
 		NSString * accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:kFBAccessTokenKey];
 		NSDate * expirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:kFBExpirationDate];
 		if(accessToken)
@@ -58,6 +61,12 @@
 	[self.facebook logout:self];
 }
 
+- (void)createSession
+{
+	NSDictionary * payload = [NSDictionary dictionaryWithObjectsAndKeys:self.facebook.accessToken, @"token", nil];
+	[self.restInterface invokeAction:RACreate onController:@"user_sessions" data:payload];
+}
+
 - (BOOL)handleOpenURL:(NSURL *)url
 {
 	return [self.facebook handleOpenURL:url];
@@ -74,7 +83,7 @@
 {
 
 }
-
+/* Posts a 'status changed' notification to update the ui after login*/
 - (void)postStatusChange
 {
 	NSDictionary * status = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:self.loggedIn], kLoggedInStatus, nil];
@@ -89,9 +98,9 @@
 	  expirationDate:(NSDate *)expirationDate
 {
 	NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
-	[def setValue:[NSNumber numberWithLongLong:fbid] forKey:kFBID];
+	/*[def setValue:[NSNumber numberWithLongLong:fbid] forKey:kFBID];
 	[def setValue:firstName forKey:kFirstName];
-	[def setValue:lastName forKey:kLastName];
+	[def setValue:lastName forKey:kLastName];*/
 	[def setValue:accessToken forKey:kFBAccessTokenKey];
 	[def setValue:expirationDate forKey:kFBExpirationDate];
 	[def synchronize];
@@ -125,10 +134,13 @@
 	
 }
 
+
+
 #pragma FBSessionDelegate methods
 - (void)fbDidLogin
 {
-	[self.facebook requestWithGraphPath:@"me" andDelegate:self];
+	[self saveUserData:0 firstName:nil lastName:nil accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
+	[self createSession];
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled

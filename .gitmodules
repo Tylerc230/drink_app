@@ -1,3 +1,6 @@
 [submodule "client/ios/submodules/facebook-ios-sdk"]
 	path = client/ios/submodules/facebook-ios-sdk
 	url = https://github.com/facebook/facebook-ios-sdk.git
+[submodule "client/ios/submodules/asi-http-request"]
+	path = client/ios/submodules/asi-http-request
+	url = https://github.com/pokeb/asi-http-request.git

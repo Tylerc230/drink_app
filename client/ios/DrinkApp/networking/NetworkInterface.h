@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Facebook.h"
+#import "RESTInterface.h"
 
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
 #define kLoggedInStatus @"LoggedInStatus"
@@ -18,9 +19,13 @@
 @interface NetworkInterface : NSObject<FBSessionDelegate, FBRequestDelegate> {
     @private
 	Facebook * facebook_;
+	RESTInterface * restInterface_;
 	BOOL loggedIn_;
 }
 @property (nonatomic, readonly) BOOL loggedIn;
+
+
+- (id)initWithBaseUrl:(NSString *)baseURL;
 - (void)login;
 - (void)logout;
 - (void)getFriends;

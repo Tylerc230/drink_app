@@ -13,7 +13,7 @@
 
 @synthesize window=_window;
 
-@synthesize tabBarController=_tabBarController, networkInterface = networkInterface_;
+@synthesize tabBarController=_tabBarController, networkInterface = networkInterface_, config = config_;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -21,7 +21,8 @@
 	// Add the tab bar controller's current view as a subview of the window
 	self.window.rootViewController = self.tabBarController;
 	[self.window makeKeyAndVisible];
-	networkInterface_ = [[NetworkInterface alloc] init];
+	config_ = [[Config alloc] init];
+	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:self.config.serverBaseURL];
     return YES;
 }
 
@@ -72,6 +73,7 @@
 
 - (void)dealloc
 {
+	[config_ release], config_ = nil;
 	[networkInterface_ release], networkInterface_ = nil;
 	[_window release];
 	[_tabBarController release];

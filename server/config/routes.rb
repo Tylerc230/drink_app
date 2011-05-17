@@ -1,7 +1,5 @@
 DrinkApp::Application.routes.draw do
-  get "user_sessions/create"
-
-  get "user_sessions/destroy"
+	resources :user_sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
