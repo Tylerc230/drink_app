@@ -7,8 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RestRequest.h"
 #import "ASIFormDataRequest.h"
+typedef enum
+{
+	RACreate,
+	RAShow,
+	RAUpdate,
+	RADestroy
+}ResourceAction;
 @interface RESTInterface : NSObject {
     NSString *		baseURL_;
 	NSMutableDictionary *	activeRequests_;

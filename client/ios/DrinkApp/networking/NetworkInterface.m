@@ -135,10 +135,10 @@
 - (void)onMe:(ASIFormDataRequest *)request
 {
 	NSDictionary * data = [[request responseString] JSONValue];
-	NSDictionary * me = [data objectForKey:@"me"];
+	NSDictionary * me = [[data objectForKey:@"me"] objectAtIndex:0];
 	NSDictionary * friends = [data objectForKey:@"friends"];
 	NSLog(@"%@", friends);
-	long long fbid = [[me objectForKey:@"id"] longLongValue];
+	long long fbid = [[me objectForKey:@"uid"] longLongValue];
 	NSString * firstName  = [me objectForKey:@"first_name"];
 	NSString * lastName = [me objectForKey:@"last_name"];
 	[self saveUserData:fbid firstName:firstName lastName:lastName accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];

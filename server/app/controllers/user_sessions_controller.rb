@@ -8,13 +8,9 @@ class UserSessionsController < ApplicationController
 		data = {}
 		data['me'] = get_me(token)
 		data['friends'] = get_friends(token)
-
-		#converts to dict
-		user_info = data.as_json
-		fbid = user_info.id
+		fbid = data['me'].id
 		user_session = UserSession.new(:token => token, :fbid => fbid)
 		user_session.save
-
 		render :text => data.to_json
 	end
 
@@ -22,10 +18,23 @@ class UserSessionsController < ApplicationController
 	end
 
 	def get_me(token)
-		return get_facebook_method('me', token)
+		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user where uid = me()', token)
 	end
+
 	def get_friends(token)
-		return get_facebook_method('me/friends', token)
+		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1=me())', token)
+	end
+
+	def facebook_fql(query, token)
+		url = 'api.facebook.com'
+		url_encode_token = CGI::escape(token)
+		url_encode_query = CGI::escape(query)
+		path = "/method/fql.query?format=json&query=#{url_encode_query}" + "&access_token=#{url_encode_token}"
+		http = Net::HTTP.new(url, 443)
+		http.use_ssl = true
+		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
+		return ActiveSupport::JSON.decode(data)
+		
 	end
 	def get_facebook_method(method, token)
 		url = 'graph.facebook.com'

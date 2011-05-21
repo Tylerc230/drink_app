@@ -48,8 +48,6 @@
 		706AA439137A329E00FBAF2E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA420137A329E00FBAF2E /* SBJsonWriter.m */; };
 		706AA444137A33A600FBAF2E /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA443137A33A600FBAF2E /* NetworkInterface.m */; };
 		706AA445137A33A600FBAF2E /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA443137A33A600FBAF2E /* NetworkInterface.m */; };
-		70714E7D13865CA600397E62 /* RestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70714E7C13865CA600397E62 /* RestRequest.m */; };
-		70714E7E13865CA600397E62 /* RestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 70714E7C13865CA600397E62 /* RestRequest.m */; };
 		707C78FB1382430C006B6D97 /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FA1382430C006B6D97 /* RESTInterface.m */; };
 		707C78FC1382430C006B6D97 /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FA1382430C006B6D97 /* RESTInterface.m */; };
 		707C78FF13824AAD006B6D97 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FE13824AAD006B6D97 /* Config.m */; };
@@ -148,8 +146,6 @@
 		706AA420137A329E00FBAF2E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		706AA442137A33A600FBAF2E /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkInterface.h; path = networking/NetworkInterface.h; sourceTree = "<group>"; };
 		706AA443137A33A600FBAF2E /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkInterface.m; path = networking/NetworkInterface.m; sourceTree = "<group>"; };
-		70714E7B13865CA600397E62 /* RestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestRequest.h; sourceTree = "<group>"; };
-		70714E7C13865CA600397E62 /* RestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestRequest.m; sourceTree = "<group>"; };
 		707C78F91382430C006B6D97 /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTInterface.h; sourceTree = "<group>"; };
 		707C78FA1382430C006B6D97 /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTInterface.m; sourceTree = "<group>"; };
 		707C78FD13824AAD006B6D97 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -363,8 +359,6 @@
 				706AA443137A33A600FBAF2E /* NetworkInterface.m */,
 				707C78F91382430C006B6D97 /* RESTInterface.h */,
 				707C78FA1382430C006B6D97 /* RESTInterface.m */,
-				70714E7B13865CA600397E62 /* RestRequest.h */,
-				70714E7C13865CA600397E62 /* RestRequest.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -553,7 +547,6 @@
 				707C7C5513825944006B6D97 /* ASIInputStream.m in Sources */,
 				707C7C5713825944006B6D97 /* ASINetworkQueue.m in Sources */,
 				707C7C9713825944006B6D97 /* Reachability.m in Sources */,
-				70714E7D13865CA600397E62 /* RestRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +577,6 @@
 				707C7C5613825944006B6D97 /* ASIInputStream.m in Sources */,
 				707C7C5813825944006B6D97 /* ASINetworkQueue.m in Sources */,
 				707C7C9813825944006B6D97 /* Reachability.m in Sources */,
-				70714E7E13865CA600397E62 /* RestRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
