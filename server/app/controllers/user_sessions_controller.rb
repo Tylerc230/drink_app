@@ -18,11 +18,11 @@ class UserSessionsController < ApplicationController
 	end
 
 	def get_me(token)
-		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user where uid = me()', token)
+		return facebook_fql('SELECT first_name, last_name, uid, pic_square, is_app_user FROM user where uid = me()', token)
 	end
 
 	def get_friends(token)
-		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1=me())', token)
+		return facebook_fql('SELECT first_name, last_name, uid, pic_square, is_app_user FROM user WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1=me())', token)
 	end
 
 	def facebook_fql(query, token)
