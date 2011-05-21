@@ -4,5 +4,6 @@ class UserSession < ActiveRecord::Base
 	def initialize(params = {})
 		super
 		@token = params[:token]
+		@fbid = params[:fbid]
 	end
 end

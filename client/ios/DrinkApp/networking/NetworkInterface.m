@@ -7,6 +7,7 @@
 //
 
 #import "NetworkInterface.h"
+#import "JSON.h"
 
 #define kFBAppId @"165584076834065"
 #define kFBAccessTokenKey @"AccessTokenKey"
@@ -14,6 +15,11 @@
 
 @interface NetworkInterface ()
 - (void)postStatusChange;
+- (void)saveUserData:(long long)fbid
+		   firstName:(NSString*)firstName
+			lastName:(NSString *)lastName
+		 accessToken:(NSString*)accessToken
+	  expirationDate:(NSDate *)expirationDate;
 @property (nonatomic, readonly) Facebook * facebook;
 @property (nonatomic, readonly) RESTInterface * restInterface;
 @end
@@ -64,7 +70,7 @@
 - (void)createSession
 {
 	NSDictionary * payload = [NSDictionary dictionaryWithObjectsAndKeys:self.facebook.accessToken, @"token", nil];
-	[self.restInterface invokeAction:RACreate onController:@"user_sessions" data:payload];
+	[self.restInterface invokeAction:RACreate onController:@"user_sessions" data:payload target:self callback:@selector(onMe:)];
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
@@ -81,8 +87,14 @@
 
 - (void)getFriends
 {
-
+	[self createSession];
 }
+
+- (void)restResponse:(NSDictionary *)response
+{
+	[self saveUserData:0 firstName:nil lastName:nil accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
+}
+
 /* Posts a 'status changed' notification to update the ui after login*/
 - (void)postStatusChange
 {
@@ -98,9 +110,9 @@
 	  expirationDate:(NSDate *)expirationDate
 {
 	NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
-	/*[def setValue:[NSNumber numberWithLongLong:fbid] forKey:kFBID];
+	[def setValue:[NSNumber numberWithLongLong:fbid] forKey:kFBID];
 	[def setValue:firstName forKey:kFirstName];
-	[def setValue:lastName forKey:kLastName];*/
+	[def setValue:lastName forKey:kLastName];
 	[def setValue:accessToken forKey:kFBAccessTokenKey];
 	[def setValue:expirationDate forKey:kFBExpirationDate];
 	[def synchronize];
@@ -117,29 +129,24 @@
 	[def removeObjectForKey:kFBExpirationDate];
 	[def synchronize];	
 }
-#pragma FBRequestDelegate methods
-- (void)request:(FBRequest *)request didLoad:(id)result
-{
-	NSString * firstName = [result objectForKey:@"first_name"];
-	NSString * lastName = [result objectForKey:@"last_name"];
-	long long fbid = [[result objectForKey:@"id"] longLongValue];
 
+#pragma mark -
+#pragma Server responses
+- (void)onMe:(ASIFormDataRequest *)request
+{
+	NSDictionary * data = [[request responseString] JSONValue];
+	NSDictionary * me = [data objectForKey:@"me"];
+	NSDictionary * friends = [data objectForKey:@"friends"];
+	NSLog(@"%@", friends);
+	long long fbid = [[me objectForKey:@"id"] longLongValue];
+	NSString * firstName  = [me objectForKey:@"first_name"];
+	NSString * lastName = [me objectForKey:@"last_name"];
 	[self saveUserData:fbid firstName:firstName lastName:lastName accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
-	loggedIn_ = YES;
-	[self postStatusChange];	
 }
-
-- (void)request:(FBRequest *)request didFailWithError:(NSError *)error
-{
-	
-}
-
-
 
 #pragma FBSessionDelegate methods
 - (void)fbDidLogin
 {
-	[self saveUserData:0 firstName:nil lastName:nil accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
 	[self createSession];
 }
 
