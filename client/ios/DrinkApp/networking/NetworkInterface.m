@@ -18,6 +18,7 @@
 - (void)saveUserData:(long long)fbid
 		   firstName:(NSString*)firstName
 			lastName:(NSString *)lastName
+			  picURL:(NSString *)picURL
 		 accessToken:(NSString*)accessToken
 	  expirationDate:(NSDate *)expirationDate;
 @property (nonatomic, readonly) Facebook * facebook;
@@ -27,6 +28,7 @@
 @implementation NetworkInterface
 @synthesize loggedIn = loggedIn_;
 @synthesize restInterface = restInterface_;
+@dynamic fbId;
 
 - (id)initWithBaseUrl:(NSString *)baseURL
 {
@@ -67,10 +69,20 @@
 	[self.facebook logout:self];
 }
 
+- (void)checkInWithId:(int)itemId count:(int)count
+{
+	NSDictionary * data = [NSDictionary dictionaryWithObjectsAndKeys:
+						   [NSNumber numberWithLongLong:self.fbId], @"user_id", 
+						   [NSNumber numberWithInt:itemId], @"item_id",
+						   [NSNumber numberWithInt:count], @"count",
+						   nil];
+	[self.restInterface invokeAction:RACreate onController:@"checkins" data:data target:nil callback:nil];
+}
+
 - (void)createSession
 {
 	NSDictionary * payload = [NSDictionary dictionaryWithObjectsAndKeys:self.facebook.accessToken, @"token", nil];
-	[self.restInterface invokeAction:RACreate onController:@"user_sessions" data:payload target:self callback:@selector(onMe:)];
+	[self.restInterface invokeAction:RACreate onController:@"user_sessions" data:payload target:self callback:@selector(onConnect:)];
 }
 
 - (BOOL)handleOpenURL:(NSURL *)url
@@ -87,12 +99,7 @@
 
 - (void)getFriends
 {
-	[self createSession];
-}
-
-- (void)restResponse:(NSDictionary *)response
-{
-	[self saveUserData:0 firstName:nil lastName:nil accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
+	[self checkInWithId:3 count:5];
 }
 
 /* Posts a 'status changed' notification to update the ui after login*/
@@ -106,6 +113,7 @@
 - (void)saveUserData:(long long)fbid
 		   firstName:(NSString*)firstName
 			lastName:(NSString *)lastName
+			  picURL:(NSString *)picURL
 		 accessToken:(NSString*)accessToken
 	  expirationDate:(NSDate *)expirationDate
 {
@@ -113,9 +121,15 @@
 	[def setValue:[NSNumber numberWithLongLong:fbid] forKey:kFBID];
 	[def setValue:firstName forKey:kFirstName];
 	[def setValue:lastName forKey:kLastName];
+	[def setValue:picURL forKey:kPicURL];
 	[def setValue:accessToken forKey:kFBAccessTokenKey];
 	[def setValue:expirationDate forKey:kFBExpirationDate];
 	[def synchronize];
+	
+}
+
+- (void)saveFriends:(NSArray *)friends
+{
 	
 }
 
@@ -129,19 +143,27 @@
 	[def removeObjectForKey:kFBExpirationDate];
 	[def synchronize];	
 }
+#pragma mark - 
+#pragma user info
 
+- (long long)fbId
+{
+	NSUserDefaults * def = [NSUserDefaults standardUserDefaults];
+	return [[def objectForKey:kFBID] longLongValue];
+}
 #pragma mark -
 #pragma Server responses
-- (void)onMe:(ASIFormDataRequest *)request
+- (void)onConnect:(ASIFormDataRequest *)request
 {
 	NSDictionary * data = [[request responseString] JSONValue];
 	NSDictionary * me = [[data objectForKey:@"me"] objectAtIndex:0];
-	NSDictionary * friends = [data objectForKey:@"friends"];
-	NSLog(@"%@", friends);
+	NSArray * friends = [data objectForKey:@"friends"];
 	long long fbid = [[me objectForKey:@"uid"] longLongValue];
 	NSString * firstName  = [me objectForKey:@"first_name"];
 	NSString * lastName = [me objectForKey:@"last_name"];
-	[self saveUserData:fbid firstName:firstName lastName:lastName accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
+	NSString * picURL = [me objectForKey:@"pic_square"];
+	[self saveUserData:fbid firstName:firstName lastName:lastName picURL:picURL accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
+	[self saveFriends:friends];
 }
 
 #pragma FBSessionDelegate methods

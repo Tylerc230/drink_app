@@ -15,6 +15,7 @@
 #define kFBID @"FBID"
 #define kFirstName @"FirstName"
 #define kLastName @"LastName"
+#define kPicURL @"picURL"
 
 @interface NetworkInterface : NSObject<FBSessionDelegate, FBRequestDelegate> {
     @private
@@ -23,11 +24,13 @@
 	BOOL loggedIn_;
 }
 @property (nonatomic, readonly) BOOL loggedIn;
+@property (nonatomic, readonly) long long fbId;
 
 
 - (id)initWithBaseUrl:(NSString *)baseURL;
 - (void)login;
 - (void)logout;
+- (void)checkInWithId:(int)itemId count:(int)count;
 - (void)getFriends;
 
 - (BOOL)handleOpenURL:(NSURL *)url;

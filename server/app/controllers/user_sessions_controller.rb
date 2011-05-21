@@ -7,7 +7,8 @@ class UserSessionsController < ApplicationController
 		token = params[:token]
 		data = {}
 		data['me'] = get_me(token)
-		data['friends'] = get_friends(token)
+		friend_data = get_friend_data(get_friends(token))
+		data['friends'] = friend_data
 		fbid = data['me'].id
 		user_session = UserSession.new(:token => token, :fbid => fbid)
 		user_session.save
@@ -18,7 +19,20 @@ class UserSessionsController < ApplicationController
 	end
 
 	def get_me(token)
-		return facebook_fql('SELECT first_name, last_name, uid, pic_square, is_app_user FROM user where uid = me()', token)
+		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user where uid = me()', token)
+	end
+
+	def get_friend_data(friends)
+		friends.each do |friend|
+			if(friend['is_app_user'])
+				friend['data'] = get_data_for_user(friend['uid'])
+			end
+		end
+		return friends
+	end
+
+	def get_data_for_user(uid)
+		
 	end
 
 	def get_friends(token)

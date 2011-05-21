@@ -1,4 +1,5 @@
 DrinkApp::Application.routes.draw do
+	resources :checkins
 	resources :user_sessions
 
   # The priority is based upon order of creation:
