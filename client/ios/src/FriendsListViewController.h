@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  FriendsListViewController.h
 //  DrinkApp
 //
 //  Created by Tyler Casselman on 5/8/11.
@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NetworkInterface.h"
 
-
-@interface SecondViewController : UIViewController {
-    
+@interface FriendsListViewController : UIViewController {
+    IBOutlet UITableView * tableView_;
+	NetworkInterface * networkInterface_;
 }
+@property (nonatomic, retain) NetworkInterface * networkInterface;
+
 
 @end

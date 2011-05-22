@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "NetworkInterface.h"
 #import "Config.h"
+#import "FriendsListViewController.h"
 
 @interface DrinkAppAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	NetworkInterface * networkInterface_;
 	Config * config_;
+	IBOutlet FriendsListViewController * friendView_;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -23,6 +23,7 @@
 	[self.window makeKeyAndVisible];
 	config_ = [[Config alloc] init];
 	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:self.config.serverBaseURL];
+	friendView_.networkInterface = networkInterface_;
     return YES;
 }
 

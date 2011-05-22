@@ -10,7 +10,11 @@
 #import "Facebook.h"
 #import "RESTInterface.h"
 
+//Notifications
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
+#define kFriendDataLoadedNotif @"FriendDataLoaded"
+
+//Keys
 #define kLoggedInStatus @"LoggedInStatus"
 #define kFBID @"FBID"
 #define kFirstName @"FirstName"
@@ -22,9 +26,13 @@
 	Facebook * facebook_;
 	RESTInterface * restInterface_;
 	BOOL loggedIn_;
+	NSArray * playingFriendInfo_;
+	NSArray * fbFriendInfo_;//People not yet playing the app
 }
 @property (nonatomic, readonly) BOOL loggedIn;
 @property (nonatomic, readonly) long long fbId;
+@property (nonatomic, readonly) NSArray * playingFriendInfo;
+@property (nonatomic, readonly) NSArray * fbFriendInfo;
 
 
 - (id)initWithBaseUrl:(NSString *)baseURL;

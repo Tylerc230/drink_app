@@ -10,14 +10,6 @@
 		706AA2E0137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
 		706AA2E2137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
 		706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
-		706AA2EA137711F800FBAF2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2E8137711F800FBAF2E /* InfoPlist.strings */; };
-		706AA2ED137711F800FBAF2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2EC137711F800FBAF2E /* main.m */; };
-		706AA2F0137711F800FBAF2E /* DrinkAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */; };
-		706AA2F3137711F800FBAF2E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2F1137711F800FBAF2E /* MainWindow.xib */; };
-		706AA2F6137711F800FBAF2E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2F5137711F800FBAF2E /* FirstViewController.m */; };
-		706AA2F9137711F800FBAF2E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA2F8137711F800FBAF2E /* SecondViewController.m */; };
-		706AA2FC137711F800FBAF2E /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2FA137711F800FBAF2E /* FirstView.xib */; };
-		706AA2FF137711F800FBAF2E /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 706AA2FD137711F800FBAF2E /* SecondView.xib */; };
 		706AA306137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
 		706AA307137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
 		706AA308137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
@@ -46,12 +38,6 @@
 		706AA437137A329E00FBAF2E /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA41E137A329E00FBAF2E /* SBJsonParser.m */; };
 		706AA438137A329E00FBAF2E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA420137A329E00FBAF2E /* SBJsonWriter.m */; };
 		706AA439137A329E00FBAF2E /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA420137A329E00FBAF2E /* SBJsonWriter.m */; };
-		706AA444137A33A600FBAF2E /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA443137A33A600FBAF2E /* NetworkInterface.m */; };
-		706AA445137A33A600FBAF2E /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA443137A33A600FBAF2E /* NetworkInterface.m */; };
-		707C78FB1382430C006B6D97 /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FA1382430C006B6D97 /* RESTInterface.m */; };
-		707C78FC1382430C006B6D97 /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FA1382430C006B6D97 /* RESTInterface.m */; };
-		707C78FF13824AAD006B6D97 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FE13824AAD006B6D97 /* Config.m */; };
-		707C790013824AAD006B6D97 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C78FE13824AAD006B6D97 /* Config.m */; };
 		707C7C4913825944006B6D97 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C7B7313825944006B6D97 /* ASIAuthenticationDialog.m */; };
 		707C7C4A13825944006B6D97 /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C7B7313825944006B6D97 /* ASIAuthenticationDialog.m */; };
 		707C7C4B13825944006B6D97 /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 707C7B7613825944006B6D97 /* ASIDataCompressor.m */; };
@@ -76,6 +62,30 @@
 		707C7CEF13825A3F006B6D97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
 		707C7CF113825A4C006B6D97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */; };
 		707C7CF413825A6B006B6D97 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
+		70CD9C651389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
+		70CD9C661389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
+		70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */; };
+		70CD9C681389755400366BCB /* DrinkApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */; };
+		70CD9C691389755400366BCB /* DrinkAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */; };
+		70CD9C6A1389755400366BCB /* DrinkAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */; };
+		70CD9C6B1389755400366BCB /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C531389755400366BCB /* FirstView.xib */; };
+		70CD9C6C1389755400366BCB /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C531389755400366BCB /* FirstView.xib */; };
+		70CD9C6D1389755400366BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C551389755400366BCB /* InfoPlist.strings */; };
+		70CD9C6E1389755400366BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C551389755400366BCB /* InfoPlist.strings */; };
+		70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C571389755400366BCB /* MainWindow.xib */; };
+		70CD9C701389755400366BCB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C571389755400366BCB /* MainWindow.xib */; };
+		70CD9C731389755400366BCB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5C1389755400366BCB /* FirstViewController.m */; };
+		70CD9C741389755400366BCB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5C1389755400366BCB /* FirstViewController.m */; };
+		70CD9C751389755400366BCB /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5E1389755400366BCB /* FriendsListViewController.m */; };
+		70CD9C761389755400366BCB /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5E1389755400366BCB /* FriendsListViewController.m */; };
+		70CD9C771389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
+		70CD9C781389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
+		70CD9C791389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
+		70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
+		70CD9C7B1389755400366BCB /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C641389755400366BCB /* RESTInterface.m */; };
+		70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C641389755400366BCB /* RESTInterface.m */; };
+		70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
+		70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,19 +110,6 @@
 		706AA2DF137711F800FBAF2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		706AA2E1137711F800FBAF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		706AA2E3137711F800FBAF2E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		706AA2E7137711F800FBAF2E /* DrinkApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
-		706AA2E9137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		706AA2EB137711F800FBAF2E /* DrinkApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrinkApp-Prefix.pch"; sourceTree = "<group>"; };
-		706AA2EC137711F800FBAF2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		706AA2EE137711F800FBAF2E /* DrinkAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrinkAppAppDelegate.h; sourceTree = "<group>"; };
-		706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrinkAppAppDelegate.m; sourceTree = "<group>"; };
-		706AA2F2137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		706AA2F4137711F800FBAF2E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		706AA2F5137711F800FBAF2E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		706AA2F7137711F800FBAF2E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		706AA2F8137711F800FBAF2E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		706AA2FB137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		706AA2FE137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
 		706AA305137711F800FBAF2E /* DrinkAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		706AA30D137711F800FBAF2E /* DrinkAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DrinkAppTests-Info.plist"; sourceTree = "<group>"; };
 		706AA30F137711F800FBAF2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -144,12 +141,6 @@
 		706AA41E137A329E00FBAF2E /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		706AA41F137A329E00FBAF2E /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		706AA420137A329E00FBAF2E /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		706AA442137A33A600FBAF2E /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkInterface.h; path = networking/NetworkInterface.h; sourceTree = "<group>"; };
-		706AA443137A33A600FBAF2E /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkInterface.m; path = networking/NetworkInterface.m; sourceTree = "<group>"; };
-		707C78F91382430C006B6D97 /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTInterface.h; sourceTree = "<group>"; };
-		707C78FA1382430C006B6D97 /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTInterface.m; sourceTree = "<group>"; };
-		707C78FD13824AAD006B6D97 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		707C78FE13824AAD006B6D97 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		707C7B7213825944006B6D97 /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = Classes/ASIAuthenticationDialog.h; sourceTree = "<group>"; };
 		707C7B7313825944006B6D97 /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = Classes/ASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		707C7B7413825944006B6D97 /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = Classes/ASICacheDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +169,25 @@
 		707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		707C7CF213825A58006B6D97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		70CD9C4D1389755400366BCB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		70CD9C4E1389755400366BCB /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
+		70CD9C501389755400366BCB /* DrinkApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DrinkApp-Prefix.pch"; sourceTree = "<group>"; };
+		70CD9C511389755400366BCB /* DrinkAppAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkAppAppDelegate.h; sourceTree = "<group>"; };
+		70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkAppAppDelegate.m; sourceTree = "<group>"; };
+		70CD9C541389755400366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
+		70CD9C561389755400366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		70CD9C581389755400366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		70CD9C5B1389755400366BCB /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		70CD9C5C1389755400366BCB /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		70CD9C5D1389755400366BCB /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
+		70CD9C5E1389755400366BCB /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
+		70CD9C5F1389755400366BCB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		70CD9C611389755400366BCB /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
+		70CD9C621389755400366BCB /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
+		70CD9C631389755400366BCB /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTInterface.h; sourceTree = "<group>"; };
+		70CD9C641389755400366BCB /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTInterface.m; sourceTree = "<group>"; };
+		70CD9C7E1389784E00366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FriendsListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +227,7 @@
 				707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */,
 				707C7CEC13825A2F006B6D97 /* CFNetwork.framework */,
 				706AA326137717D000FBAF2E /* 3rdParty */,
-				706AA2E5137711F800FBAF2E /* DrinkApp */,
+				70CD9C4C1389755400366BCB /* src */,
 				706AA30B137711F800FBAF2E /* DrinkAppTests */,
 				706AA2DE137711F800FBAF2E /* Frameworks */,
 				706AA2DC137711F800FBAF2E /* Products */,
@@ -241,37 +251,6 @@
 				706AA2E3137711F800FBAF2E /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		706AA2E5137711F800FBAF2E /* DrinkApp */ = {
-			isa = PBXGroup;
-			children = (
-				706AA43D137A330700FBAF2E /* Network */,
-				706AA2EE137711F800FBAF2E /* DrinkAppAppDelegate.h */,
-				706AA2EF137711F800FBAF2E /* DrinkAppAppDelegate.m */,
-				706AA2F1137711F800FBAF2E /* MainWindow.xib */,
-				706AA2F4137711F800FBAF2E /* FirstViewController.h */,
-				706AA2F5137711F800FBAF2E /* FirstViewController.m */,
-				706AA2F7137711F800FBAF2E /* SecondViewController.h */,
-				706AA2F8137711F800FBAF2E /* SecondViewController.m */,
-				706AA2FA137711F800FBAF2E /* FirstView.xib */,
-				706AA2FD137711F800FBAF2E /* SecondView.xib */,
-				706AA2E6137711F800FBAF2E /* Supporting Files */,
-				707C78FD13824AAD006B6D97 /* Config.h */,
-				707C78FE13824AAD006B6D97 /* Config.m */,
-			);
-			path = DrinkApp;
-			sourceTree = "<group>";
-		};
-		706AA2E6137711F800FBAF2E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				706AA2E7137711F800FBAF2E /* DrinkApp-Info.plist */,
-				706AA2E8137711F800FBAF2E /* InfoPlist.strings */,
-				706AA2EB137711F800FBAF2E /* DrinkApp-Prefix.pch */,
-				706AA2EC137711F800FBAF2E /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		706AA30B137711F800FBAF2E /* DrinkAppTests */ = {
@@ -352,17 +331,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		706AA43D137A330700FBAF2E /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				706AA442137A33A600FBAF2E /* NetworkInterface.h */,
-				706AA443137A33A600FBAF2E /* NetworkInterface.m */,
-				707C78F91382430C006B6D97 /* RESTInterface.h */,
-				707C78FA1382430C006B6D97 /* RESTInterface.m */,
-			);
-			name = Network;
-			sourceTree = "<group>";
-		};
 		707C7B4513825944006B6D97 /* asi-http-request */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +360,48 @@
 			);
 			name = "asi-http-request";
 			path = "submodules/asi-http-request";
+			sourceTree = "<group>";
+		};
+		70CD9C4C1389755400366BCB /* src */ = {
+			isa = PBXGroup;
+			children = (
+				70CD9C811389795800366BCB /* FriendsList */,
+				70CD9C4D1389755400366BCB /* Config.h */,
+				70CD9C4E1389755400366BCB /* Config.m */,
+				70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */,
+				70CD9C501389755400366BCB /* DrinkApp-Prefix.pch */,
+				70CD9C511389755400366BCB /* DrinkAppAppDelegate.h */,
+				70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */,
+				70CD9C531389755400366BCB /* FirstView.xib */,
+				70CD9C551389755400366BCB /* InfoPlist.strings */,
+				70CD9C571389755400366BCB /* MainWindow.xib */,
+				70CD9C5B1389755400366BCB /* FirstViewController.h */,
+				70CD9C5C1389755400366BCB /* FirstViewController.m */,
+				70CD9C5F1389755400366BCB /* main.m */,
+				70CD9C601389755400366BCB /* networking */,
+				70CD9C631389755400366BCB /* RESTInterface.h */,
+				70CD9C641389755400366BCB /* RESTInterface.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		70CD9C601389755400366BCB /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				70CD9C611389755400366BCB /* NetworkInterface.h */,
+				70CD9C621389755400366BCB /* NetworkInterface.m */,
+			);
+			path = networking;
+			sourceTree = "<group>";
+		};
+		70CD9C811389795800366BCB /* FriendsList */ = {
+			isa = PBXGroup;
+			children = (
+				70CD9C5D1389755400366BCB /* FriendsListViewController.h */,
+				70CD9C5E1389755400366BCB /* FriendsListViewController.m */,
+				70CD9C7D1389784E00366BCB /* FriendsListView.xib */,
+			);
+			name = FriendsList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,12 +488,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				706AA2EA137711F800FBAF2E /* InfoPlist.strings in Resources */,
-				706AA2F3137711F800FBAF2E /* MainWindow.xib in Resources */,
-				706AA2FC137711F800FBAF2E /* FirstView.xib in Resources */,
-				706AA2FF137711F800FBAF2E /* SecondView.xib in Resources */,
 				706AA426137A329E00FBAF2E /* FBDialog.bundle in Resources */,
 				707C7C9313825944006B6D97 /* DONORS in Resources */,
+				70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */,
+				70CD9C6B1389755400366BCB /* FirstView.xib in Resources */,
+				70CD9C6D1389755400366BCB /* InfoPlist.strings in Resources */,
+				70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */,
+				70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +506,11 @@
 				706AA313137711F800FBAF2E /* DrinkAppTests.h in Resources */,
 				706AA427137A329E00FBAF2E /* FBDialog.bundle in Resources */,
 				707C7C9413825944006B6D97 /* DONORS in Resources */,
+				70CD9C681389755400366BCB /* DrinkApp-Info.plist in Resources */,
+				70CD9C6C1389755400366BCB /* FirstView.xib in Resources */,
+				70CD9C6E1389755400366BCB /* InfoPlist.strings in Resources */,
+				70CD9C701389755400366BCB /* MainWindow.xib in Resources */,
+				70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,10 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				706AA2ED137711F800FBAF2E /* main.m in Sources */,
-				706AA2F0137711F800FBAF2E /* DrinkAppAppDelegate.m in Sources */,
-				706AA2F6137711F800FBAF2E /* FirstViewController.m in Sources */,
-				706AA2F9137711F800FBAF2E /* SecondViewController.m in Sources */,
 				706AA424137A329E00FBAF2E /* Facebook.m in Sources */,
 				706AA428137A329E00FBAF2E /* FBDialog.m in Sources */,
 				706AA42A137A329E00FBAF2E /* FBLoginDialog.m in Sources */,
@@ -535,9 +547,6 @@
 				706AA434137A329E00FBAF2E /* SBJsonBase.m in Sources */,
 				706AA436137A329E00FBAF2E /* SBJsonParser.m in Sources */,
 				706AA438137A329E00FBAF2E /* SBJsonWriter.m in Sources */,
-				706AA444137A33A600FBAF2E /* NetworkInterface.m in Sources */,
-				707C78FB1382430C006B6D97 /* RESTInterface.m in Sources */,
-				707C78FF13824AAD006B6D97 /* Config.m in Sources */,
 				707C7C4913825944006B6D97 /* ASIAuthenticationDialog.m in Sources */,
 				707C7C4B13825944006B6D97 /* ASIDataCompressor.m in Sources */,
 				707C7C4D13825944006B6D97 /* ASIDataDecompressor.m in Sources */,
@@ -547,6 +556,13 @@
 				707C7C5513825944006B6D97 /* ASIInputStream.m in Sources */,
 				707C7C5713825944006B6D97 /* ASINetworkQueue.m in Sources */,
 				707C7C9713825944006B6D97 /* Reachability.m in Sources */,
+				70CD9C651389755400366BCB /* Config.m in Sources */,
+				70CD9C691389755400366BCB /* DrinkAppAppDelegate.m in Sources */,
+				70CD9C731389755400366BCB /* FirstViewController.m in Sources */,
+				70CD9C751389755400366BCB /* FriendsListViewController.m in Sources */,
+				70CD9C771389755400366BCB /* main.m in Sources */,
+				70CD9C791389755400366BCB /* NetworkInterface.m in Sources */,
+				70CD9C7B1389755400366BCB /* RESTInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,9 +581,6 @@
 				706AA435137A329E00FBAF2E /* SBJsonBase.m in Sources */,
 				706AA437137A329E00FBAF2E /* SBJsonParser.m in Sources */,
 				706AA439137A329E00FBAF2E /* SBJsonWriter.m in Sources */,
-				706AA445137A33A600FBAF2E /* NetworkInterface.m in Sources */,
-				707C78FC1382430C006B6D97 /* RESTInterface.m in Sources */,
-				707C790013824AAD006B6D97 /* Config.m in Sources */,
 				707C7C4A13825944006B6D97 /* ASIAuthenticationDialog.m in Sources */,
 				707C7C4C13825944006B6D97 /* ASIDataCompressor.m in Sources */,
 				707C7C4E13825944006B6D97 /* ASIDataDecompressor.m in Sources */,
@@ -577,6 +590,13 @@
 				707C7C5613825944006B6D97 /* ASIInputStream.m in Sources */,
 				707C7C5813825944006B6D97 /* ASINetworkQueue.m in Sources */,
 				707C7C9813825944006B6D97 /* Reachability.m in Sources */,
+				70CD9C661389755400366BCB /* Config.m in Sources */,
+				70CD9C6A1389755400366BCB /* DrinkAppAppDelegate.m in Sources */,
+				70CD9C741389755400366BCB /* FirstViewController.m in Sources */,
+				70CD9C761389755400366BCB /* FriendsListViewController.m in Sources */,
+				70CD9C781389755400366BCB /* main.m in Sources */,
+				70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */,
+				70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,44 +611,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		706AA2E8137711F800FBAF2E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				706AA2E9137711F800FBAF2E /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		706AA2F1137711F800FBAF2E /* MainWindow.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				706AA2F2137711F800FBAF2E /* en */,
-			);
-			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		706AA2FA137711F800FBAF2E /* FirstView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				706AA2FB137711F800FBAF2E /* en */,
-			);
-			name = FirstView.xib;
-			sourceTree = "<group>";
-		};
-		706AA2FD137711F800FBAF2E /* SecondView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				706AA2FE137711F800FBAF2E /* en */,
-			);
-			name = SecondView.xib;
-			sourceTree = "<group>";
-		};
 		706AA30E137711F800FBAF2E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				706AA30F137711F800FBAF2E /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70CD9C531389755400366BCB /* FirstView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70CD9C541389755400366BCB /* en */,
+			);
+			name = FirstView.xib;
+			sourceTree = "<group>";
+		};
+		70CD9C551389755400366BCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70CD9C561389755400366BCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70CD9C571389755400366BCB /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70CD9C581389755400366BCB /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		70CD9C7D1389784E00366BCB /* FriendsListView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70CD9C7E1389784E00366BCB /* en */,
+			);
+			name = FriendsListView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -675,8 +695,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrinkApp/DrinkApp-Prefix.pch";
-				INFOPLIST_FILE = "DrinkApp/DrinkApp-Info.plist";
+				GCC_PREFIX_HEADER = "src/DrinkApp-Prefix.pch";
+				INFOPLIST_FILE = "src/DrinkApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -688,8 +708,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DrinkApp/DrinkApp-Prefix.pch";
-				INFOPLIST_FILE = "DrinkApp/DrinkApp-Info.plist";
+				GCC_PREFIX_HEADER = "src/DrinkApp-Prefix.pch";
+				INFOPLIST_FILE = "src/DrinkApp-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
