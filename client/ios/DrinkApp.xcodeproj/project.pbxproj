@@ -182,8 +182,8 @@
 		70CD9C5F1389755400366BCB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70CD9C611389755400366BCB /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
 		70CD9C621389755400366BCB /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
-		70CD9C631389755400366BCB /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTInterface.h; sourceTree = "<group>"; };
-		70CD9C641389755400366BCB /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTInterface.m; sourceTree = "<group>"; };
+		70CD9C631389755400366BCB /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTInterface.h; path = ../RESTInterface.h; sourceTree = "<group>"; };
+		70CD9C641389755400366BCB /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTInterface.m; path = ../RESTInterface.m; sourceTree = "<group>"; };
 		70CD9C7E1389784E00366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FriendsListView.xib; sourceTree = "<group>"; };
 		70E2073A1394A8BA00D858B8 /* CheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinViewController.h; sourceTree = "<group>"; };
 		70E2073B1394A8BA00D858B8 /* CheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinViewController.m; sourceTree = "<group>"; };
@@ -365,6 +365,7 @@
 		70CD9C4C1389755400366BCB /* src */ = {
 			isa = PBXGroup;
 			children = (
+				70E207421394A9EF00D858B8 /* Checkin */,
 				70CD9C811389795800366BCB /* FriendsList */,
 				70CD9C4D1389755400366BCB /* Config.h */,
 				70CD9C4E1389755400366BCB /* Config.m */,
@@ -373,14 +374,9 @@
 				70CD9C511389755400366BCB /* DrinkAppAppDelegate.h */,
 				70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */,
 				70CD9C551389755400366BCB /* InfoPlist.strings */,
-				70E2073A1394A8BA00D858B8 /* CheckinViewController.h */,
-				70E2073B1394A8BA00D858B8 /* CheckinViewController.m */,
-				70E2073C1394A8BA00D858B8 /* CheckinView.xib */,
 				70CD9C571389755400366BCB /* MainWindow.xib */,
 				70CD9C5F1389755400366BCB /* main.m */,
 				70CD9C601389755400366BCB /* networking */,
-				70CD9C631389755400366BCB /* RESTInterface.h */,
-				70CD9C641389755400366BCB /* RESTInterface.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -388,6 +384,8 @@
 		70CD9C601389755400366BCB /* networking */ = {
 			isa = PBXGroup;
 			children = (
+				70CD9C631389755400366BCB /* RESTInterface.h */,
+				70CD9C641389755400366BCB /* RESTInterface.m */,
 				70CD9C611389755400366BCB /* NetworkInterface.h */,
 				70CD9C621389755400366BCB /* NetworkInterface.m */,
 			);
@@ -402,6 +400,16 @@
 				70CD9C7D1389784E00366BCB /* FriendsListView.xib */,
 			);
 			name = FriendsList;
+			sourceTree = "<group>";
+		};
+		70E207421394A9EF00D858B8 /* Checkin */ = {
+			isa = PBXGroup;
+			children = (
+				70E2073A1394A8BA00D858B8 /* CheckinViewController.h */,
+				70E2073B1394A8BA00D858B8 /* CheckinViewController.m */,
+				70E2073C1394A8BA00D858B8 /* CheckinView.xib */,
+			);
+			name = Checkin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

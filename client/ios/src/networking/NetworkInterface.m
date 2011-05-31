@@ -14,6 +14,7 @@
 #define kFBExpirationDate @"ExpirationDate"
 
 @interface NetworkInterface ()
+- (void)createSession;
 - (void)postStatusChange;
 - (void)saveUserData:(long long)fbid
 		   firstName:(NSString*)firstName
@@ -47,11 +48,12 @@
 			self.facebook.expirationDate = expirationDate;
 		BOOL sessionValid = [self.facebook isSessionValid];
 		if (sessionValid) {
-			loggedIn_ = YES;
+			[self createSession];
 		}else{
 			loggedIn_ = NO;			
+			[self postStatusChange];
 		}
-		[self postStatusChange];
+
 
 	}
 	return self;
