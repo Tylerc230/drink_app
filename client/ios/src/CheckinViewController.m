@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  CheckinViewController.m
 //  DrinkApp
 //
 //  Created by Tyler Casselman on 5/8/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CheckinViewController.h"
 
-@interface FirstViewController ()
+@interface CheckinViewController ()
 - (void)setLoggedIn:(BOOL)loggedIn;
 @end
 
-@implementation FirstViewController
+@implementation CheckinViewController
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  CheckinViewController.h
 //  DrinkApp
 //
 //  Created by Tyler Casselman on 5/8/11.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DrinkAppAppDelegate.h"
 
-@interface FirstViewController : UIViewController {
+@interface CheckinViewController : UIViewController {
 	DrinkAppAppDelegate * appDelegate_;
 	IBOutlet UIButton * logginButton_;
 	IBOutlet UIButton * getFriendsButton_;
