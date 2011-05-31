@@ -104,6 +104,10 @@
 	NSString * picURL = [me objectForKey:@"pic_square"];
 	[self saveUserData:fbid firstName:firstName lastName:lastName picURL:picURL accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
 	[self saveFriends:friends];
+	loggedIn_ = YES;
+	[self postStatusChange];
+
+	
 }
 
 //facilitates single sign on

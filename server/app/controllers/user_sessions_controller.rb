@@ -6,11 +6,17 @@ class UserSessionsController < ApplicationController
 	def create()
 		token = params[:token]
 		data = {}
+#TODO combine get_me and get_friends call to facebook
 		data['me'] = get_me(token)
 		friend_data = get_friend_data(get_friends(token))
 		data['friends'] = friend_data
 		fbid = data['me'].id
-		user_session = UserSession.new(:token => token, :fbid => fbid)
+		user_session = UserSession.where(:fbid => fbid)[0]
+		if(!user_session)
+			user_session = UserSession.new(:token => token, :fbid => fbid)
+		else
+			user_session.token = token
+		end
 		user_session.save
 		render :text => data.to_json
 	end
@@ -49,16 +55,6 @@ class UserSessionsController < ApplicationController
 		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
 		return ActiveSupport::JSON.decode(data)
 		
-	end
-	def get_facebook_method(method, token)
-		url = 'graph.facebook.com'
-		url_encode_token = CGI::escape(token)
-		query = '&sdk=ios&sdk_version=2&format=json'
-		path = "/#{method}?access_token="+url_encode_token + query
-		http = Net::HTTP.new(url, 443)
-		http.use_ssl = true
-		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
-		return data
 	end
 
 end
