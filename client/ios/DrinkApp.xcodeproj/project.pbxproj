@@ -62,6 +62,13 @@
 		707C7CEF13825A3F006B6D97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
 		707C7CF113825A4C006B6D97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */; };
 		707C7CF413825A6B006B6D97 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
+		70999FE7139B64DA0096048B /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FE5139B64DA0096048B /* DrinkCountViewController.m */; };
+		70999FE8139B64DA0096048B /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FE5139B64DA0096048B /* DrinkCountViewController.m */; };
+		70999FE9139B64DA0096048B /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FE6139B64DA0096048B /* DrinkCountViewController.xib */; };
+		70999FEA139B64DA0096048B /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FE6139B64DA0096048B /* DrinkCountViewController.xib */; };
+		70999FEE139B65D70096048B /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FEC139B65D70096048B /* DrinkSelectionViewController.m */; };
+		70999FEF139B65D70096048B /* DrinkSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FED139B65D70096048B /* DrinkSelectionViewController.xib */; };
+		70999FF0139B693D0096048B /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FEC139B65D70096048B /* DrinkSelectionViewController.m */; };
 		70CD9C651389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C661389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */; };
@@ -82,10 +89,6 @@
 		70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C641389755400366BCB /* RESTInterface.m */; };
 		70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
 		70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
-		70E2073E1394A8BA00D858B8 /* CheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E2073B1394A8BA00D858B8 /* CheckinViewController.m */; };
-		70E2073F1394A8BA00D858B8 /* CheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E2073B1394A8BA00D858B8 /* CheckinViewController.m */; };
-		70E207401394A8BA00D858B8 /* CheckinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E2073C1394A8BA00D858B8 /* CheckinView.xib */; };
-		70E207411394A8BA00D858B8 /* CheckinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E2073C1394A8BA00D858B8 /* CheckinView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +172,12 @@
 		707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		707C7CF213825A58006B6D97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		70999FE4139B64DA0096048B /* DrinkCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCountViewController.h; sourceTree = "<group>"; };
+		70999FE5139B64DA0096048B /* DrinkCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCountViewController.m; sourceTree = "<group>"; };
+		70999FE6139B64DA0096048B /* DrinkCountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkCountViewController.xib; sourceTree = "<group>"; };
+		70999FEB139B65D70096048B /* DrinkSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkSelectionViewController.h; sourceTree = "<group>"; };
+		70999FEC139B65D70096048B /* DrinkSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkSelectionViewController.m; sourceTree = "<group>"; };
+		70999FED139B65D70096048B /* DrinkSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkSelectionViewController.xib; sourceTree = "<group>"; };
 		70CD9C4D1389755400366BCB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		70CD9C4E1389755400366BCB /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
@@ -185,9 +194,6 @@
 		70CD9C631389755400366BCB /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTInterface.h; path = ../RESTInterface.h; sourceTree = "<group>"; };
 		70CD9C641389755400366BCB /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTInterface.m; path = ../RESTInterface.m; sourceTree = "<group>"; };
 		70CD9C7E1389784E00366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FriendsListView.xib; sourceTree = "<group>"; };
-		70E2073A1394A8BA00D858B8 /* CheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckinViewController.h; sourceTree = "<group>"; };
-		70E2073B1394A8BA00D858B8 /* CheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinViewController.m; sourceTree = "<group>"; };
-		70E2073D1394A8BA00D858B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CheckinView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -405,9 +411,12 @@
 		70E207421394A9EF00D858B8 /* Checkin */ = {
 			isa = PBXGroup;
 			children = (
-				70E2073A1394A8BA00D858B8 /* CheckinViewController.h */,
-				70E2073B1394A8BA00D858B8 /* CheckinViewController.m */,
-				70E2073C1394A8BA00D858B8 /* CheckinView.xib */,
+				70999FE4139B64DA0096048B /* DrinkCountViewController.h */,
+				70999FE5139B64DA0096048B /* DrinkCountViewController.m */,
+				70999FE6139B64DA0096048B /* DrinkCountViewController.xib */,
+				70999FEB139B65D70096048B /* DrinkSelectionViewController.h */,
+				70999FEC139B65D70096048B /* DrinkSelectionViewController.m */,
+				70999FED139B65D70096048B /* DrinkSelectionViewController.xib */,
 			);
 			name = Checkin;
 			sourceTree = "<group>";
@@ -502,7 +511,8 @@
 				70CD9C6D1389755400366BCB /* InfoPlist.strings in Resources */,
 				70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */,
 				70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */,
-				70E207401394A8BA00D858B8 /* CheckinView.xib in Resources */,
+				70999FE9139B64DA0096048B /* DrinkCountViewController.xib in Resources */,
+				70999FEF139B65D70096048B /* DrinkSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +528,7 @@
 				70CD9C6E1389755400366BCB /* InfoPlist.strings in Resources */,
 				70CD9C701389755400366BCB /* MainWindow.xib in Resources */,
 				70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */,
-				70E207411394A8BA00D858B8 /* CheckinView.xib in Resources */,
+				70999FEA139B64DA0096048B /* DrinkCountViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +580,8 @@
 				70CD9C771389755400366BCB /* main.m in Sources */,
 				70CD9C791389755400366BCB /* NetworkInterface.m in Sources */,
 				70CD9C7B1389755400366BCB /* RESTInterface.m in Sources */,
-				70E2073E1394A8BA00D858B8 /* CheckinViewController.m in Sources */,
+				70999FE7139B64DA0096048B /* DrinkCountViewController.m in Sources */,
+				70999FEE139B65D70096048B /* DrinkSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -604,7 +615,8 @@
 				70CD9C781389755400366BCB /* main.m in Sources */,
 				70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */,
 				70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */,
-				70E2073F1394A8BA00D858B8 /* CheckinViewController.m in Sources */,
+				70999FE8139B64DA0096048B /* DrinkCountViewController.m in Sources */,
+				70999FF0139B693D0096048B /* DrinkSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,14 +661,6 @@
 				70CD9C7E1389784E00366BCB /* en */,
 			);
 			name = FriendsListView.xib;
-			sourceTree = "<group>";
-		};
-		70E2073C1394A8BA00D858B8 /* CheckinView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70E2073D1394A8BA00D858B8 /* en */,
-			);
-			name = CheckinView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
