@@ -21,9 +21,11 @@
 	// Add the tab bar controller's current view as a subview of the window
 	self.window.rootViewController = self.tabBarController;
 	[self.window makeKeyAndVisible];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusChanged:) name:kLoggedInStatusChangedNotif object:nil];
 	config_ = [[Config alloc] init];
 	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:self.config.serverBaseURL];
 	friendView_.networkInterface = networkInterface_;
+
     return YES;
 }
 
@@ -78,8 +80,18 @@
 	[networkInterface_ release], networkInterface_ = nil;
 	[_window release];
 	[_tabBarController release];
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
     [super dealloc];
 }
+
+#pragma Notification callback
+- (void)statusChanged:(NSNotification *)notification
+{
+	NSDictionary * userInfo = [notification userInfo];
+	BOOL loggedIn = [[userInfo objectForKey:kLoggedInStatus] boolValue];
+	NSLog(@"Logged In %d", loggedIn);
+}
+
 
 /*
 // Optional UITabBarControllerDelegate method.
