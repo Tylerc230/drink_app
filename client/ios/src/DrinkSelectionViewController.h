@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NetworkInterface.h"
 
 @interface DrinkSelectionViewController : UITableViewController {
     int numDrinks_;
+	NetworkInterface * networkInterface_;
 }
+@property (nonatomic, retain) NetworkInterface * networkInterface;
+
 - (id)initWithNumDrinks:(int)numDrinks;
 @end

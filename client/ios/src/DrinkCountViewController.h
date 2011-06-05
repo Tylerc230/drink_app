@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NetworkInterface.h"
 
 @interface DrinkCountViewController : UIViewController {
-    
+    NetworkInterface * networkInterface_;
 }
-
+@property (nonatomic, retain) NetworkInterface * networkInterface;
 - (IBAction)checkin:(UIButton *)sender;
 
 @end
