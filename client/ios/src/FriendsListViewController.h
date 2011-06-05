@@ -11,9 +11,11 @@
 
 @interface FriendsListViewController : UIViewController {
     IBOutlet UITableView * tableView_;
+	IBOutlet UIBarButtonItem * loginButton_;
 	NetworkInterface * networkInterface_;
+	
 }
 @property (nonatomic, retain) NetworkInterface * networkInterface;
 
-
+- (IBAction)login:(id)sender;
 @end

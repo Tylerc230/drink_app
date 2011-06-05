@@ -19,7 +19,8 @@
 {
 	if((self = [super initWithCoder:aDecoder]))
 	{
-		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(friendsUpdated:) name:kFriendDataLoadedNotif object:nil];		
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(friendsUpdated:) name:kFriendDataLoadedNotif object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionStatusChanged:) name:kLoggedInStatusChangedNotif object:nil];
 	}
 	return self;
 }
@@ -47,10 +48,37 @@
 }
 
 #pragma mark -
+#pragma IBActions
+
+- (IBAction)login:(id)sender
+{
+	if(networkInterface_.loggedIn)
+	{
+		[networkInterface_ logout];
+	}else
+	{
+		[networkInterface_ login];
+	}
+}
+
+#pragma mark -
 #pragma notifications
 
 - (void)friendsUpdated:(NSNotification *)notif
 {
+	[tableView_ reloadData];
+}
+
+- (void)sessionStatusChanged:(NSNotification *)notif
+{
+	NSDictionary * status = [notif userInfo];
+	if([[status objectForKey:kLoggedInStatus] boolValue])
+	{
+		loginButton_.title = @"logout";
+	}else
+	{
+		loginButton_.title = @"login";
+	}
 	[tableView_ reloadData];
 }
 

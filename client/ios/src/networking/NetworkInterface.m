@@ -187,6 +187,12 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
 }
 
+- (void)removeFriends
+{
+	[playingFriendInfo_ release], playingFriendInfo_ = nil;
+	[fbFriendInfo_ release], fbFriendInfo_ = nil;
+}
+
 #pragma mark - 
 #pragma user info
 
@@ -205,6 +211,7 @@
 - (void)fbDidNotLogin:(BOOL)cancelled
 {
 	[self removeUserData];
+	[self removeFriends];
 	loggedIn_ = NO;
 	[self postStatusChange];
 }
@@ -212,6 +219,7 @@
 - (void)fbDidLogout
 {
 	[self removeUserData];
+	[self removeFriends];
 	loggedIn_ = NO;
 	[self postStatusChange];
 }
