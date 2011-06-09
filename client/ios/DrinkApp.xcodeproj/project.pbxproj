@@ -62,13 +62,23 @@
 		707C7CEF13825A3F006B6D97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
 		707C7CF113825A4C006B6D97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */; };
 		707C7CF413825A6B006B6D97 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
-		70999FE7139B64DA0096048B /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FE5139B64DA0096048B /* DrinkCountViewController.m */; };
-		70999FE8139B64DA0096048B /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FE5139B64DA0096048B /* DrinkCountViewController.m */; };
-		70999FE9139B64DA0096048B /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FE6139B64DA0096048B /* DrinkCountViewController.xib */; };
-		70999FEA139B64DA0096048B /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FE6139B64DA0096048B /* DrinkCountViewController.xib */; };
-		70999FEE139B65D70096048B /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FEC139B65D70096048B /* DrinkSelectionViewController.m */; };
-		70999FEF139B65D70096048B /* DrinkSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70999FED139B65D70096048B /* DrinkSelectionViewController.xib */; };
-		70999FF0139B693D0096048B /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70999FEC139B65D70096048B /* DrinkSelectionViewController.m */; };
+		70ABAE9C13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */; };
+		70ABAE9D13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */; };
+		70ABAE9E13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */; };
+		70ABAE9F13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */; };
+		70ABAEA013A0A73500A6BCAD /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9813A0A73500A6BCAD /* DrinkSelectionViewController.m */; };
+		70ABAEA113A0A73500A6BCAD /* DrinkSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9813A0A73500A6BCAD /* DrinkSelectionViewController.m */; };
+		70ABAEA213A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70ABAE9913A0A73500A6BCAD /* DrinkSelectionViewController.xib */; };
+		70ABAEA313A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70ABAE9913A0A73500A6BCAD /* DrinkSelectionViewController.xib */; };
+		70ABAEA413A0A73500A6BCAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */; };
+		70ABAEA513A0A73500A6BCAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */; };
+		70ABAEA813A0A74B00A6BCAD /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */; };
+		70ABAEA913A0A74B00A6BCAD /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */; };
+		70ABAEAF13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */; };
+		70ABAEB013A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */; };
+		70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */; };
+		70ABAEB213A0A9DC00A6BCAD /* FacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */; };
+		70ABAEB413A0AE7600A6BCAD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ABAEB313A0AE7600A6BCAD /* CoreData.framework */; };
 		70CD9C651389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C661389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */; };
@@ -79,16 +89,10 @@
 		70CD9C6E1389755400366BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C551389755400366BCB /* InfoPlist.strings */; };
 		70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C571389755400366BCB /* MainWindow.xib */; };
 		70CD9C701389755400366BCB /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C571389755400366BCB /* MainWindow.xib */; };
-		70CD9C751389755400366BCB /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5E1389755400366BCB /* FriendsListViewController.m */; };
-		70CD9C761389755400366BCB /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5E1389755400366BCB /* FriendsListViewController.m */; };
 		70CD9C771389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C781389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C791389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
 		70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
-		70CD9C7B1389755400366BCB /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C641389755400366BCB /* RESTInterface.m */; };
-		70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C641389755400366BCB /* RESTInterface.m */; };
-		70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
-		70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C7D1389784E00366BCB /* FriendsListView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,12 +176,20 @@
 		707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		707C7CF213825A58006B6D97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		70999FE4139B64DA0096048B /* DrinkCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCountViewController.h; sourceTree = "<group>"; };
-		70999FE5139B64DA0096048B /* DrinkCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCountViewController.m; sourceTree = "<group>"; };
-		70999FE6139B64DA0096048B /* DrinkCountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkCountViewController.xib; sourceTree = "<group>"; };
-		70999FEB139B65D70096048B /* DrinkSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkSelectionViewController.h; sourceTree = "<group>"; };
-		70999FEC139B65D70096048B /* DrinkSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkSelectionViewController.m; sourceTree = "<group>"; };
-		70999FED139B65D70096048B /* DrinkSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkSelectionViewController.xib; sourceTree = "<group>"; };
+		70ABAE9413A0A73500A6BCAD /* DrinkCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCountViewController.h; sourceTree = "<group>"; };
+		70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCountViewController.m; sourceTree = "<group>"; };
+		70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkCountViewController.xib; sourceTree = "<group>"; };
+		70ABAE9713A0A73500A6BCAD /* DrinkSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkSelectionViewController.h; sourceTree = "<group>"; };
+		70ABAE9813A0A73500A6BCAD /* DrinkSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkSelectionViewController.m; sourceTree = "<group>"; };
+		70ABAE9913A0A73500A6BCAD /* DrinkSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkSelectionViewController.xib; sourceTree = "<group>"; };
+		70ABAE9A13A0A73500A6BCAD /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
+		70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
+		70ABAEA613A0A74B00A6BCAD /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESTInterface.h; sourceTree = "<group>"; };
+		70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTInterface.m; sourceTree = "<group>"; };
+		70ABAEAC13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrinkAppModel.xcdatamodel; sourceTree = "<group>"; };
+		70ABAEAD13A0A9DC00A6BCAD /* FacebookUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookUser.h; sourceTree = "<group>"; };
+		70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookUser.m; sourceTree = "<group>"; };
+		70ABAEB313A0AE7600A6BCAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		70CD9C4D1389755400366BCB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		70CD9C4E1389755400366BCB /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
@@ -186,14 +198,9 @@
 		70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkAppAppDelegate.m; sourceTree = "<group>"; };
 		70CD9C561389755400366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		70CD9C581389755400366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		70CD9C5D1389755400366BCB /* FriendsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListViewController.h; sourceTree = "<group>"; };
-		70CD9C5E1389755400366BCB /* FriendsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListViewController.m; sourceTree = "<group>"; };
 		70CD9C5F1389755400366BCB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70CD9C611389755400366BCB /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
 		70CD9C621389755400366BCB /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
-		70CD9C631389755400366BCB /* RESTInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTInterface.h; path = ../RESTInterface.h; sourceTree = "<group>"; };
-		70CD9C641389755400366BCB /* RESTInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTInterface.m; path = ../RESTInterface.m; sourceTree = "<group>"; };
-		70CD9C7E1389784E00366BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FriendsListView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70ABAEB413A0AE7600A6BCAD /* CoreData.framework in Frameworks */,
 				707C7CF413825A6B006B6D97 /* libz.1.2.3.dylib in Frameworks */,
 				706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */,
 				707C7CF113825A4C006B6D97 /* MobileCoreServices.framework in Frameworks */,
@@ -228,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */,
+				70ABAEB313A0AE7600A6BCAD /* CoreData.framework */,
 				707C7CF213825A58006B6D97 /* CoreGraphics.framework */,
 				707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */,
 				707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */,
@@ -368,11 +377,36 @@
 			path = "submodules/asi-http-request";
 			sourceTree = "<group>";
 		};
+		70ABAE9313A0A73500A6BCAD /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				70ABAE9413A0A73500A6BCAD /* DrinkCountViewController.h */,
+				70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */,
+				70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */,
+				70ABAE9713A0A73500A6BCAD /* DrinkSelectionViewController.h */,
+				70ABAE9813A0A73500A6BCAD /* DrinkSelectionViewController.m */,
+				70ABAE9913A0A73500A6BCAD /* DrinkSelectionViewController.xib */,
+				70ABAE9A13A0A73500A6BCAD /* FriendsListViewController.h */,
+				70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		70ABAEAA13A0A9DB00A6BCAD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */,
+				70ABAEAD13A0A9DC00A6BCAD /* FacebookUser.h */,
+				70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		70CD9C4C1389755400366BCB /* src */ = {
 			isa = PBXGroup;
 			children = (
-				70E207421394A9EF00D858B8 /* Checkin */,
-				70CD9C811389795800366BCB /* FriendsList */,
+				70ABAEAA13A0A9DB00A6BCAD /* CoreData */,
+				70ABAE9313A0A73500A6BCAD /* ui */,
 				70CD9C4D1389755400366BCB /* Config.h */,
 				70CD9C4E1389755400366BCB /* Config.m */,
 				70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */,
@@ -390,35 +424,12 @@
 		70CD9C601389755400366BCB /* networking */ = {
 			isa = PBXGroup;
 			children = (
-				70CD9C631389755400366BCB /* RESTInterface.h */,
-				70CD9C641389755400366BCB /* RESTInterface.m */,
+				70ABAEA613A0A74B00A6BCAD /* RESTInterface.h */,
+				70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */,
 				70CD9C611389755400366BCB /* NetworkInterface.h */,
 				70CD9C621389755400366BCB /* NetworkInterface.m */,
 			);
 			path = networking;
-			sourceTree = "<group>";
-		};
-		70CD9C811389795800366BCB /* FriendsList */ = {
-			isa = PBXGroup;
-			children = (
-				70CD9C5D1389755400366BCB /* FriendsListViewController.h */,
-				70CD9C5E1389755400366BCB /* FriendsListViewController.m */,
-				70CD9C7D1389784E00366BCB /* FriendsListView.xib */,
-			);
-			name = FriendsList;
-			sourceTree = "<group>";
-		};
-		70E207421394A9EF00D858B8 /* Checkin */ = {
-			isa = PBXGroup;
-			children = (
-				70999FE4139B64DA0096048B /* DrinkCountViewController.h */,
-				70999FE5139B64DA0096048B /* DrinkCountViewController.m */,
-				70999FE6139B64DA0096048B /* DrinkCountViewController.xib */,
-				70999FEB139B65D70096048B /* DrinkSelectionViewController.h */,
-				70999FEC139B65D70096048B /* DrinkSelectionViewController.m */,
-				70999FED139B65D70096048B /* DrinkSelectionViewController.xib */,
-			);
-			name = Checkin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,9 +521,8 @@
 				70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */,
 				70CD9C6D1389755400366BCB /* InfoPlist.strings in Resources */,
 				70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */,
-				70CD9C7F1389784E00366BCB /* FriendsListView.xib in Resources */,
-				70999FE9139B64DA0096048B /* DrinkCountViewController.xib in Resources */,
-				70999FEF139B65D70096048B /* DrinkSelectionViewController.xib in Resources */,
+				70ABAE9E13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
+				70ABAEA213A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,8 +537,8 @@
 				70CD9C681389755400366BCB /* DrinkApp-Info.plist in Resources */,
 				70CD9C6E1389755400366BCB /* InfoPlist.strings in Resources */,
 				70CD9C701389755400366BCB /* MainWindow.xib in Resources */,
-				70CD9C801389784E00366BCB /* FriendsListView.xib in Resources */,
-				70999FEA139B64DA0096048B /* DrinkCountViewController.xib in Resources */,
+				70ABAE9F13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
+				70ABAEA313A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,12 +586,14 @@
 				707C7C9713825944006B6D97 /* Reachability.m in Sources */,
 				70CD9C651389755400366BCB /* Config.m in Sources */,
 				70CD9C691389755400366BCB /* DrinkAppAppDelegate.m in Sources */,
-				70CD9C751389755400366BCB /* FriendsListViewController.m in Sources */,
 				70CD9C771389755400366BCB /* main.m in Sources */,
 				70CD9C791389755400366BCB /* NetworkInterface.m in Sources */,
-				70CD9C7B1389755400366BCB /* RESTInterface.m in Sources */,
-				70999FE7139B64DA0096048B /* DrinkCountViewController.m in Sources */,
-				70999FEE139B65D70096048B /* DrinkSelectionViewController.m in Sources */,
+				70ABAE9C13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */,
+				70ABAEA013A0A73500A6BCAD /* DrinkSelectionViewController.m in Sources */,
+				70ABAEA413A0A73500A6BCAD /* FriendsListViewController.m in Sources */,
+				70ABAEA813A0A74B00A6BCAD /* RESTInterface.m in Sources */,
+				70ABAEAF13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
+				70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,12 +623,14 @@
 				707C7C9813825944006B6D97 /* Reachability.m in Sources */,
 				70CD9C661389755400366BCB /* Config.m in Sources */,
 				70CD9C6A1389755400366BCB /* DrinkAppAppDelegate.m in Sources */,
-				70CD9C761389755400366BCB /* FriendsListViewController.m in Sources */,
 				70CD9C781389755400366BCB /* main.m in Sources */,
 				70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */,
-				70CD9C7C1389755400366BCB /* RESTInterface.m in Sources */,
-				70999FE8139B64DA0096048B /* DrinkCountViewController.m in Sources */,
-				70999FF0139B693D0096048B /* DrinkSelectionViewController.m in Sources */,
+				70ABAE9D13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */,
+				70ABAEA113A0A73500A6BCAD /* DrinkSelectionViewController.m in Sources */,
+				70ABAEA513A0A73500A6BCAD /* FriendsListViewController.m in Sources */,
+				70ABAEA913A0A74B00A6BCAD /* RESTInterface.m in Sources */,
+				70ABAEB013A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
+				70ABAEB213A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,14 +667,6 @@
 				70CD9C581389755400366BCB /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		70CD9C7D1389784E00366BCB /* FriendsListView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				70CD9C7E1389784E00366BCB /* en */,
-			);
-			name = FriendsListView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -803,6 +809,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70ABAEAC13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodel */,
+			);
+			currentVersion = 70ABAEAC13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodel */;
+			path = DrinkAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 706AA2D2137711F700FBAF2E /* Project object */;
 }

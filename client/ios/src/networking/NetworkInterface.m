@@ -8,6 +8,8 @@
 
 #import "NetworkInterface.h"
 #import "JSON.h"
+#import "FacebookUser.h"
+#import "DrinkAppAppDelegate.h"
 
 #define kFBAppId @"165584076834065"
 #define kFBAccessTokenKey @"AccessTokenKey"
@@ -34,10 +36,11 @@
 @synthesize fbFriendInfo = fbFriendInfo_;
 @dynamic fbId;
 
-- (id)initWithBaseUrl:(NSString *)baseURL
+- (id)initWithBaseUrl:(NSString *)baseURL andAppDelegate:(DrinkAppAppDelegate*)appDelegate
 {
 	if((self = [super init]))
 	{
+		appDelegate_ = [appDelegate retain];
 		facebook_ = [[Facebook alloc] initWithAppId:kFBAppId];
 		restInterface_ = [[RESTInterface alloc] initWithBaseURL:baseURL];
 		NSString * accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:kFBAccessTokenKey];
@@ -60,6 +63,7 @@
 }
 - (void)dealloc
 {
+	[appDelegate_ release], appDelegate_ = nil;
 	[facebook_ release], facebook_ = nil;
 	[super dealloc];
 }
@@ -110,6 +114,21 @@
 	[self postStatusChange];
 
 	
+}
+
+- (void)requestFailed:(id)request
+{
+	UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"Connection Failed" message:@"The DrinkApp server is unavailable. rails s" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+	[alertView show];
+
+}
+
+#pragma AlertView delegate methods
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	[alertView release];
+	exit(0);
 }
 
 //facilitates single sign on
@@ -175,13 +194,17 @@
 	NSMutableArray * playingFriends = [NSMutableArray arrayWithCapacity:friends.count/2];
 	NSMutableArray * fbFriends =[NSMutableArray arrayWithCapacity:friends.count/2];
 	for (NSDictionary * friend in friends) {
-		if ([[friend objectForKey:@"is_app_user"] boolValue]) {
-			[playingFriends addObject:friend];
-		}else
-		{
-			[fbFriends addObject:friend];
-		}
+		FacebookUser * fbUser = (FacebookUser *)[NSEntityDescription insertNewObjectForEntityForName:@"FacebookUser" inManagedObjectContext:appDelegate_.managedObjectContext];
+		fbUser.fbid = [friend objectForKey:@"fb_id"];
+		fbUser.firstName = [friend objectForKey:@"first_name"];
+		fbUser.lastName = [friend objectForKey:@"last_name"];
+		if([[friend objectForKey:@"app_user"] boolValue])
+			[playingFriends addObject:fbUser];
+		else
+			[fbFriends addObject:fbUser];
+		
 	}
+	[appDelegate_ saveContext];
 	playingFriendInfo_ = [playingFriends retain];
 	fbFriendInfo_ = [fbFriends retain];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
