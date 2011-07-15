@@ -7,8 +7,8 @@ class UserSessionsController < ApplicationController
 		token = params[:token]
 		data = {}
 #TODO combine get_me and get_friends call to facebook
-		data['me'] = get_fb_me(token)
-		fbid = data['me'].id
+		data['me'] = get_fb_me(token).last
+		fbid = data['me']['id']
 		user_session = UserSession.where(:fbid => fbid)[0]
 		if(!user_session)
 			user_session = UserSession.new(:token => token, :fbid => fbid)
