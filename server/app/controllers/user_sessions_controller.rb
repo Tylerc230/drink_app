@@ -15,9 +15,9 @@ class UserSessionsController < ApplicationController
 		else
 			user_session.token = token
 			friend_data = get_friend_data(get_fb_friends(token))
-			puts 'friend data' + friend_data
 			data['friends'] = friend_data
 		end
+        data['drinks'] = get_drink_data
 		user_session.save
 		render :text => data.to_json
 	end
@@ -69,5 +69,15 @@ class UserSessionsController < ApplicationController
 		return ActiveSupport::JSON.decode(data)
 		
 	end
+    def get_drink_data
+      rows = Drink.all
+      data = []
+      rows.each do |row|
+        drink = {}
+        drink['name'] = row.name
+        data.push(drink)
+      end 
+      return data
+    end
 
 end

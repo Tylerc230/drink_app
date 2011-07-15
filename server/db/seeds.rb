@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+Drink.delete_all
+drink_csv  = File.open("./content/drinks.csv", "r")
+drink_csv.each_line.drop(1).each do |line|
+  entries = line.split(',')
+  Drink.create(:name => entries[0].strip)
+end
+
