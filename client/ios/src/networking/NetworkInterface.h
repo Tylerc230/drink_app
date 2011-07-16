@@ -30,14 +30,10 @@
 	Facebook * facebook_;
 	RESTInterface * restInterface_;
 	BOOL loggedIn_;
-	NSArray * playingFriendInfo_;
-	NSArray * fbFriendInfo_;//People not yet playing the app
 	DrinkAppAppDelegate * appDelegate_;
 }
 @property (nonatomic, readonly) BOOL loggedIn;
 @property (nonatomic, readonly) long long fbId;
-@property (nonatomic, readonly) NSArray * playingFriendInfo;
-@property (nonatomic, readonly) NSArray * fbFriendInfo;
 
 
 - (id)initWithBaseUrl:(NSString *)baseURL andAppDelegate:(DrinkAppAppDelegate*)appDelegate;

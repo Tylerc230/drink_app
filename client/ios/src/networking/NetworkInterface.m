@@ -32,8 +32,6 @@
 @implementation NetworkInterface
 @synthesize loggedIn = loggedIn_;
 @synthesize restInterface = restInterface_;
-@synthesize playingFriendInfo = playingFriendInfo_;
-@synthesize fbFriendInfo = fbFriendInfo_;
 @dynamic fbId;
 
 - (id)initWithBaseUrl:(NSString *)baseURL andAppDelegate:(DrinkAppAppDelegate*)appDelegate
@@ -187,33 +185,20 @@
 }
 
 - (void)saveFriends:(NSArray *)friends
-{
-	[playingFriendInfo_ release], playingFriendInfo_ = nil;
-	[fbFriendInfo_ release], fbFriendInfo_ = nil;
-	
-	NSMutableArray * playingFriends = [NSMutableArray arrayWithCapacity:friends.count/2];
-	NSMutableArray * fbFriends =[NSMutableArray arrayWithCapacity:friends.count/2];
+{	
 	for (NSDictionary * friend in friends) {
 		FacebookUser * fbUser = (FacebookUser *)[NSEntityDescription insertNewObjectForEntityForName:@"FacebookUser" inManagedObjectContext:appDelegate_.managedObjectContext];
 		fbUser.fbid = [friend objectForKey:@"fb_id"];
 		fbUser.firstName = [friend objectForKey:@"first_name"];
 		fbUser.lastName = [friend objectForKey:@"last_name"];
-		if([[friend objectForKey:@"app_user"] boolValue])
-			[playingFriends addObject:fbUser];
-		else
-			[fbFriends addObject:fbUser];
 		
 	}
 	[appDelegate_ saveContext];
-	playingFriendInfo_ = [playingFriends retain];
-	fbFriendInfo_ = [fbFriends retain];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
 }
 
 - (void)removeFriends
 {
-	[playingFriendInfo_ release], playingFriendInfo_ = nil;
-	[fbFriendInfo_ release], fbFriendInfo_ = nil;
 }
 
 #pragma mark - 

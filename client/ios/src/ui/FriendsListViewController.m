@@ -113,14 +113,12 @@
 	switch (indexPath.section) {
 		case kPlayingSectionId:
 		{
-			NSDictionary * friend = [self.networkInterface.playingFriendInfo objectAtIndex:indexPath.row];
-			cell.textLabel.text = [friend objectForKey:@"first_name"];
+		//	cell.textLabel.text = [friend objectForKey:@"first_name"];
 			break;
 		}
 		case kNotPlayingSectionId:
 		{
-			NSDictionary * friend = [self.networkInterface.fbFriendInfo objectAtIndex:indexPath.row];
-			cell.textLabel.text = [friend objectForKey:@"first_name"];
+		//	cell.textLabel.text = [friend objectForKey:@"first_name"];
 			break;
 		}
 			
@@ -134,9 +132,9 @@
 {
 	switch (section) {
 		case kPlayingSectionId:
-			return self.networkInterface.playingFriendInfo.count;
+			return 0;
 		case kNotPlayingSectionId:
-			return self.networkInterface.fbFriendInfo.count;
+			return 0;
 		default:
 			return 0;
 	}
