@@ -9,12 +9,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "src/networking/NetworkInterface.m"
-         timestampString = "329300248.589116"
+         timestampString = "332474885.533301"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195"
-         landmarkName = "-saveFriends:"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-onConnect:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -23,12 +23,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "src/networking/NetworkInterface.m"
-         timestampString = "332406128.6679"
+         timestampString = "332475008.442985"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "105"
-         endingLineNumber = "105"
-         landmarkName = "-onConnect:"
+         startingLineNumber = "212"
+         endingLineNumber = "212"
+         landmarkName = "-saveDrinks:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

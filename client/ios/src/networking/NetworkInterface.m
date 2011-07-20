@@ -10,6 +10,7 @@
 #import "JSON.h"
 #import "FacebookUser.h"
 #import "DrinkAppAppDelegate.h"
+#import "Drink.h"
 
 #define kFBAppId @"165584076834065"
 #define kFBAccessTokenKey @"AccessTokenKey"
@@ -25,6 +26,7 @@
 		 accessToken:(NSString*)accessToken
 	  expirationDate:(NSDate *)expirationDate;
 - (void)saveFriends:(NSArray *)friends;
+- (void)saveDrinks:(NSArray *)data;
 @property (nonatomic, readonly) Facebook * facebook;
 @property (nonatomic, readonly) RESTInterface * restInterface;
 @end
@@ -97,15 +99,20 @@
 
 #pragma mark -
 #pragma Server responses
+/*
+ * callback from our initial request to the server
+ * The response contains our friend data, data about ourself, and potentially drink data
+ */
 - (void)onConnect:(ASIFormDataRequest *)request
 {
 	NSDictionary * data = [[request responseString] JSONValue];
-	NSDictionary * me = [[data objectForKey:@"me"] objectAtIndex:0];
+	NSDictionary * me = [data objectForKey:@"me"];
 	NSArray * friends = [data objectForKey:@"friends"];
 	long long fbid = [[me objectForKey:@"uid"] longLongValue];
 	NSString * firstName  = [me objectForKey:@"first_name"];
 	NSString * lastName = [me objectForKey:@"last_name"];
 	NSString * picURL = [me objectForKey:@"pic_square"];
+	[self saveDrinks:[data objectForKey:@"drinks"]];
 	[self saveUserData:fbid firstName:firstName lastName:lastName picURL:picURL accessToken:self.facebook.accessToken expirationDate:self.facebook.expirationDate];
 	[self saveFriends:friends];
 	loggedIn_ = YES;
@@ -154,7 +161,9 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:kLoggedInStatusChangedNotif object:self userInfo:status];
 	
 }
-
+/*
+ * Save data about ourself to the persistent store for offline play
+ */
 - (void)saveUserData:(long long)fbid
 		   firstName:(NSString*)firstName
 			lastName:(NSString *)lastName
@@ -191,10 +200,23 @@
 		fbUser.fbid = [friend objectForKey:@"fb_id"];
 		fbUser.firstName = [friend objectForKey:@"first_name"];
 		fbUser.lastName = [friend objectForKey:@"last_name"];
+		fbUser.isAppUser = [friend objectForKey:@"app_user"];
+
 		
 	}
 	[appDelegate_ saveContext];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
+}
+
+- (void)saveDrinks:(NSArray *)data
+{
+	//TODO: truncate table
+	for (NSDictionary * drinkDict in data) {
+		Drink * drink = (Drink*)[NSEntityDescription insertNewObjectForEntityForName:@"Drink" inManagedObjectContext:appDelegate_.managedObjectContext];
+		drink.name = [drinkDict objectForKey:@"name"];
+	}
+	[appDelegate_ saveContext];
+
 }
 
 - (void)removeFriends

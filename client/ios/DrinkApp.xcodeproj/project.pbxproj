@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7011EF3613D1238600DF56E1 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7011EF3513D1238600DF56E1 /* Drink.m */; };
+		7011EF3713D1238600DF56E1 /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7011EF3513D1238600DF56E1 /* Drink.m */; };
+		702719B813D210E900472925 /* NetworkInterfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 702719B613D210E900472925 /* NetworkInterfaceTests.m */; };
+		702719C113D2151C00472925 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ABAEB313A0AE7600A6BCAD /* CoreData.framework */; };
+		702719C213D2151C00472925 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */; };
+		702719C313D2151C00472925 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
+		702719C413D2151C00472925 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEC13825A2F006B6D97 /* CFNetwork.framework */; };
+		702719C513D2153E00472925 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
 		706AA2E0137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
 		706AA2E2137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
 		706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
@@ -113,6 +121,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7011EF3413D1238600DF56E1 /* Drink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drink.h; sourceTree = "<group>"; };
+		7011EF3513D1238600DF56E1 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
+		702719B513D210E900472925 /* NetworkInterfaceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceTests.h; sourceTree = "<group>"; };
+		702719B613D210E900472925 /* NetworkInterfaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceTests.m; sourceTree = "<group>"; };
 		706AA2DB137711F800FBAF2E /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706AA2DF137711F800FBAF2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		706AA2E1137711F800FBAF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,6 +238,11 @@
 				706AA306137711F800FBAF2E /* UIKit.framework in Frameworks */,
 				706AA307137711F800FBAF2E /* Foundation.framework in Frameworks */,
 				706AA308137711F800FBAF2E /* CoreGraphics.framework in Frameworks */,
+				702719C113D2151C00472925 /* CoreData.framework in Frameworks */,
+				702719C213D2151C00472925 /* MobileCoreServices.framework in Frameworks */,
+				702719C313D2151C00472925 /* SystemConfiguration.framework in Frameworks */,
+				702719C413D2151C00472925 /* CFNetwork.framework in Frameworks */,
+				702719C513D2153E00472925 /* libz.1.2.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +288,8 @@
 		706AA30B137711F800FBAF2E /* DrinkAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				702719B513D210E900472925 /* NetworkInterfaceTests.h */,
+				702719B613D210E900472925 /* NetworkInterfaceTests.m */,
 				706AA312137711F800FBAF2E /* DrinkAppTests.h */,
 				706AA314137711F800FBAF2E /* DrinkAppTests.m */,
 				706AA30C137711F800FBAF2E /* Supporting Files */,
@@ -398,6 +417,8 @@
 				70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */,
 				70ABAEAD13A0A9DC00A6BCAD /* FacebookUser.h */,
 				70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */,
+				7011EF3413D1238600DF56E1 /* Drink.h */,
+				7011EF3513D1238600DF56E1 /* Drink.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -594,6 +615,7 @@
 				70ABAEA813A0A74B00A6BCAD /* RESTInterface.m in Sources */,
 				70ABAEAF13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
 				70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
+				7011EF3613D1238600DF56E1 /* Drink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +653,8 @@
 				70ABAEA913A0A74B00A6BCAD /* RESTInterface.m in Sources */,
 				70ABAEB013A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
 				70ABAEB213A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
+				7011EF3713D1238600DF56E1 /* Drink.m in Sources */,
+				702719B813D210E900472925 /* NetworkInterfaceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

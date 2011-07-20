@@ -14,5 +14,6 @@
 @dynamic firstName;
 @dynamic lastName;
 @dynamic imgURL;
+@dynamic isAppUser;
 
 @end

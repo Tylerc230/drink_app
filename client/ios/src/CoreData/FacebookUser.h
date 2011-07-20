@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * lastName;
 @property (nonatomic, retain) NSString * imgURL;
+@property (nonatomic, retain) NSNumber * isAppUser;
 
 @end
