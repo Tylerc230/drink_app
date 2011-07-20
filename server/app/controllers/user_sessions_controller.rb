@@ -75,6 +75,7 @@ class UserSessionsController < ApplicationController
       rows.each do |row|
         drink = {}
         drink['name'] = row.name
+        drink['tags'] = row.tags.collect {|t| t.name }.join(",")
         data.push(drink)
       end 
       return data

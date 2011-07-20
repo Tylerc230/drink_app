@@ -1,0 +1,1 @@
+curl -d "token=IP4fWh9uCW22BAYeG2fQXwKQ463rYVYa3mZvY2VCsLs.eyJpdiI6IlpBYlRpNFRKT3d0dHlkQzQyTklNVEEifQ.pgrQQM1EixbZZSJ_HfTpHXToI6g32Pjb49zc_ZBgsZ_MtIBIf2CfQpBv3INLje-AN91ohK8zB5hb2hV3MxQkAHTplvZSK7ec-N1-VjmsTfVofcLUhcH1Da4qQtdSPp8qkwLiZ548cCh3CyroOFE1xw" http://localhost:3000/user_sessions

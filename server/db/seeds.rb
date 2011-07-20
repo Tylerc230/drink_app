@@ -9,6 +9,8 @@ Drink.delete_all
 drink_csv  = File.open("./content/drinks.csv", "r")
 drink_csv.each_line.drop(1).each do |line|
   entries = line.split(',')
-  Drink.create(:name => entries[0].strip)
+  drink = Drink.create(:name => entries[0].strip)
+  drink.tag_list = "yummy, beer, liquid"
+  drink.save
 end
 
