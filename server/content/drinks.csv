@@ -1,4 +1,4 @@
-name
-beer
-wine
-vodka
+name,tags
+budweiser,beer:low_alcohol:pilsner:american
+cabernet,wine:low_alcohol:classy
+jameson shot,high_alcohol:macho

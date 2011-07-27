@@ -10,7 +10,8 @@ drink_csv  = File.open("./content/drinks.csv", "r")
 drink_csv.each_line.drop(1).each do |line|
   entries = line.split(',')
   drink = Drink.create(:name => entries[0].strip)
-  drink.tag_list = "yummy, beer, liquid"
+  tags = entries[1].strip.gsub(':', ', ')
+  drink.tag_list = tags
   drink.save
 end
 
