@@ -7,18 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CoreData/CoreData.h"
 
 #import "NetworkInterface.h"
 #import "Config.h"
 #import "FriendsListViewController.h"
 #import "DrinkCountViewController.h"
+#import "CoreDataInterface.h"
 
 
 @interface DrinkAppAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	NetworkInterface * networkInterface_;
 	Config * config_;
-	NSManagedObjectContext * managedObjectContext_;
+	CoreDataInterface * coreDataInterface_;
 	
 	IBOutlet FriendsListViewController * friendView_;
 	IBOutlet DrinkCountViewController * drinkCountView_;
@@ -29,8 +29,4 @@
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, readonly) NetworkInterface * networkInterface;
 @property (nonatomic, readonly) Config * config;
-@property (nonatomic, readonly) NSManagedObjectContext * managedObjectContext;
-
-- (NSURL *)applicationDocumentsDirectory;
-- (void)saveContext;
 @end

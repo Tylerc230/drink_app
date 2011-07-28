@@ -7,27 +7,58 @@
 //
 
 #import "NetworkInterfaceTests.h"
+#import "Helpers.h"
+#import "TestHelpers.h"
+#import "RESTInterface+test.h"
+#import "Facebook+test.h"
 
+@interface NetworkInterfaceTests ()
+- (void)swizzleMethods;
+- (void)clearCoreData;
+@end
 
 @implementation NetworkInterfaceTests
 
-#if USE_APPLICATION_UNIT_TEST     // all code under test is in the iPhone Application
+- (void)setUp
+{
+    [super setUp];
+	[self swizzleMethods];
+	[self clearCoreData];
+	
+    CoreDataInterface * coreDataInterface = [[CoreDataInterface alloc] init];
+	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:@"http://localhost" andCoreData:coreDataInterface];
+	[coreDataInterface release];
+}
 
-- (void)testAppDelegate {
-    
-    id yourApplicationDelegate = [[UIApplication sharedApplication] delegate];
-    STAssertNotNil(yourApplicationDelegate, @"UIApplication failed to find the AppDelegate");
+- (void)swizzleMethods
+{
+	[TestHelpers swizzleMethod:@selector(invokeAction:onController:data:target:callback:)
+					 forMethod:@selector(invokeAction_dummy:onController:data:target:callback:)
+					   inClass:[RESTInterface class]];
+	[TestHelpers swizzleMethod:@selector(authorize:delegate:)
+					 forMethod:@selector(authorize_dummy:delegate:)
+					   inClass:[Facebook class]];	
+}
+
+- (void)clearCoreData
+{
+	NSURL * sqliteFile = [[Helpers applicationDocumentsDirectory] URLByAppendingPathComponent:@"temp.sqlite"];
+	NSError * error = nil;
+	[[NSFileManager defaultManager] removeItemAtURL:sqliteFile error:&error];
+}
+
+- (void)tearDown
+{
+	[networkInterface_ release];
+    [super tearDown];
+}
+
+
+- (void)testLogin {
+    [networkInterface_ login];
+	STAssertFalse(YES, @"should fail");
     
 }
 
-#else                           // all code under test must be linked into the Unit Test bundle
-
-- (void)testMath {
-    
-    STAssertTrue((1+1)==2, @"Compiler isn't feeling well today :-(" );
-    
-}
-
-#endif
 
 @end

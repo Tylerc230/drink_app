@@ -10,7 +10,7 @@
 #import "CoreData/CoreData.h"
 #import "Facebook.h"
 #import "RESTInterface.h"
-
+#import "CoreDataInterface.h"
 
 //Notifications
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
@@ -30,13 +30,13 @@
 	Facebook * facebook_;
 	RESTInterface * restInterface_;
 	BOOL loggedIn_;
-	DrinkAppAppDelegate * appDelegate_;
+	CoreDataInterface * coreDataInterface_;
 }
 @property (nonatomic, readonly) BOOL loggedIn;
 @property (nonatomic, readonly) long long fbId;
 
 
-- (id)initWithBaseUrl:(NSString *)baseURL andAppDelegate:(DrinkAppAppDelegate*)appDelegate;
+- (id)initWithBaseUrl:(NSString *)baseURL andCoreData:(CoreDataInterface*)coreDataInterface;
 - (void)login;
 - (void)logout;
 - (void)checkInWithId:(int)itemId count:(int)count;

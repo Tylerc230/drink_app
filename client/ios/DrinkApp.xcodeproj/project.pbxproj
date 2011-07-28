@@ -25,7 +25,6 @@
 		706AA313137711F800FBAF2E /* DrinkAppTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 706AA312137711F800FBAF2E /* DrinkAppTests.h */; };
 		706AA315137711F800FBAF2E /* DrinkAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA314137711F800FBAF2E /* DrinkAppTests.m */; };
 		706AA424137A329E00FBAF2E /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA409137A329E00FBAF2E /* Facebook.m */; };
-		706AA425137A329E00FBAF2E /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA409137A329E00FBAF2E /* Facebook.m */; };
 		706AA426137A329E00FBAF2E /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 706AA40C137A329E00FBAF2E /* FBDialog.bundle */; };
 		706AA427137A329E00FBAF2E /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 706AA40C137A329E00FBAF2E /* FBDialog.bundle */; };
 		706AA428137A329E00FBAF2E /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA40E137A329E00FBAF2E /* FBDialog.m */; };
@@ -70,6 +69,18 @@
 		707C7CEF13825A3F006B6D97 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
 		707C7CF113825A4C006B6D97 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */; };
 		707C7CF413825A6B006B6D97 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
+		7096BF5013E11822004477D9 /* dummy_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 7096BF4F13E11822004477D9 /* dummy_login.json */; };
+		7096BF5313E11D63004477D9 /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF5213E11D63004477D9 /* CoreDataInterface.m */; };
+		7096BF5413E11D63004477D9 /* CoreDataInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF5213E11D63004477D9 /* CoreDataInterface.m */; };
+		7096BF5713E11EBA004477D9 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF5613E11EBA004477D9 /* Helpers.m */; };
+		7096BF5813E11EBA004477D9 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF5613E11EBA004477D9 /* Helpers.m */; };
+		7096BF5913E124CE004477D9 /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
+		7096BF5C13E12504004477D9 /* RESTInterface+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF5B13E12504004477D9 /* RESTInterface+test.m */; };
+		7096BF6313E13925004477D9 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF6213E13925004477D9 /* TestHelpers.m */; };
+		7096BF6613E14411004477D9 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 706AA409137A329E00FBAF2E /* Facebook.m */; };
+		7096BF6713E14425004477D9 /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */; };
+		7096BF6A13E146C0004477D9 /* Facebook+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 7096BF6913E146C0004477D9 /* Facebook+test.m */; };
+		7096BF6B13E14B08004477D9 /* dummy_login.json in Resources */ = {isa = PBXBuildFile; fileRef = 7096BF4F13E11822004477D9 /* dummy_login.json */; };
 		70ABAE9C13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */; };
 		70ABAE9D13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */; };
 		70ABAE9E13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */; };
@@ -81,7 +92,6 @@
 		70ABAEA413A0A73500A6BCAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */; };
 		70ABAEA513A0A73500A6BCAD /* FriendsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */; };
 		70ABAEA813A0A74B00A6BCAD /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */; };
-		70ABAEA913A0A74B00A6BCAD /* RESTInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEA713A0A74B00A6BCAD /* RESTInterface.m */; };
 		70ABAEAF13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */; };
 		70ABAEB013A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */; };
 		70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */; };
@@ -100,7 +110,6 @@
 		70CD9C771389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C781389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C791389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
-		70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -188,6 +197,17 @@
 		707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		707C7CF213825A58006B6D97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		7096BF4F13E11822004477D9 /* dummy_login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy_login.json; sourceTree = "<group>"; };
+		7096BF5113E11D63004477D9 /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
+		7096BF5213E11D63004477D9 /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
+		7096BF5513E11EBA004477D9 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		7096BF5613E11EBA004477D9 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
+		7096BF5B13E12504004477D9 /* RESTInterface+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RESTInterface+test.m"; sourceTree = "<group>"; };
+		7096BF6013E13836004477D9 /* RESTInterface+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RESTInterface+test.h"; sourceTree = "<group>"; };
+		7096BF6113E13925004477D9 /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
+		7096BF6213E13925004477D9 /* TestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelpers.m; sourceTree = "<group>"; };
+		7096BF6813E146C0004477D9 /* Facebook+test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Facebook+test.h"; sourceTree = "<group>"; };
+		7096BF6913E146C0004477D9 /* Facebook+test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Facebook+test.m"; sourceTree = "<group>"; };
 		70ABAE9413A0A73500A6BCAD /* DrinkCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrinkCountViewController.h; sourceTree = "<group>"; };
 		70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrinkCountViewController.m; sourceTree = "<group>"; };
 		70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkCountViewController.xib; sourceTree = "<group>"; };
@@ -288,11 +308,18 @@
 		706AA30B137711F800FBAF2E /* DrinkAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				7096BF4F13E11822004477D9 /* dummy_login.json */,
 				702719B513D210E900472925 /* NetworkInterfaceTests.h */,
 				702719B613D210E900472925 /* NetworkInterfaceTests.m */,
 				706AA312137711F800FBAF2E /* DrinkAppTests.h */,
 				706AA314137711F800FBAF2E /* DrinkAppTests.m */,
 				706AA30C137711F800FBAF2E /* Supporting Files */,
+				7096BF6013E13836004477D9 /* RESTInterface+test.h */,
+				7096BF5B13E12504004477D9 /* RESTInterface+test.m */,
+				7096BF6113E13925004477D9 /* TestHelpers.h */,
+				7096BF6213E13925004477D9 /* TestHelpers.m */,
+				7096BF6813E146C0004477D9 /* Facebook+test.h */,
+				7096BF6913E146C0004477D9 /* Facebook+test.m */,
 			);
 			path = DrinkAppTests;
 			sourceTree = "<group>";
@@ -419,6 +446,8 @@
 				70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */,
 				7011EF3413D1238600DF56E1 /* Drink.h */,
 				7011EF3513D1238600DF56E1 /* Drink.m */,
+				7096BF5113E11D63004477D9 /* CoreDataInterface.h */,
+				7096BF5213E11D63004477D9 /* CoreDataInterface.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -438,6 +467,8 @@
 				70CD9C571389755400366BCB /* MainWindow.xib */,
 				70CD9C5F1389755400366BCB /* main.m */,
 				70CD9C601389755400366BCB /* networking */,
+				7096BF5513E11EBA004477D9 /* Helpers.h */,
+				7096BF5613E11EBA004477D9 /* Helpers.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -497,6 +528,9 @@
 /* Begin PBXProject section */
 		706AA2D2137711F700FBAF2E /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = DrinkApp;
+			};
 			buildConfigurationList = 706AA2D5137711F700FBAF2E /* Build configuration list for PBXProject "DrinkApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -544,6 +578,7 @@
 				70CD9C6F1389755400366BCB /* MainWindow.xib in Resources */,
 				70ABAE9E13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
 				70ABAEA213A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
+				7096BF6B13E14B08004477D9 /* dummy_login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +595,7 @@
 				70CD9C701389755400366BCB /* MainWindow.xib in Resources */,
 				70ABAE9F13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
 				70ABAEA313A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
+				7096BF5013E11822004477D9 /* dummy_login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +652,8 @@
 				70ABAEAF13A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
 				70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
 				7011EF3613D1238600DF56E1 /* Drink.m in Sources */,
+				7096BF5313E11D63004477D9 /* CoreDataInterface.m in Sources */,
+				7096BF5713E11EBA004477D9 /* Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +662,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				706AA315137711F800FBAF2E /* DrinkAppTests.m in Sources */,
-				706AA425137A329E00FBAF2E /* Facebook.m in Sources */,
 				706AA429137A329E00FBAF2E /* FBDialog.m in Sources */,
 				706AA42B137A329E00FBAF2E /* FBLoginDialog.m in Sources */,
 				706AA42D137A329E00FBAF2E /* FBRequest.m in Sources */,
@@ -646,15 +683,21 @@
 				70CD9C661389755400366BCB /* Config.m in Sources */,
 				70CD9C6A1389755400366BCB /* DrinkAppAppDelegate.m in Sources */,
 				70CD9C781389755400366BCB /* main.m in Sources */,
-				70CD9C7A1389755400366BCB /* NetworkInterface.m in Sources */,
 				70ABAE9D13A0A73500A6BCAD /* DrinkCountViewController.m in Sources */,
 				70ABAEA113A0A73500A6BCAD /* DrinkSelectionViewController.m in Sources */,
 				70ABAEA513A0A73500A6BCAD /* FriendsListViewController.m in Sources */,
-				70ABAEA913A0A74B00A6BCAD /* RESTInterface.m in Sources */,
 				70ABAEB013A0A9DC00A6BCAD /* DrinkAppModel.xcdatamodeld in Sources */,
 				70ABAEB213A0A9DC00A6BCAD /* FacebookUser.m in Sources */,
 				7011EF3713D1238600DF56E1 /* Drink.m in Sources */,
 				702719B813D210E900472925 /* NetworkInterfaceTests.m in Sources */,
+				7096BF5413E11D63004477D9 /* CoreDataInterface.m in Sources */,
+				7096BF5813E11EBA004477D9 /* Helpers.m in Sources */,
+				7096BF5913E124CE004477D9 /* NetworkInterface.m in Sources */,
+				7096BF5C13E12504004477D9 /* RESTInterface+test.m in Sources */,
+				7096BF6313E13925004477D9 /* TestHelpers.m in Sources */,
+				7096BF6613E14411004477D9 /* Facebook.m in Sources */,
+				7096BF6713E14425004477D9 /* RESTInterface.m in Sources */,
+				7096BF6A13E146C0004477D9 /* Facebook+test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

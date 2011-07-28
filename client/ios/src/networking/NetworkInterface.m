@@ -36,11 +36,11 @@
 @synthesize restInterface = restInterface_;
 @dynamic fbId;
 
-- (id)initWithBaseUrl:(NSString *)baseURL andAppDelegate:(DrinkAppAppDelegate*)appDelegate
+- (id)initWithBaseUrl:(NSString *)baseURL andCoreData:(CoreDataInterface*)coreDataInterface
 {
 	if((self = [super init]))
 	{
-		appDelegate_ = [appDelegate retain];
+		coreDataInterface_ = [coreDataInterface retain];
 		facebook_ = [[Facebook alloc] initWithAppId:kFBAppId];
 		restInterface_ = [[RESTInterface alloc] initWithBaseURL:baseURL];
 		NSString * accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:kFBAccessTokenKey];
@@ -63,7 +63,7 @@
 }
 - (void)dealloc
 {
-	[appDelegate_ release], appDelegate_ = nil;
+	[coreDataInterface_ release], coreDataInterface_ = nil;
 	[facebook_ release], facebook_ = nil;
 	[super dealloc];
 }
@@ -75,6 +75,7 @@
 	NSArray * permissions = [NSArray arrayWithObjects:@"offline_access", nil];
 	[self.facebook authorize:permissions delegate:self];
 }
+
 - (void)logout
 {
 	[self.facebook logout:self];
@@ -196,7 +197,7 @@
 - (void)saveFriends:(NSArray *)friends
 {	
 	for (NSDictionary * friend in friends) {
-		FacebookUser * fbUser = (FacebookUser *)[NSEntityDescription insertNewObjectForEntityForName:@"FacebookUser" inManagedObjectContext:appDelegate_.managedObjectContext];
+		FacebookUser * fbUser = (FacebookUser *)[coreDataInterface_ createObjectOfType:@"FacebookUser"];
 		fbUser.fbid = [friend objectForKey:@"fb_id"];
 		fbUser.firstName = [friend objectForKey:@"first_name"];
 		fbUser.lastName = [friend objectForKey:@"last_name"];
@@ -204,7 +205,7 @@
 
 		
 	}
-	[appDelegate_ saveContext];
+	[coreDataInterface_ saveContext];
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
 }
 
@@ -212,10 +213,10 @@
 {
 	//TODO: truncate table
 	for (NSDictionary * drinkDict in data) {
-		Drink * drink = (Drink*)[NSEntityDescription insertNewObjectForEntityForName:@"Drink" inManagedObjectContext:appDelegate_.managedObjectContext];
+		Drink * drink = (Drink*)[coreDataInterface_ createObjectOfType:@"Drink"];
 		drink.name = [drinkDict objectForKey:@"name"];
 	}
-	[appDelegate_ saveContext];
+	[coreDataInterface_ saveContext];
 
 }
 

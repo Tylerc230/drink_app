@@ -31,7 +31,6 @@
 	[super dealloc];
 }
 
-
 - (void)invokeAction:(ResourceAction)action onController:(NSString *)controller data:(NSDictionary *)data target:(id)target callback:(SEL)callback
 {
 	NSString * urlStr = [NSString stringWithFormat:@"%@/%@", self.baseURL, controller];
