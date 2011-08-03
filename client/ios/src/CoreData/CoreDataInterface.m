@@ -36,6 +36,32 @@
 	return [NSEntityDescription insertNewObjectForEntityForName:objectType inManagedObjectContext:self.managedObjectContext];
 }
 
+- (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate
+{
+	NSFetchRequest * request = [[NSFetchRequest alloc] init];
+	NSEntityDescription * description = [NSEntityDescription entityForName:type inManagedObjectContext:self.managedObjectContext];
+	NSAssert(description != nil, @"Core Data Managed Object of type %@ does not exist", type);
+	[request setEntity:description];
+	NSPredicate * pred = nil;
+	if (predicate != nil) {
+		pred = [NSPredicate predicateWithFormat:predicate];
+		[request setPredicate:pred];
+	}
+
+	NSError * error = nil;
+	NSArray * items = [self.managedObjectContext executeFetchRequest:request error:&error];
+	return items;
+}
+
+- (void)removeAllObjectsOfType:(NSString *)type
+{
+	NSArray * items = [self fetchType:type withPredicate:nil];
+	for (NSManagedObject * item in items) {
+		[self.managedObjectContext deleteObject:item];
+	}
+	[self saveContext];
+}
+
 - (void)saveContext
 {
     NSError *error = nil;

@@ -27,6 +27,7 @@
 	  expirationDate:(NSDate *)expirationDate;
 - (void)saveFriends:(NSArray *)friends;
 - (void)saveDrinks:(NSArray *)data;
+- (void)removeDrinks;
 @property (nonatomic, readonly) Facebook * facebook;
 @property (nonatomic, readonly) RESTInterface * restInterface;
 @end
@@ -211,7 +212,7 @@
 
 - (void)saveDrinks:(NSArray *)data
 {
-	//TODO: truncate table
+	[self removeDrinks];
 	for (NSDictionary * drinkDict in data) {
 		Drink * drink = (Drink*)[coreDataInterface_ createObjectOfType:@"Drink"];
 		drink.name = [drinkDict objectForKey:@"name"];
@@ -222,6 +223,12 @@
 
 - (void)removeFriends
 {
+	[coreDataInterface_ removeAllObjectsOfType:@"FacebookUser"];
+}
+
+- (void)removeDrinks
+{
+	[coreDataInterface_ removeAllObjectsOfType:@"Drink"];
 }
 
 #pragma mark - 

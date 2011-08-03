@@ -17,6 +17,8 @@
 @property (nonatomic, readonly) NSManagedObjectContext * managedObjectContext;
 
 - (id)createObjectOfType:(NSString *)objectType;
+- (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate;
+- (void)removeAllObjectsOfType:(NSString *)type;
 - (void)saveContext;
 
 @end
