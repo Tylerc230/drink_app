@@ -97,6 +97,8 @@
 		70ABAEB113A0A9DC00A6BCAD /* FacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */; };
 		70ABAEB213A0A9DC00A6BCAD /* FacebookUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */; };
 		70ABAEB413A0AE7600A6BCAD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ABAEB313A0AE7600A6BCAD /* CoreData.framework */; };
+		70B33EAB13E92049009C15BB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B33EA913E92049009C15BB /* FriendsListView.xib */; };
+		70B33EAC13E92049009C15BB /* FriendsListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B33EA913E92049009C15BB /* FriendsListView.xib */; };
 		70CD9C651389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C661389755400366BCB /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C4E1389755400366BCB /* Config.m */; };
 		70CD9C671389755400366BCB /* DrinkApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */; };
@@ -222,6 +224,7 @@
 		70ABAEAD13A0A9DC00A6BCAD /* FacebookUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookUser.h; sourceTree = "<group>"; };
 		70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookUser.m; sourceTree = "<group>"; };
 		70ABAEB313A0AE7600A6BCAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		70B33EAA13E92049009C15BB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FriendsListView.xib; sourceTree = "<group>"; };
 		70CD9C4D1389755400366BCB /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		70CD9C4E1389755400366BCB /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		70CD9C4F1389755400366BCB /* DrinkApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrinkApp-Info.plist"; sourceTree = "<group>"; };
@@ -465,6 +468,7 @@
 				70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */,
 				70CD9C551389755400366BCB /* InfoPlist.strings */,
 				70CD9C571389755400366BCB /* MainWindow.xib */,
+				70B33EA913E92049009C15BB /* FriendsListView.xib */,
 				70CD9C5F1389755400366BCB /* main.m */,
 				70CD9C601389755400366BCB /* networking */,
 				7096BF5513E11EBA004477D9 /* Helpers.h */,
@@ -579,6 +583,7 @@
 				70ABAE9E13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
 				70ABAEA213A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 				7096BF6B13E14B08004477D9 /* dummy_login.json in Resources */,
+				70B33EAB13E92049009C15BB /* FriendsListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +601,7 @@
 				70ABAE9F13A0A73500A6BCAD /* DrinkCountViewController.xib in Resources */,
 				70ABAEA313A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 				7096BF5013E11822004477D9 /* dummy_login.json in Resources */,
+				70B33EAC13E92049009C15BB /* FriendsListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +724,14 @@
 				706AA30F137711F800FBAF2E /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		70B33EA913E92049009C15BB /* FriendsListView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70B33EAA13E92049009C15BB /* en */,
+			);
+			name = FriendsListView.xib;
 			sourceTree = "<group>";
 		};
 		70CD9C551389755400366BCB /* InfoPlist.strings */ = {

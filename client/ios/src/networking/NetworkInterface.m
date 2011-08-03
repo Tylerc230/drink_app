@@ -151,9 +151,9 @@
 	return facebook_;
 }
 
-- (void)getFriends
+- (NSArray *)getFriends
 {
-	[self createSession];
+	return [coreDataInterface_ fetchType:@"FacebookUser" withPredicate:nil];
 }
 
 /* Posts a 'status changed' notification to update the ui after login*/

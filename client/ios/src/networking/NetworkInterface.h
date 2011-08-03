@@ -40,7 +40,7 @@
 - (void)login;
 - (void)logout;
 - (void)checkInWithId:(int)itemId count:(int)count;
-- (void)getFriends;
+- (NSArray *)getFriends;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 @end

@@ -8,6 +8,7 @@
 
 #import "FriendsListViewController.h"
 #import "NetworkInterface.h"
+#import "FacebookUser.h"
 #define kPlayingSectionId 0
 #define kNotPlayingSectionId 1
 #define kNumSections 2
@@ -66,6 +67,7 @@
 
 - (void)friendsUpdated:(NSNotification *)notif
 {
+	friends_ = [[networkInterface_ getFriends] retain];
 	[tableView_ reloadData];
 }
 
@@ -110,15 +112,16 @@
 	{
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableviewcell"];
 	}
+	FacebookUser * friend = [friends_ objectAtIndex:indexPath.row];
 	switch (indexPath.section) {
 		case kPlayingSectionId:
 		{
-		//	cell.textLabel.text = [friend objectForKey:@"first_name"];
+			cell.textLabel.text = friend.firstName;
 			break;
 		}
 		case kNotPlayingSectionId:
 		{
-		//	cell.textLabel.text = [friend objectForKey:@"first_name"];
+			cell.textLabel.text = friend.firstName;
 			break;
 		}
 			
@@ -134,7 +137,7 @@
 		case kPlayingSectionId:
 			return 0;
 		case kNotPlayingSectionId:
-			return 0;
+			return friends_.count;
 		default:
 			return 0;
 	}
