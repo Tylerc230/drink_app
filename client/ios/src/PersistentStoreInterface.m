@@ -35,8 +35,19 @@
 
 - (NSArray *)drinksWithTagsLike:(NSString *)searchString
 {
-	return nil;
+	NSArray * tags = [coreDataInterface_ fetchType:@"Tag" withPredicate:[NSString stringWithFormat:@"tagName beginswith '%@'", searchString]];
+	NSMutableSet * drinks = [[NSMutableSet alloc] initWithCapacity:tags.count * 5];
+	for (Tag * tag in tags) {
+		[drinks addObjectsFromArray:[tag.drinks allObjects]];
+	}
+	return [drinks allObjects];
 }
+
+- (NSArray *)drinksWithNameLike:(NSString *)searchString
+{
+	return [coreDataInterface_ fetchType:@"Drink" withPredicate:[NSString stringWithFormat:@"name beginswith '%@'", searchString]];	
+}
+
 #pragma mark - 
 #pragma user info
 

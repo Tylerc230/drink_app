@@ -85,7 +85,11 @@
 #pragma mark - UISearchDisplayDelegate methods
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-	drinksDisplayed_ = [self.persistentStoreInterface drinksWithTagsLike:searchString];
+	NSMutableSet * drinks = [[NSMutableSet alloc] initWithArray:[self.persistentStoreInterface drinksWithNameLike:searchString]];
+	[drinks addObjectsFromArray:[self.persistentStoreInterface drinksWithTagsLike:searchString]];
+	[drinksDisplayed_ release];
+	drinksDisplayed_ = [[drinks allObjects] retain];
+	[drinks release];
 	return YES;
 }
 
