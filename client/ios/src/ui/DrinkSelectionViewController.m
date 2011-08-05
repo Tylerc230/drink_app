@@ -10,9 +10,7 @@
 
 
 @implementation DrinkSelectionViewController
-@synthesize networkInterface = networkInterface_;
-
-static NSString * drinks[] = {@"beer", @"wine", @"whisky", @"manhattan"};
+@synthesize networkInterface = networkInterface_, persistentStoreInterface = persistentStoreInterface;
 
 - (id)initWithNumDrinks:(int)numDrinks
 {
@@ -26,6 +24,7 @@ static NSString * drinks[] = {@"beer", @"wine", @"whisky", @"manhattan"};
 - (void)dealloc
 {
 	self.networkInterface = nil;
+	self.persistentStoreInterface = nil;
     [super dealloc];
 }
 
@@ -83,6 +82,13 @@ static NSString * drinks[] = {@"beer", @"wine", @"whisky", @"manhattan"};
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+#pragma mark - UISearchDisplayDelegate methods
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+	drinksDisplayed_ = [self.persistentStoreInterface drinksWithTagsLike:searchString];
+	return YES;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -96,7 +102,7 @@ static NSString * drinks[] = {@"beer", @"wine", @"whisky", @"manhattan"};
 {
 
     // Return the number of rows in the section.
-    return 4;
+    return drinksDisplayed_.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,7 +114,7 @@ static NSString * drinks[] = {@"beer", @"wine", @"whisky", @"manhattan"};
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	cell.textLabel.text = drinks[indexPath.row];
+	cell.textLabel.text = [[drinksDisplayed_ objectAtIndex:indexPath.row] name];
     
     return cell;
 }

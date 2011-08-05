@@ -12,8 +12,11 @@
 @interface DrinkSelectionViewController : UITableViewController {
     int numDrinks_;
 	NetworkInterface * networkInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
+	NSArray * drinksDisplayed_;
 }
 @property (nonatomic, retain) NetworkInterface * networkInterface;
+@property (nonatomic, retain) PersistentStoreInterface * persistentStoreInterface;
 
 - (id)initWithNumDrinks:(int)numDrinks;
 @end

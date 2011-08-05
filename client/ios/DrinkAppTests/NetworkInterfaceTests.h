@@ -19,7 +19,7 @@
 
 @interface NetworkInterfaceTests : SenTestCase {
 	NetworkInterface * networkInterface_;
-	CoreDataInterface * coreDataInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
 }
 
 @end

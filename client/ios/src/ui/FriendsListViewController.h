@@ -13,10 +13,12 @@
     IBOutlet UITableView * tableView_;
 	IBOutlet UIBarButtonItem * loginButton_;
 	NetworkInterface * networkInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
 	NSArray * friends_;
 	
 }
 @property (nonatomic, retain) NetworkInterface * networkInterface;
+@property (nonatomic, retain) PersistentStoreInterface * persistentStoreInterface;
 
 - (IBAction)login:(id)sender;
 @end

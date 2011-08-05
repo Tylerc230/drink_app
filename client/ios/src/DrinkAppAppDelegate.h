@@ -12,13 +12,13 @@
 #import "Config.h"
 #import "FriendsListViewController.h"
 #import "DrinkCountViewController.h"
-#import "CoreDataInterface.h"
+#import "PersistentStoreInterface.h"
 
 
 @interface DrinkAppAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
 	NetworkInterface * networkInterface_;
 	Config * config_;
-	CoreDataInterface * coreDataInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
 	
 	IBOutlet FriendsListViewController * friendView_;
 	IBOutlet DrinkCountViewController * drinkCountView_;

@@ -31,8 +31,8 @@
     [super setUp];
 	[self clearCoreData];
 	
-	coreDataInterface_ = [[CoreDataInterface alloc] init];
-	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:@"http://localhost" andCoreData:coreDataInterface_];
+	persistentStoreInterface_ = [[PersistentStoreInterface alloc] init];
+	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:@"http://localhost" andPersistentStore:persistentStoreInterface_];
 
 }
 
@@ -56,19 +56,19 @@
 - (void)tearDown
 {
 	[networkInterface_ release];
-	[coreDataInterface_ release];
+	[persistentStoreInterface_ release];
     [super tearDown];
 }
 
 
 - (void)validateCoreData:(NSString *)test count:(int)expectedCount type:(NSString*) type
 {
-	NSEntityDescription * entityDescription = [NSEntityDescription entityForName:type inManagedObjectContext:coreDataInterface_.managedObjectContext];
+	NSEntityDescription * entityDescription = [NSEntityDescription entityForName:type inManagedObjectContext:persistentStoreInterface_->coreDataInterface_.managedObjectContext];
 	STAssertNotNil(entityDescription, @"Entity description nil");
 	NSFetchRequest * request = [[[NSFetchRequest alloc] init] autorelease];
 	[request setEntity:entityDescription];
 	NSError * error = nil;
-	NSUInteger count = [coreDataInterface_.managedObjectContext countForFetchRequest:request error:&error];
+	NSUInteger count = [persistentStoreInterface_->coreDataInterface_.managedObjectContext countForFetchRequest:request error:&error];
 	STAssertNil(error, @"Drinks fetch failed %@", error);
 	STAssertTrue(count == expectedCount, @"%@. Wrong number of %@ returned %d should have been %d",test, type, count, expectedCount);
 }
@@ -102,7 +102,7 @@
 - (void)testDrinkContent
 {
 	[networkInterface_ login];
-	NSArray * drinks = [coreDataInterface_ fetchType:@"Drink" withPredicate:nil];
+	NSArray * drinks = [persistentStoreInterface_->coreDataInterface_ fetchType:@"Drink" withPredicate:nil];
 	for (int i = 0; i < drinks.count; i++) 
 	{
 		Drink * drink = [drinks objectAtIndex:i];

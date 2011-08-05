@@ -11,8 +11,10 @@
 
 @interface DrinkCountViewController : UIViewController {
     NetworkInterface * networkInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
 }
 @property (nonatomic, retain) NetworkInterface * networkInterface;
+@property (nonatomic, retain) PersistentStoreInterface * persistentStoreInterface;
 - (IBAction)checkin:(UIButton *)sender;
 
 @end

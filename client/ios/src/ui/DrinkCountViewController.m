@@ -10,7 +10,7 @@
 #import "DrinkSelectionViewController.h"
 
 @implementation DrinkCountViewController
-@synthesize networkInterface = networkInterface_;
+@synthesize networkInterface = networkInterface_, persistentStoreInterface = persistentStoreInterface_;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -23,6 +23,7 @@
 - (void)dealloc
 {
 	self.networkInterface = nil;
+	self.persistentStoreInterface = nil;
     [super dealloc];
 }
 
@@ -61,6 +62,7 @@
 	int numDrinks = sender.tag;
 	DrinkSelectionViewController * selectionView = [[DrinkSelectionViewController alloc] initWithNumDrinks:numDrinks];
 	selectionView.networkInterface = self.networkInterface;
+	selectionView.persistentStoreInterface = self.persistentStoreInterface;
 	[self.navigationController pushViewController:selectionView animated:YES];
 	[selectionView release];
 }

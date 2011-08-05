@@ -10,18 +10,13 @@
 #import "CoreData/CoreData.h"
 #import "Facebook.h"
 #import "RESTInterface.h"
-#import "CoreDataInterface.h"
+#import "PersistentStoreInterface.h"
 
 //Notifications
 #define kLoggedInStatusChangedNotif @"LoggedInStatusChanged"
-#define kFriendDataLoadedNotif @"FriendDataLoaded"
 
 //Keys
 #define kLoggedInStatus @"LoggedInStatus"
-#define kFBID @"FBID"
-#define kFirstName @"FirstName"
-#define kLastName @"LastName"
-#define kPicURL @"picURL"
 
 @class DrinkAppAppDelegate;
 
@@ -29,18 +24,16 @@
     @private
 	Facebook * facebook_;
 	RESTInterface * restInterface_;
+	PersistentStoreInterface * persistentStoreInterface_;
 	BOOL loggedIn_;
-	CoreDataInterface * coreDataInterface_;
 }
 @property (nonatomic, readonly) BOOL loggedIn;
-@property (nonatomic, readonly) long long fbId;
 
 
-- (id)initWithBaseUrl:(NSString *)baseURL andCoreData:(CoreDataInterface*)coreDataInterface;
+- (id)initWithBaseUrl:(NSString *)baseURL andPersistentStore:(PersistentStoreInterface*)persistentStoreInterface;
 - (void)login;
 - (void)logout;
 - (void)checkInWithId:(int)itemId count:(int)count;
-- (NSArray *)getFriends;
 
 - (BOOL)handleOpenURL:(NSURL *)url;
 @end

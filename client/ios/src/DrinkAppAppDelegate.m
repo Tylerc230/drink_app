@@ -25,11 +25,14 @@
 	[self.window makeKeyAndVisible];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusChanged:) name:kLoggedInStatusChangedNotif object:nil];
 	config_ = [[Config alloc] init];
-	coreDataInterface_ = [[CoreDataInterface alloc] init];
-	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:self.config.serverBaseURL andCoreData:coreDataInterface_];
+	persistentStoreInterface_ = [[PersistentStoreInterface alloc] init];
+	networkInterface_ = [[NetworkInterface alloc] initWithBaseUrl:self.config.serverBaseURL andPersistentStore:persistentStoreInterface_];
 	
 	friendView_.networkInterface = networkInterface_;
+	friendView_.persistentStoreInterface = persistentStoreInterface_;
+	
 	drinkCountView_.networkInterface = networkInterface_;
+	drinkCountView_.persistentStoreInterface = persistentStoreInterface_;
 
     return YES;
 }

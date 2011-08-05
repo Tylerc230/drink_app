@@ -14,7 +14,7 @@
 #define kNumSections 2
 
 @implementation FriendsListViewController
-@synthesize networkInterface = networkInterface_;
+@synthesize networkInterface = networkInterface_, persistentStoreInterface = persistentStoreInterface_;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -67,7 +67,7 @@
 
 - (void)friendsUpdated:(NSNotification *)notif
 {
-	friends_ = [[networkInterface_ getFriends] retain];
+	friends_ = [[persistentStoreInterface_ getFriends] retain];
 	[tableView_ reloadData];
 }
 
