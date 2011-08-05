@@ -15,6 +15,8 @@
 		702719C313D2151C00472925 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEE13825A3F006B6D97 /* SystemConfiguration.framework */; };
 		702719C413D2151C00472925 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CEC13825A2F006B6D97 /* CFNetwork.framework */; };
 		702719C513D2153E00472925 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */; };
+		702BC8F313EB8E1B0032C555 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 702BC8F213EB8E1B0032C555 /* Tag.m */; };
+		702BC8F413EB8E1B0032C555 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 702BC8F213EB8E1B0032C555 /* Tag.m */; };
 		706AA2E0137711F800FBAF2E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2DF137711F800FBAF2E /* UIKit.framework */; };
 		706AA2E2137711F800FBAF2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E1137711F800FBAF2E /* Foundation.framework */; };
 		706AA2E4137711F800FBAF2E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706AA2E3137711F800FBAF2E /* CoreGraphics.framework */; };
@@ -136,6 +138,8 @@
 		7011EF3513D1238600DF56E1 /* Drink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drink.m; sourceTree = "<group>"; };
 		702719B513D210E900472925 /* NetworkInterfaceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterfaceTests.h; sourceTree = "<group>"; };
 		702719B613D210E900472925 /* NetworkInterfaceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterfaceTests.m; sourceTree = "<group>"; };
+		702BC8F113EB8E1B0032C555 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
+		702BC8F213EB8E1B0032C555 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		706AA2DB137711F800FBAF2E /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706AA2DF137711F800FBAF2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		706AA2E1137711F800FBAF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -445,6 +449,8 @@
 			isa = PBXGroup;
 			children = (
 				70ABAEAB13A0A9DB00A6BCAD /* DrinkAppModel.xcdatamodeld */,
+				702BC8F113EB8E1B0032C555 /* Tag.h */,
+				702BC8F213EB8E1B0032C555 /* Tag.m */,
 				70ABAEAD13A0A9DC00A6BCAD /* FacebookUser.h */,
 				70ABAEAE13A0A9DC00A6BCAD /* FacebookUser.m */,
 				7011EF3413D1238600DF56E1 /* Drink.h */,
@@ -660,6 +666,7 @@
 				7011EF3613D1238600DF56E1 /* Drink.m in Sources */,
 				7096BF5313E11D63004477D9 /* CoreDataInterface.m in Sources */,
 				7096BF5713E11EBA004477D9 /* Helpers.m in Sources */,
+				702BC8F313EB8E1B0032C555 /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +711,7 @@
 				7096BF6613E14411004477D9 /* Facebook.m in Sources */,
 				7096BF6713E14425004477D9 /* RESTInterface.m in Sources */,
 				7096BF6A13E146C0004477D9 /* Facebook+test.m in Sources */,
+				702BC8F413EB8E1B0032C555 /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

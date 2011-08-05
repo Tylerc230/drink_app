@@ -11,6 +11,7 @@
 #import "FacebookUser.h"
 #import "DrinkAppAppDelegate.h"
 #import "Drink.h"
+#import "Tag.h"
 
 #define kFBAppId @"165584076834065"
 #define kFBAccessTokenKey @"AccessTokenKey"
@@ -28,6 +29,7 @@
 - (void)saveFriends:(NSArray *)friends;
 - (void)saveDrinks:(NSArray *)data;
 - (void)removeDrinks;
+- (NSSet *)createTags:(NSArray *)tags;
 @property (nonatomic, readonly) Facebook * facebook;
 @property (nonatomic, readonly) RESTInterface * restInterface;
 @end
@@ -216,9 +218,31 @@
 	for (NSDictionary * drinkDict in data) {
 		Drink * drink = (Drink*)[coreDataInterface_ createObjectOfType:@"Drink"];
 		drink.name = [drinkDict objectForKey:@"name"];
+		NSArray * tagNames = [[drinkDict objectForKey:@"tags"] componentsSeparatedByString:@","];
+		drink.tags = [self createTags:tagNames];
 	}
 	[coreDataInterface_ saveContext];
 
+}
+
+- (NSSet *)createTags:(NSArray *)tagNames
+{
+	NSMutableSet * tags = [[NSMutableSet alloc] initWithCapacity:tagNames.count];
+	for (NSString * tagName in tagNames)
+	{
+		tagName = [tagName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+		Tag * tag = nil;
+		NSArray * possibleTags = [coreDataInterface_ fetchType:@"Tag" withPredicate:[NSString stringWithFormat:@"tagName == '%@'", tagName]];
+		if(possibleTags.count == 0)
+		{
+			tag = [coreDataInterface_ createObjectOfType:@"Tag"];
+			tag.tagName = tagName;
+		}else{
+			tag = [possibleTags objectAtIndex:0];
+		}
+		[tags addObject:tag];
+	}
+	return tags;
 }
 
 - (void)removeFriends

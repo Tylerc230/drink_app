@@ -7,10 +7,11 @@
 //
 
 #import "Drink.h"
-
+#import "Tag.h"
 
 @implementation Drink
 @dynamic name;
+@dynamic tags;
 
 
 @end
