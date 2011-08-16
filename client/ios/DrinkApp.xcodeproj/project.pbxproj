@@ -445,6 +445,7 @@
 				70ABAE9913A0A73500A6BCAD /* DrinkSelectionViewController.xib */,
 				70ABAE9A13A0A73500A6BCAD /* FriendsListViewController.h */,
 				70ABAE9B13A0A73500A6BCAD /* FriendsListViewController.m */,
+				70B33EA913E92049009C15BB /* FriendsListView.xib */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -478,7 +479,6 @@
 				70CD9C521389755400366BCB /* DrinkAppAppDelegate.m */,
 				70CD9C551389755400366BCB /* InfoPlist.strings */,
 				70CD9C571389755400366BCB /* MainWindow.xib */,
-				70B33EA913E92049009C15BB /* FriendsListView.xib */,
 				70CD9C5F1389755400366BCB /* main.m */,
 				70CD9C601389755400366BCB /* networking */,
 				7096BF5513E11EBA004477D9 /* Helpers.h */,
@@ -748,6 +748,7 @@
 				70B33EAA13E92049009C15BB /* en */,
 			);
 			name = FriendsListView.xib;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		70CD9C551389755400366BCB /* InfoPlist.strings */ = {

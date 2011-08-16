@@ -33,6 +33,7 @@
 - (id)initWithBaseUrl:(NSString *)baseURL andPersistentStore:(PersistentStoreInterface*)persistentStoreInterface;
 - (void)login;
 - (void)logout;
+- (void)cheersFriend:(long long)fbid;
 - (void)checkInWithId:(int)itemId count:(int)count;
 
 - (BOOL)handleOpenURL:(NSURL *)url;

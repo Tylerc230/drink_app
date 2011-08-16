@@ -74,6 +74,13 @@
 	[self.facebook logout:self];
 }
 
+- (void)cheersFriend:(long long)fbid
+{
+	NSNumber * toFbid = [NSNumber numberWithLongLong:fbid];
+	NSDictionary * payload = [NSDictionary dictionaryWithObjectsAndKeys:toFbid, @"fbid", nil];
+	[self.restInterface invokeAction:RACreate onController:@"cheers" data:payload target:self callback:@selector(onCheers:)];
+}
+
 //update our servers with auth token and get initial data
 - (void)createSession
 {
@@ -112,6 +119,11 @@
 	loggedIn_ = YES;
 	[self postStatusChange];
 
+	
+}
+
+- (void)onCheers:(ASIFormDataRequest *)request
+{
 	
 }
 

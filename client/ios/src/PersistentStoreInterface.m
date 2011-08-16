@@ -75,9 +75,10 @@
 	[self removeFriends];
 	for (NSDictionary * friend in friends) {
 		FacebookUser * fbUser = (FacebookUser *)[coreDataInterface_ createObjectOfType:@"FacebookUser"];
-		fbUser.fbid = [friend objectForKey:@"fb_id"];
+		fbUser.fbid = [friend objectForKey:@"uid"];
 		fbUser.firstName = [friend objectForKey:@"first_name"];
 		fbUser.lastName = [friend objectForKey:@"last_name"];
+		fbUser.imgURL = [friend objectForKey:@"pic_square"];
 		NSNumber * user = [friend objectForKey:@"is_app_user"];
 		fbUser.isAppUser = user;
 		

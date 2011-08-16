@@ -62,6 +62,12 @@
 	}
 }
 
+- (IBAction)cheersFriend:(UIButton *)cheersButton
+{
+	FacebookUser * toCheers = [playingFriends_ objectAtIndex:cheersButton.tag];
+	[networkInterface_ cheersFriend:[toCheers.fbid longLongValue]];
+}
+
 #pragma mark -
 #pragma notifications
 
@@ -119,6 +125,12 @@
 		{
 			FacebookUser * friend = [playingFriends_ objectAtIndex:indexPath.row];
 			cell.textLabel.text = friend.firstName;
+			UIButton * cheersButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+			cheersButton.frame = CGRectMake(0, 0, 75., 30.f);
+			[cheersButton setTitle:@"Cheers!" forState:UIControlStateNormal];
+			cheersButton.tag = indexPath.row;
+			[cheersButton addTarget:self action:@selector(cheersFriend:) forControlEvents:UIControlEventTouchUpInside];
+			cell.accessoryView = cheersButton;
 			break;
 		}
 		case kNotPlayingSectionId:
