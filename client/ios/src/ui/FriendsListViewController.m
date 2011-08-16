@@ -9,6 +9,7 @@
 #import "FriendsListViewController.h"
 #import "NetworkInterface.h"
 #import "FacebookUser.h"
+#import "Three20/Three20.h"
 #define kPlayingSectionId 0
 #define kNotPlayingSectionId 1
 #define kNumSections 2
@@ -125,6 +126,11 @@
 		{
 			FacebookUser * friend = [playingFriends_ objectAtIndex:indexPath.row];
 			cell.textLabel.text = friend.firstName;
+			TTImageView * profileImage = [[TTImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+			[profileImage setUrlPath:friend.imgURL];
+			[cell.contentView addSubview:profileImage];
+			[profileImage release];
+										
 			UIButton * cheersButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 			cheersButton.frame = CGRectMake(0, 0, 75., 30.f);
 			[cheersButton setTitle:@"Cheers!" forState:UIControlStateNormal];
