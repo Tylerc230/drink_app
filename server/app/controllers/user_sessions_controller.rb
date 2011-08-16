@@ -1,13 +1,14 @@
 require 'net/http'
 require 'net/https'
-require File.join(File.dirname(__FILE__), '..', 'helpers/facebook_helper')
+require 'facebook'
 
 class UserSessionsController < ApplicationController
 	def create()
 		token = params[:token]
 		data = {}
 #TODO combine get_me and get_friends call to facebook
-        me = get_fb_me(token)
+        facebook = Facebook.new
+        me = facebook.get_fb_me(token)
         error = me.instance_of?(Hash) && me['error_code']
         if(error)
           data['error_code'] = error
@@ -20,7 +21,7 @@ class UserSessionsController < ApplicationController
               user_session = UserSession.new(:token => token, :fbid => fbid)
           else
               user_session.token = token
-              friend_data = get_friend_data(get_fb_friends(token))
+              friend_data = get_friend_data(facebook.get_fb_friends(token))
               data['friends'] = friend_data
           end
           data['drinks'] = get_drink_data
@@ -31,10 +32,6 @@ class UserSessionsController < ApplicationController
 	end
 
 	def destroy
-	end
-
-	def get_fb_me(token)
-		return facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user where uid = me()', token)
 	end
 
 	def get_friend_data(friends)
@@ -59,24 +56,8 @@ class UserSessionsController < ApplicationController
 
 	def get_data_for_users(uids)
 		UserSession.where(:fbid => uids)
-		
 	end
 
-	def get_fb_friends(token)
-		return facebook_fql('SELECT first_name, last_name, uid, pic_square, is_app_user FROM user WHERE uid IN ( SELECT uid2 FROM friend WHERE uid1=me())', token)
-	end
-
-	def facebook_fql(query, token)
-		url = 'api.facebook.com'
-		url_encode_token = CGI::escape(token)
-		url_encode_query = CGI::escape(query)
-		path = "/method/fql.query?format=json&query=#{url_encode_query}" + "&access_token=#{url_encode_token}"
-		http = Net::HTTP.new(url, 443)
-		http.use_ssl = true
-		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
-		return ActiveSupport::JSON.decode(data)
-		
-	end
     def get_drink_data
       rows = Drink.all
       data = []
