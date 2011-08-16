@@ -23,7 +23,9 @@
 }
 @property (nonatomic, readonly) long long fbId;
 
-- (NSArray *)getFriends;
+- (NSArray *)getAllFriends;
+- (NSArray *)getPlayingFriends;
+- (NSArray *)getNonPlayingFriends;
 - (NSArray *)drinksWithNameLike:(NSString *)searchString;
 - (NSArray *)drinksWithTagsLike:(NSString *)searchString;
 - (void)saveUserData:(long long)fbid

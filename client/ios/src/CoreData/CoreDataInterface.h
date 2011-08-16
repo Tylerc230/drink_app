@@ -18,6 +18,7 @@
 
 - (id)createObjectOfType:(NSString *)objectType;
 - (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate;
+- (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate sortOn:sort;
 - (void)removeAllObjectsOfType:(NSString *)type;
 - (void)saveContext;
 

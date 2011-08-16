@@ -15,6 +15,7 @@
 	NetworkInterface * networkInterface_;
 	PersistentStoreInterface * persistentStoreInterface_;
 	NSArray * friends_;
+    NSArray * playingFriends_;
 	
 }
 @property (nonatomic, retain) NetworkInterface * networkInterface;

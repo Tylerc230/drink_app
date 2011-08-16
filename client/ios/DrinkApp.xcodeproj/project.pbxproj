@@ -143,7 +143,7 @@
 		702BC8F113EB8E1B0032C555 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tag.h; sourceTree = "<group>"; };
 		702BC8F213EB8E1B0032C555 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tag.m; sourceTree = "<group>"; };
 		702BC8F513EB9FF60032C555 /* PersistentStoreInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistentStoreInterface.h; sourceTree = "<group>"; };
-		702BC8F613EB9FF60032C555 /* PersistentStoreInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStoreInterface.m; sourceTree = "<group>"; };
+		702BC8F613EB9FF60032C555 /* PersistentStoreInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistentStoreInterface.m; sourceTree = "<group>"; usesTabs = 1; };
 		706AA2DB137711F800FBAF2E /* DrinkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706AA2DF137711F800FBAF2E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		706AA2E1137711F800FBAF2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -207,7 +207,7 @@
 		707C7CF013825A4C006B6D97 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		707C7CF213825A58006B6D97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		707C7CF313825A6B006B6D97 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		7096BF4F13E11822004477D9 /* dummy_login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dummy_login.json; sourceTree = "<group>"; };
+		7096BF4F13E11822004477D9 /* dummy_login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dummy_login.json; sourceTree = "<group>"; };
 		7096BF5113E11D63004477D9 /* CoreDataInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataInterface.h; sourceTree = "<group>"; };
 		7096BF5213E11D63004477D9 /* CoreDataInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataInterface.m; sourceTree = "<group>"; };
 		7096BF5513E11EBA004477D9 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };

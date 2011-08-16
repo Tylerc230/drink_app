@@ -67,7 +67,8 @@
 
 - (void)friendsUpdated:(NSNotification *)notif
 {
-	friends_ = [[persistentStoreInterface_ getFriends] retain];
+	playingFriends_ = [[persistentStoreInterface_ getPlayingFriends] retain];
+	friends_ = [[persistentStoreInterface_ getNonPlayingFriends] retain];
 	[tableView_ reloadData];
 }
 
@@ -112,15 +113,17 @@
 	{
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableviewcell"];
 	}
-	FacebookUser * friend = [friends_ objectAtIndex:indexPath.row];
+
 	switch (indexPath.section) {
 		case kPlayingSectionId:
 		{
+			FacebookUser * friend = [playingFriends_ objectAtIndex:indexPath.row];
 			cell.textLabel.text = friend.firstName;
 			break;
 		}
 		case kNotPlayingSectionId:
 		{
+			FacebookUser * friend = [friends_ objectAtIndex:indexPath.row];
 			cell.textLabel.text = friend.firstName;
 			break;
 		}
@@ -135,7 +138,7 @@
 {
 	switch (section) {
 		case kPlayingSectionId:
-			return 0;
+			return playingFriends_.count;
 		case kNotPlayingSectionId:
 			return friends_.count;
 		default:

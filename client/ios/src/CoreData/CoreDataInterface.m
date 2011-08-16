@@ -38,14 +38,25 @@
 
 - (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate
 {
+	return [self fetchType:type withPredicate:predicate sortOn:nil];
+}
+- (NSArray *)fetchType:(NSString *) type withPredicate:(NSString *)predicate sortOn:sort
+{
 	NSFetchRequest * request = [[NSFetchRequest alloc] init];
 	NSEntityDescription * description = [NSEntityDescription entityForName:type inManagedObjectContext:self.managedObjectContext];
 	NSAssert(description != nil, @"Core Data Managed Object of type %@ does not exist", type);
 	[request setEntity:description];
-	NSPredicate * pred = nil;
 	if (predicate != nil) {
-		pred = [NSPredicate predicateWithFormat:predicate];
+		NSPredicate * pred = [NSPredicate predicateWithFormat:predicate];
 		[request setPredicate:pred];
+	}
+	
+	if(sort != nil)
+	{
+		NSSortDescriptor * sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sort ascending:YES];
+		[request setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+		[sortDescriptor release];
+		
 	}
 
 	NSError * error = nil;

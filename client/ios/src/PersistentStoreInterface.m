@@ -28,26 +28,6 @@
     return self;
 }
 
-- (NSArray *)getFriends
-{
-	return [coreDataInterface_ fetchType:@"FacebookUser" withPredicate:nil];
-}
-
-- (NSArray *)drinksWithTagsLike:(NSString *)searchString
-{
-	NSArray * tags = [coreDataInterface_ fetchType:@"Tag" withPredicate:[NSString stringWithFormat:@"tagName beginswith '%@'", searchString]];
-	NSMutableSet * drinks = [[NSMutableSet alloc] initWithCapacity:tags.count * 5];
-	for (Tag * tag in tags) {
-		[drinks addObjectsFromArray:[tag.drinks allObjects]];
-	}
-	return [drinks allObjects];
-}
-
-- (NSArray *)drinksWithNameLike:(NSString *)searchString
-{
-	return [coreDataInterface_ fetchType:@"Drink" withPredicate:[NSString stringWithFormat:@"name beginswith '%@'", searchString]];	
-}
-
 #pragma mark - 
 #pragma user info
 
@@ -89,14 +69,17 @@
 	[def synchronize];	
 }
 
+#pragma Friend methods
 - (void)saveFriends:(NSArray *)friends
 {	
+	[self removeFriends];
 	for (NSDictionary * friend in friends) {
 		FacebookUser * fbUser = (FacebookUser *)[coreDataInterface_ createObjectOfType:@"FacebookUser"];
 		fbUser.fbid = [friend objectForKey:@"fb_id"];
 		fbUser.firstName = [friend objectForKey:@"first_name"];
 		fbUser.lastName = [friend objectForKey:@"last_name"];
-		fbUser.isAppUser = [friend objectForKey:@"app_user"];
+		NSNumber * user = [friend objectForKey:@"is_app_user"];
+		fbUser.isAppUser = user;
 		
 		
 	}
@@ -104,6 +87,29 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
 }
 
+- (NSArray *)getAllFriends
+{
+	return [coreDataInterface_ fetchType:@"FacebookUser" withPredicate:nil];
+}
+
+- (NSArray *)getPlayingFriends
+{
+	return [coreDataInterface_ fetchType:@"FacebookUser" withPredicate:@"isAppUser == YES" sortOn:@"firstName"];
+}
+
+- (NSArray *)getNonPlayingFriends
+{
+	return [coreDataInterface_ fetchType:@"FacebookUser" withPredicate:@"isAppUser == NO" sortOn:@"firstName"];	
+}
+
+- (void)removeFriends
+{
+	[coreDataInterface_ removeAllObjectsOfType:@"FacebookUser"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kFriendDataLoadedNotif object:self userInfo:nil];
+}
+
+
+#pragma Drink methods
 - (void)saveDrinks:(NSArray *)data
 {
 	[self removeDrinks];
@@ -117,6 +123,28 @@
 	
 }
 
+- (NSArray *)drinksWithTagsLike:(NSString *)searchString
+{
+	NSArray * tags = [coreDataInterface_ fetchType:@"Tag" withPredicate:[NSString stringWithFormat:@"tagName beginswith '%@'", searchString]];
+	NSMutableSet * drinks = [[NSMutableSet alloc] initWithCapacity:tags.count * 5];
+	for (Tag * tag in tags) {
+		[drinks addObjectsFromArray:[tag.drinks allObjects]];
+	}
+	return [drinks allObjects];
+}
+
+- (NSArray *)drinksWithNameLike:(NSString *)searchString
+{
+	return [coreDataInterface_ fetchType:@"Drink" withPredicate:[NSString stringWithFormat:@"name beginswith '%@'", searchString]];	
+}
+
+- (void)removeDrinks
+{
+	[coreDataInterface_ removeAllObjectsOfType:@"Drink"];
+}
+
+
+#pragma Tag methods
 - (NSSet *)createTags:(NSArray *)tagNames
 {
 	NSMutableSet * tags = [[NSMutableSet alloc] initWithCapacity:tagNames.count];
@@ -137,15 +165,6 @@
 	return tags;
 }
 
-- (void)removeFriends
-{
-	[coreDataInterface_ removeAllObjectsOfType:@"FacebookUser"];
-}
-
-- (void)removeDrinks
-{
-	[coreDataInterface_ removeAllObjectsOfType:@"Drink"];
-}
 
 
 @end
