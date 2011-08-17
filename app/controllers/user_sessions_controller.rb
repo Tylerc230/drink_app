@@ -38,7 +38,7 @@ class UserSessionsController < ApplicationController
 		friend_ids = []
 		friends.each do |friend|
 			if(friend['is_app_user'])
-				friend_ids = friend['uid']
+				friend_ids << friend['uid']
 			end
 		end
 		friends_data = get_data_for_users(friend_ids)
