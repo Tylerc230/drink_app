@@ -15,7 +15,7 @@ class UserSessionsController < ApplicationController
           data['error_msg'] = me['error_msg']
         else
           data['me'] = me.last
-          fbid = data['me']['id']
+          fbid = data['me']['id'].to_s
           user_session = UserSession.where(:fbid => fbid)[0]
           if(!user_session)
               user_session = UserSession.new(:token => token, :fbid => fbid)
@@ -55,7 +55,7 @@ class UserSessionsController < ApplicationController
 	end
 
 	def get_data_for_users(uids)
-		UserSession.where(:fbid => uids)
+		UserSession.where(:fbid => uids.collect{|uid| uid.to_s})
 	end
 
     def get_drink_data
