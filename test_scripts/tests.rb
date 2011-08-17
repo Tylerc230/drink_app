@@ -2,18 +2,18 @@
 require 'optparse'
 require 'net/http'
 
-def do_login(token)
-  send_post("user_sessions", {'token' => token})
+def do_login(url, token)
+  send_post(url, "user_sessions", {'token' => token})
 end
 
-def do_cheers(fbid)
-  send_post("cheers", {'fbid' => fbid})
+def do_cheers(url, fbid)
+  send_post(url, "cheers", {'fbid' => fbid})
 end
 
 
-def send_post(controller, params)
-    puts "#{controller} params: #{params.to_s}"
-	url = URI.parse("http://localhost:3000/#{controller}")
+def send_post(base_url, controller, params)
+    puts "#{base_url}/#{controller} params: #{params.to_s}"
+	url = URI.parse("#{base_url}/#{controller}")
 	res = Net::HTTP.post_form(url, params)
 	puts res.body
 end
@@ -36,6 +36,11 @@ OptionParser.new do |opts|
       options[:fbid] = fbid
     end
 
+	options[:base_url]  = "http://localhost:3000"
+	opts.on('-u', '--url URL', 'base url') do |url|
+		options[:url] = url
+	end
+
 	opts.on( '-h', '--help', 'Display this screen' ) do
 		puts opts
 		exit
@@ -43,16 +48,17 @@ OptionParser.new do |opts|
 end.parse!
 
 test =  options[:test]
+url = options[:url]
 
 case test
 	when "login"
 		token = options[:token]
-		do_login token
+		do_login url, token
 	when "checkin"
 		puts "checking in"
     when "cheers"
         fbid = options[:fbid]
-        do_cheers fbid
+        do_cheers url, fbid
 	else
 		puts "need test"
 end
