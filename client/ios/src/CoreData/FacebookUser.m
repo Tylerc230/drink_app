@@ -10,10 +10,16 @@
 
 
 @implementation FacebookUser
+@dynamic fullName;
 @dynamic fbid;
 @dynamic firstName;
 @dynamic lastName;
 @dynamic imgURL;
 @dynamic isAppUser;
+
+- (NSString *)fullName
+{
+	return [NSString stringWithFormat:@"%@ %@", self.firstName, self.lastName];
+}
 
 @end

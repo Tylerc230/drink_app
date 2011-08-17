@@ -10,6 +10,8 @@
 #import "NetworkInterface.h"
 #import "FacebookUser.h"
 #import "Three20/Three20.h"
+#import "FriendCell.h"
+
 #define kPlayingSectionId 0
 #define kNotPlayingSectionId 1
 #define kNumSections 2
@@ -115,40 +117,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"tableviewcell"];
+	FriendCell * cell = (FriendCell *)[tableView dequeueReusableCellWithIdentifier:@"friendCell"];
 	if(cell == nil)
 	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"tableviewcell"];
+		cell = [[[NSBundle mainBundle] loadNibNamed:@"FriendCell" owner:self options:nil] objectAtIndex:0];
 	}
 
+	FacebookUser * friend = nil;
 	switch (indexPath.section) {
 		case kPlayingSectionId:
 		{
-			FacebookUser * friend = [playingFriends_ objectAtIndex:indexPath.row];
-			cell.textLabel.text = friend.firstName;
-			TTImageView * profileImage = [[TTImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-			[profileImage setUrlPath:friend.imgURL];
-			[cell.contentView addSubview:profileImage];
-			[profileImage release];
-										
-			UIButton * cheersButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-			cheersButton.frame = CGRectMake(0, 0, 75., 30.f);
-			[cheersButton setTitle:@"Cheers!" forState:UIControlStateNormal];
-			cheersButton.tag = indexPath.row;
-			[cheersButton addTarget:self action:@selector(cheersFriend:) forControlEvents:UIControlEventTouchUpInside];
-			cell.accessoryView = cheersButton;
+			friend = [playingFriends_ objectAtIndex:indexPath.row];
 			break;
 		}
 		case kNotPlayingSectionId:
 		{
-			FacebookUser * friend = [friends_ objectAtIndex:indexPath.row];
-			cell.textLabel.text = friend.firstName;
+			friend = [friends_ objectAtIndex:indexPath.row];
 			break;
-		}
-			
+		}			
 		default:
 			break;
 	}
+	[cell setName:friend.fullName];
+	[cell setImageURL:friend.imgURL];
+	
 	return cell;
 }
 

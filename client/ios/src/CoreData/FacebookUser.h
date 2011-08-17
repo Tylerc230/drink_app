@@ -13,6 +13,9 @@
 @interface FacebookUser : NSManagedObject {
 @private
 }
+
+@property (nonatomic, readonly) NSString * fullName;
+
 @property (nonatomic, retain) NSNumber * fbid;
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * lastName;

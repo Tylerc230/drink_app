@@ -125,6 +125,10 @@
 		70CD9C771389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C781389755400366BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C5F1389755400366BCB /* main.m */; };
 		70CD9C791389755400366BCB /* NetworkInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CD9C621389755400366BCB /* NetworkInterface.m */; };
+		70D24B0A13FB382200FDE401 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D24B0913FB382200FDE401 /* FriendCell.m */; };
+		70D24B0B13FB382200FDE401 /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D24B0913FB382200FDE401 /* FriendCell.m */; };
+		70D24B0D13FB387100FDE401 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D24B0C13FB387100FDE401 /* FriendCell.xib */; };
+		70D24B0E13FB387100FDE401 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70D24B0C13FB387100FDE401 /* FriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +427,9 @@
 		70CD9C5F1389755400366BCB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70CD9C611389755400366BCB /* NetworkInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkInterface.h; sourceTree = "<group>"; };
 		70CD9C621389755400366BCB /* NetworkInterface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkInterface.m; sourceTree = "<group>"; };
+		70D24B0813FB382200FDE401 /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCell.h; sourceTree = "<group>"; };
+		70D24B0913FB382200FDE401 /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCell.m; sourceTree = "<group>"; };
+		70D24B0C13FB387100FDE401 /* FriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -698,6 +705,7 @@
 		70ABAE9313A0A73500A6BCAD /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				70D24B0713FB37E800FDE401 /* elements */,
 				70ABAE9413A0A73500A6BCAD /* DrinkCountViewController.h */,
 				70ABAE9513A0A73500A6BCAD /* DrinkCountViewController.m */,
 				70ABAE9613A0A73500A6BCAD /* DrinkCountViewController.xib */,
@@ -759,6 +767,16 @@
 				70CD9C621389755400366BCB /* NetworkInterface.m */,
 			);
 			path = networking;
+			sourceTree = "<group>";
+		};
+		70D24B0713FB37E800FDE401 /* elements */ = {
+			isa = PBXGroup;
+			children = (
+				70D24B0813FB382200FDE401 /* FriendCell.h */,
+				70D24B0913FB382200FDE401 /* FriendCell.m */,
+				70D24B0C13FB387100FDE401 /* FriendCell.xib */,
+			);
+			name = elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1005,6 +1023,7 @@
 				70ABAEA213A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 				7096BF6B13E14B08004477D9 /* dummy_login.json in Resources */,
 				70B33EAB13E92049009C15BB /* FriendsListView.xib in Resources */,
+				70D24B0D13FB387100FDE401 /* FriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1042,7 @@
 				70ABAEA313A0A73500A6BCAD /* DrinkSelectionViewController.xib in Resources */,
 				7096BF5013E11822004477D9 /* dummy_login.json in Resources */,
 				70B33EAC13E92049009C15BB /* FriendsListView.xib in Resources */,
+				70D24B0E13FB387100FDE401 /* FriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1083,6 +1103,7 @@
 				7096BF5713E11EBA004477D9 /* Helpers.m in Sources */,
 				702BC8F313EB8E1B0032C555 /* Tag.m in Sources */,
 				702BC8F713EB9FF60032C555 /* PersistentStoreInterface.m in Sources */,
+				70D24B0A13FB382200FDE401 /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,6 +1150,7 @@
 				7096BF6A13E146C0004477D9 /* Facebook+test.m in Sources */,
 				702BC8F413EB8E1B0032C555 /* Tag.m in Sources */,
 				702BC8F813EB9FF60032C555 /* PersistentStoreInterface.m in Sources */,
+				70D24B0B13FB382200FDE401 /* FriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
