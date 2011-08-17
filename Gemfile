@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
+gem 'rake'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -15,8 +15,12 @@ gem 'sqlite3'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
- gem 'acts-as-taggable-on'
+group :development, :test do
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+gem 'acts-as-taggable-on'
 
 # Bundle the extra gems:
 # gem 'bj'
