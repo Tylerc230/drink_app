@@ -12,7 +12,7 @@ end
 
 
 def send_post(base_url, controller, params)
-    puts "#{base_url}/#{controller} params: #{params.to_s}"
+    puts "url: #{base_url}/#{controller} params: #{params.to_s}"
 	url = URI.parse("#{base_url}/#{controller}")
 	res = Net::HTTP.post_form(url, params)
 	puts res.body
@@ -38,7 +38,7 @@ OptionParser.new do |opts|
 
 	options[:base_url]  = "http://localhost:3000"
 	opts.on('-u', '--url URL', 'base url') do |url|
-		options[:url] = url
+		options[:base_url] = url
 	end
 
 	opts.on( '-h', '--help', 'Display this screen' ) do
@@ -48,7 +48,7 @@ OptionParser.new do |opts|
 end.parse!
 
 test =  options[:test]
-url = options[:url]
+url = options[:base_url]
 
 case test
 	when "login"
