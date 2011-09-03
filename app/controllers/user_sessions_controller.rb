@@ -1,7 +1,6 @@
 require 'net/http'
 require 'net/https'
 require 'facebook'
-#test change
 
 class UserSessionsController < ApplicationController
 	def create()

@@ -38,6 +38,7 @@
 		restInterface_ = [[RESTInterface alloc] initWithBaseURL:baseURL];
 		NSString * accessToken = [[NSUserDefaults standardUserDefaults] stringForKey:kFBAccessTokenKey];
 		NSDate * expirationDate = [[NSUserDefaults standardUserDefaults] objectForKey:kFBExpirationDate];
+		NSLog(@"Base server url %@", baseURL);
 		NSLog(@"Using facebook access token: %@", accessToken);
 		if(accessToken)
 			self.facebook.accessToken = accessToken;
