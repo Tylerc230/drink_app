@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110720042836) do
+ActiveRecord::Schema.define(:version => 20110906053222) do
 
   create_table "checkins", :force => true do |t|
     t.integer  "user_id"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(:version => 20110720042836) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "rewards", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "condition"
+    t.string   "meta_data"
+    t.string   "tag"
+    t.string   "title"
+    t.string   "text"
   end
 
   create_table "taggings", :force => true do |t|

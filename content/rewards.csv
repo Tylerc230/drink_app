@@ -1,0 +1,4 @@
+id,condition,meta_data,tag,title,text
+1,drinks_per_session,count=6,beer,Joe Sixpack!,You just won the joe 6 pack award for drinking 6 beers in 1 session.
+2,drinks_in_timerange,count=1:range=6:00-12:00,,Breakfast of Champions!,You just wont the Breakfast of Champions award for drinking before noon.
+3,drink_count,count=1000,beer,"1,000 Beers!","You just drank your 1,000th beer!"
