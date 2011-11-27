@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(:version => 20110906053222) do
     t.string "name"
   end
 
-  create_table "user_sessions", :force => true do |t|
+  create_table "users", :force => true do |t|
     t.string   "token"
     t.string   "fbid"
     t.datetime "created_at"

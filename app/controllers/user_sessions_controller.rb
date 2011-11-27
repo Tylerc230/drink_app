@@ -7,26 +7,26 @@ class UserSessionsController < ApplicationController
 		token = params[:token]
 		data = {}
 #TODO combine get_me and get_friends call to facebook
-        facebook = Facebook.new
-        me = facebook.get_fb_me(token)
-        error = me.instance_of?(Hash) && me['error_code']
-        if(error)
-          data['error_code'] = error
-          data['error_msg'] = me['error_msg']
-        else
-          data['me'] = me.last
-          fbid = data['me']['id'].to_s
-          user_session = UserSession.where(:fbid => fbid)[0]
-          if(!user_session)
-              user_session = UserSession.new(:token => token, :fbid => fbid)
-          else
-              user_session.token = token
-              friend_data = get_friend_data(facebook.get_fb_friends(token))
-              data['friends'] = friend_data
-          end
-          data['drinks'] = get_drink_data
-          user_session.save
-        end
+    facebook = Facebook.new
+    me = facebook.get_fb_me(token)
+    error = me.instance_of?(Hash) && me['error_code']
+    if(error)
+      data['error_code'] = error
+      data['error_msg'] = me['error_msg']
+    else
+      data['me'] = me.last
+      fbid = data['me']['id'].to_s
+      user_session = User.where(:fbid => fbid)[0]
+      if(!user_session)
+          user_session = User.new(:token => token, :fbid => fbid)
+      else
+          user_session.token = token
+          friend_data = get_friend_data(facebook.get_fb_friends(token))
+          data['friends'] = friend_data
+      end
+      data['drinks'] = get_drink_data
+      user_session.save
+    end
 
 		render :text => data.to_json
 	end
@@ -55,7 +55,7 @@ class UserSessionsController < ApplicationController
 	end
 
 	def get_data_for_users(uids)
-		UserSession.where(:fbid => uids.collect{|uid| uid.to_s})
+		User.where(:fbid => uids.collect{|uid| uid.to_s})
 	end
 
     def get_drink_data

@@ -1,4 +1,4 @@
-class UserSession < ActiveRecord::Base
+class User < ActiveRecord::Base
 	attr_accessible(:token, :fbid)
 	validates(:token, :presence => true)
 	def initialize(params = {})
