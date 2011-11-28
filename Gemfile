@@ -20,6 +20,7 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
+#https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
 
 # Bundle the extra gems:
