@@ -2,8 +2,6 @@ class Facebook
 
 	def get_fb_user_for_token(token)
     me = facebook_fql('SELECT first_name, last_name, uid, pic_square FROM user where uid = me()', token)
-    error = me.instance_of?(Hash) && me['error_code']
-    raise me if error
 		return me.last
 	end
 
@@ -19,7 +17,9 @@ class Facebook
 		http = Net::HTTP.new(url, 443)
 		http.use_ssl = true
 		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
-		return ActiveSupport::JSON.decode(data)
-		
+    json = ActiveSupport::JSON.decode(data)
+    error = json.instance_of?(Hash) && json['error_code']
+    raise RuntimeError.new(json.to_s) if error
+		return json
 	end
 end
