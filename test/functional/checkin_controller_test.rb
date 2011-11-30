@@ -8,7 +8,7 @@ class CheckinControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    get :create
+    post :create, {:user_id => 12345678, :item_id => "some_item_id", :count => 1}
     assert_response :success
   end
 
