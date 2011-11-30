@@ -19,7 +19,7 @@ class Facebook
 		resp, data = http.get2(path, {'User-Agent' => 'FacebookConnect'})
     json = ActiveSupport::JSON.decode(data)
     error = json.instance_of?(Hash) && json['error_code']
-    raise RuntimeError.new(json.to_s) if error
+    raise RuntimeError.new(json) if error
 		return json
 	end
 end
