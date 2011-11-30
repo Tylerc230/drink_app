@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CheersControllerTest < ActionController::TestCase
   test "should get send_cheers" do
-    get :send_cheers
+    post :create, :fbid => "123456789"
     assert_response :success
   end
 

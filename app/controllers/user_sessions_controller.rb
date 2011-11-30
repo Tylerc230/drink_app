@@ -3,7 +3,7 @@ require 'net/https'
 require 'facebook'
 
 class UserSessionsController < ApplicationController
-	def create()
+	def create
 		token = params[:token]
 		data = {}
     data['me'] = User.get_user_for_token(token)

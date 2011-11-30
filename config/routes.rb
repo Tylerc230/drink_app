@@ -1,5 +1,5 @@
 DrinkApp::Application.routes.draw do
-    resources :cheers
+  resources :cheers
 
 	resources :checkins
 	resources :user_sessions
