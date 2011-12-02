@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reward_id: 1
+  type: 1
+  value: MyString
+
+two:
+  reward_id: 1
+  type: 1
+  value: MyString
