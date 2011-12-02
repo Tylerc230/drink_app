@@ -1,12 +1,12 @@
 class RewardEngine
 	attr_accessor :count, :drink_type
 
-	def initialize(rewards)
+	def initialize
 	end
 
-	def evaluate(drink_type, count)
+	def evaluate(drink_id, count)
 		@count = count
-		@drink_type = drink_type
+		@drink_id = drink_id
 	end
 
 end
