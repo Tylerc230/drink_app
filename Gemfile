@@ -18,6 +18,7 @@ gem 'rake'
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'test-unit'
 end
 
 #https://github.com/mbleigh/acts-as-taggable-on

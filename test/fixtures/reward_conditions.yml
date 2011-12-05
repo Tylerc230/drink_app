@@ -1,11 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  reward_id: 1
+drink_type:
+  reward: joe_sixpack
   type: 1
-  value: MyString
+  value: 'beer'
 
-two:
-  reward_id: 1
-  type: 1
-  value: MyString
+drink_amount_per_session:
+  reward: joe_sixpack
+  type: 2
+  value: '6'
+
