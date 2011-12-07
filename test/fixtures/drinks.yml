@@ -7,3 +7,7 @@ budweiser:
 coors:
   id: 2
   name: 'Coors'
+
+mimosa:
+  id: 3
+  name: 'Mimosa'

@@ -8,3 +8,8 @@ joe_sixpack:
   id: 1
   title: 'Joe Six Pack!'
   text: 'Youve been awarded this award for drinking 6 beers'
+
+bottomless_mimosas:
+  id: 2
+  title: 'Bottomless Mimosas'
+  text: "You\'ve achieved bottomless mimosas"

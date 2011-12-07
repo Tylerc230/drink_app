@@ -10,3 +10,13 @@ joe_sixpack_drink_amount_per_session:
   condition_type: 2
   value: '6'
 
+bottomless_mimosas_drink_type:
+  reward_id: 2
+  condition_type: 1
+  value: 'mimosa'
+
+bottomless_mimosas_before_time:
+  reward_id: 2
+  condition_type: 3
+  value: '46800' #before 1pm
+
