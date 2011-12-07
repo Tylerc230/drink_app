@@ -1,12 +1,12 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-drink_type:
-  reward: joe_sixpack
-  type: 1
+joe_sixpack_drink_type:
+  reward_id: 1
+  condition_type: 1
   value: 'beer'
 
-drink_amount_per_session:
-  reward: joe_sixpack
-  type: 2
+joe_sixpack_drink_amount_per_session:
+  reward_id: 1
+  condition_type: 2
   value: '6'
 
