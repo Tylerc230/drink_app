@@ -8,7 +8,8 @@ class CheckinControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    post :create, {:user_id => 12345678, :item_id => "some_item_id", :count => 1}
+    params = FactoryGirl.attributes_for(:checkin)
+    post :create, params
     assert_response :success
   end
 

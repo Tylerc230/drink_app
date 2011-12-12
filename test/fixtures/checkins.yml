@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-checkin_one:
-  user_id: 1
-  item_id: 1 #budweiser
-  count: 5
+#checkin_one:
+#  user_id: 1
+#  item_id: 1 #budweiser
+#  count: 5
 
