@@ -21,13 +21,18 @@ class Checkin < ActiveRecord::Base
     if(last_checkin)
       diff = checkin_time - last_checkin.checkin_time
       if diff > SESSION_DIVIDER
-        self.session_id = last_checkin.session_id + 1
+        new_session_id = last_checkin.session_id + 1
       else
-        self.session_id = last_checkin.session_id
+        new_session_id = last_checkin.session_id
       end
     else
-      self.session_id = 0
+      new_session_id = 0
     end
+    new_session_id
+  end
+
+  def save_session_id
+    self.session_id = calculate_session_id
   end
 
 end
