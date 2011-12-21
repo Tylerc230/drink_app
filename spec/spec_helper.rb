@@ -31,3 +31,24 @@ RSpec.configure do |config|
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
 end
+def create_beer
+  @budweiser = Factory(:drink, :name => 'Budweiser', :tag_list => 'beer, budweiser, domestic')
+  @coors = Factory(:drink, :name => 'Coors', :tag_list => 'beer, coors, domestic')
+end
+
+def create_mimosa
+  @mimosa = Factory(:drink, :name => 'Mimosa', :tag_list => 'mimosa, fruity')
+end
+
+def create_joe_sixpack
+  @six_pack_reward = Factory(:reward, :title => "Joe Six Pack!", :text => "Youve been awarded this award for drinking 6 beers")
+  Factory(:reward_condition, :reward_id => @six_pack_reward.id, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'beer')
+  Factory(:reward_condition, :reward_id => @six_pack_reward.id, :condition_type => RewardCondition::RC_AMOUNT, :value => '6')
+end
+
+def create_bottomless_mimosa
+  @bottomless_mimosa_reward = Factory(:reward, :title => "Bottomless Mimosas", :text => "You\'ve achieved bottomless mimosas")
+  Factory(:reward_condition, :reward_id => @bottomless_mimosa_reward.id, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'mimosa')
+  Factory(:reward_condition, :reward_id => @bottomless_mimosa_reward.id, :condition_type => RewardCondition::RC_BEFORE_TIME, :value => '46800')
+end
+
