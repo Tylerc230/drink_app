@@ -21,4 +21,7 @@ class CheckinTest < ActiveSupport::TestCase
     @current_checkin = FactoryGirl.create(:checkin, :checkin_time => current_checkin_time)
   end
 
+  test "scoped name for checkin" do
+  end
+
 end

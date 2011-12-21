@@ -4,28 +4,32 @@ require "reward_engine"
 
 describe "Evaluate Rewards" do
   before :each do
-    Factory(:drink, :name => 'Budweiser', :tag_list => 'beer, budweiser, domestic')
-    Factory(:drink, :name => 'Coors', :tag_list => 'beer, coors, domestic')
-    Factory(:drink, :name => 'Mimosa', :tag_list => 'mimosa, fruity')
-
-    six_pack_reward = Factory(:reward, :title => "Joe Six Pack!", :text => "Youve been awarded this award for drinking 6 beers")
-    Factory(:reward_condition, :reward_id => six_pack_reward.id, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'beer')
-    Factory(:reward_condition, :reward_id => six_pack_reward.id, :condition_type => RewardCondition::RC_AMOUNT_PER_SESSION, :value => '6')
-
-    bottomless_mimosa_reward = Factory(:reward, :title => "Bottomless Mimosas", :text => "You\'ve achieved bottomless mimosas")
-    Factory(:reward_condition, :reward_id => bottomless_mimosa_reward.id, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'mimosa')
-    Factory(:reward_condition, :reward_id => bottomless_mimosa_reward.id, :condition_type => RewardCondition::RC_BEFORE_TIME, :value => '46800')
+    create_beer
+    create_mimosa
+    create_joe_sixpack
+    create_bottomless_mimosa
     @engine = RewardEngine.new 1 #user id
   end
 
-  it "should grant reward for 6th beer" do
-    drink_id = Drink.find_by_name('Budweiser').id
-    count = 1
-    checkin_time = 43200 #noon
-    rewards = @engine.evaluate(drink_id, count, checkin_time)
+  it "should grant reward for 6th beer this session" do
+    rewards = create_one_beer_checkin_at_time DateTime.new.beginning_of_day + Checkin::SESSION_DIVIDER - 1.hour
     rewards.should_not be_nil
-    rewards.should have(1).rewards
+    rewards.should have(1).reward
+    reward = rewards.last
+    reward.id.should eql(@six_pack_reward.id)
 
+  end
+
+  it "should not grant reward for 6th beer out of session" do
+    rewards = create_one_beer_checkin_at_time DateTime.current.beginning_of_day + Checkin::SESSION_DIVIDER + 1.hour
+    rewards.should be_nil
+  end
+
+  def create_one_beer_checkin_at_time time
+    Factory.create_list(:checkin, 5, :drink_id => @budweiser.id, :checkin_time => DateTime.current.beginning_of_day)
+    new_checkin = Factory.build(:checkin, :drink_id => @budweiser.id, :checkin_time => time)
+    session_id = new_checkin.calculate_session_id
+    @engine.evaluate(new_checkin.drink_id, new_checkin.count, new_checkin.checkin_time, session_id)
   end
 
 end

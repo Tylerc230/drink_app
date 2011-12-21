@@ -42,8 +42,9 @@ end
 
 def create_joe_sixpack
   @six_pack_reward = Factory(:reward, :title => "Joe Six Pack!", :text => "Youve been awarded this award for drinking 6 beers")
-  Factory(:reward_condition, :reward_id => @six_pack_reward.id, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'beer')
-  Factory(:reward_condition, :reward_id => @six_pack_reward.id, :condition_type => RewardCondition::RC_AMOUNT, :value => '6')
+  Factory(:reward_condition, :reward => @six_pack_reward, :condition_type => RewardCondition::RC_DRINK_TYPE, :value => 'beer')
+  Factory(:reward_condition, :reward => @six_pack_reward, :condition_type => RewardCondition::RC_AMOUNT, :value => '6')
+  Factory(:reward_condition, :reward => @six_pack_reward, :condition_type => RewardCondition::RC_SESSION_RESTRICTION, :value => '1')
 end
 
 def create_bottomless_mimosa

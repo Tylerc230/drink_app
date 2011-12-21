@@ -6,14 +6,32 @@ class RewardEngine
     @user_id = user_id
 	end
 
-	def evaluate(drink_id, count, checkin_time)
-    rewards = prefilter_rewards drink_id, count, checkin_time
+	def evaluate(drink_id, count, checkin_time, current_session_id)
+    seconds_today = checkin_time.seconds_since_midnight
+    rewards = prefilter_rewards drink_id, count, seconds_today
+    final_rewards = []
     rewards.each do |reward|
-      reward.reward_conditions.each do |condition|
-
-      end
+      final_rewards << reward if reward_valid count, reward, current_session_id
     end
-    return rewards.empty? ? nil : rewards
+    return final_rewards.empty? ? nil : final_rewards
+  end
+
+  def reward_valid count, reward, current_session_id
+    total_drinks_for_reward = reward.condition_of_type(RewardCondition::RC_AMOUNT)
+    drink_type = reward.condition_of_type(RewardCondition::RC_DRINK_TYPE)
+    before_time = reward.condition_of_type(RewardCondition::RC_BEFORE_TIME)
+    after_time = reward.condition_of_type(RewardCondition::RC_AFTER_TIME)
+    session_restriction = reward.condition_of_type(RewardCondition::RC_SESSION_RESTRICTION)
+
+    checkin_relation = Checkin.tagged_with(drink_type).before_time(before_time).after_time(after_time)
+    if session_restriction
+      checkin_relation = checkin_relation.where('session_id = ?', current_session_id)
+    end
+    num_drinks_meeting_conditions = checkin_relation.count
+    drinks_needed_to_earn_reward = total_drinks_for_reward - num_drinks_meeting_conditions
+
+    return count >= drinks_needed_to_earn_reward
+
   end
 
   def prefilter_rewards drink_id, count, checkin_time

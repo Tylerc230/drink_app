@@ -1,19 +1,25 @@
 class Checkin < ActiveRecord::Base
   SESSION_DIVIDER = 12.hours
-  before_save :calculate_session_id
+  before_save :save_session_id
   belongs_to :drink
-  #scope :tagged_with, lambda { |tag|
-  #  {:joins => {:drink => [:tags, :taggings]},
-  #   :conditions => ["tags.name = ? AND tags.id = taggings.tag_id \
-  #     AND taggings.taggable_id = checkins.drink_id AND \
-  #     taggings.taggable_type = drink", tag]}
-  #}
+
   scope :tagged_with, lambda { |tag|
     {
         :joins => "INNER JOIN taggings ON taggings.taggable_id = checkins.drink_id\
                    INNER JOIN tags ON tags.id = taggings.tag_id AND taggings.taggable_type = 'Drink'",
         :conditions => ["tags.name = ?", tag]
     }
+  }
+  scope :before_time, lambda { |time|
+    if time
+      where("checkin_time < ?", time)
+    end
+  }
+
+  scope :after_time, lambda { |time|
+    if time
+      where("checkin_time > ?", time)
+    end
   }
 
   def calculate_session_id
