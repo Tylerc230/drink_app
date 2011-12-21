@@ -7,7 +7,7 @@ class CheckinsController < ApplicationController
   	count = params[:count]
     engine = RewardEngine.new user_id
 #TODO add a timestamp with users local time, or their timezone
-    checking = Checkin.new(:user_id => user_id, :item_id => item_id, :count => count)
+    checking = Checkin.new(:user_id => user_id, :drink_id => item_id, :count => count)
     checking.save
     render :text => ""
   end
