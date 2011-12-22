@@ -66,10 +66,10 @@ describe "Checkin business logic tests" do
 
   def create_2_checkins_with_time_diff(time_diff)
     last_checkin_time = DateTime.new(2011, 12, 11, 18)
-    @last_checkin = FactoryGirl.create(:checkin, :checkin_time => last_checkin_time)
+    @last_checkin = FactoryGirl.create(:checkin, :created_at => last_checkin_time)
 
     current_checkin_time = last_checkin_time + time_diff
-    @current_checkin = FactoryGirl.create(:checkin, :checkin_time => current_checkin_time)
+    @current_checkin = FactoryGirl.create(:checkin, :created_at => current_checkin_time)
   end
 
 

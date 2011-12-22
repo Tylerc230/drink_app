@@ -25,7 +25,7 @@ class Checkin < ActiveRecord::Base
   def calculate_session_id
     last_checkin = Checkin.find_last_by_user_id self.user_id
     if(last_checkin)
-      diff = checkin_time - last_checkin.checkin_time
+      diff = created_at - last_checkin.created_at
       if diff > SESSION_DIVIDER
         new_session_id = last_checkin.session_id + 1
       else
