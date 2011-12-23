@@ -6,7 +6,7 @@ FactoryGirl.define do
     user_id 1
     drink_id 1
     count 1
-    checkin_time 0.hours
+    checkin_time {DateTime.now}
   end
 
   factory :drink do

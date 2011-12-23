@@ -41,11 +41,18 @@ describe "Evaluate Rewards" do
     rewards.last.should eq(@bottomless_mimosa_reward)
   end
 
-  #  after_1pm_checkin_time =  50400 #2pm
-  #  rewards = @engine.evaluate(drink_id, count, after_1pm_checkin_time)
-  #  assert_nil(rewards, "No rewards returned if checkin after 1pm")
-  #
-  #  lexicographically_lower =  10000000 #2pm
+  it "should grant no rewards if the time is after 1 pm" do
+    checkin_time = DateTime.new(2011, 12, 20) + 14.hours
+    mimosa_checkin = Factory.build(:checkin, :drink => @mimosa, :checkin_time => checkin_time)
+    rewards = @engine.evaluate(mimosa_checkin.drink_id, mimosa_checkin.count, mimosa_checkin.checkin_time, mimosa_checkin.session_id)
+    rewards.should be_nil
+
+  end
+  #I need to rejigger this test b/c 10000 sec is only 2.6am and our mimosa reward is after 13 and 100000 is 27 hrs so it wraps around
+  #it "should return no rewards when using a higher number which lexicographically lower" do
+  #  lexicographically_lower =  10000
+  #  checkin_time = DateTime.new(2011, 12, 20) + 14.hours
+  #  mimosa_checkin = Factory.build(:checkin, :drink => @mimosa, :checkin_time => checkin_time)
   #  rewards = @engine.evaluate(drink_id, count, lexicographically_lower)
   #  assert_nil(rewards, "lexicographically lower, but numerically higher numbers should return no rewards")
   #end
