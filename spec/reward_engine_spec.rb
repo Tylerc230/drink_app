@@ -32,4 +32,22 @@ describe "Evaluate Rewards" do
     @engine.evaluate(new_checkin.drink_id, new_checkin.count, new_checkin.checkin_time, session_id)
   end
 
+  it "should grant bottomless_mimosa reward" do
+    checkin_time = DateTime.new(2011, 12, 20) + 12.hours
+    mimosa_checkin = Factory.build(:checkin, :drink => @mimosa, :checkin_time => checkin_time)
+    rewards = @engine.evaluate(mimosa_checkin.drink_id, mimosa_checkin.count, mimosa_checkin.checkin_time, mimosa_checkin.session_id)
+    rewards.should_not be_nil
+    rewards.should have(1).reward
+    rewards.last.should eq(@bottomless_mimosa_reward)
+  end
+
+  #  after_1pm_checkin_time =  50400 #2pm
+  #  rewards = @engine.evaluate(drink_id, count, after_1pm_checkin_time)
+  #  assert_nil(rewards, "No rewards returned if checkin after 1pm")
+  #
+  #  lexicographically_lower =  10000000 #2pm
+  #  rewards = @engine.evaluate(drink_id, count, lexicographically_lower)
+  #  assert_nil(rewards, "lexicographically lower, but numerically higher numbers should return no rewards")
+  #end
+
 end

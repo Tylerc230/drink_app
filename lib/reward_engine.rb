@@ -9,6 +9,7 @@ class RewardEngine
 	def evaluate(drink_id, count, checkin_time, current_session_id)
     seconds_today = checkin_time.seconds_since_midnight
     rewards = prefilter_rewards drink_id, count, seconds_today
+    all_rewards = rewards
     final_rewards = []
     rewards.each do |reward|
       final_rewards << reward if reward_valid count, reward, current_session_id
@@ -23,7 +24,7 @@ class RewardEngine
     after_time = reward.condition_of_type(RewardCondition::RC_AFTER_TIME)
     session_restriction = reward.condition_of_type(RewardCondition::RC_SESSION_RESTRICTION)
 
-    checkin_relation = Checkin.tagged_with(drink_type).before_time(before_time).after_time(after_time)
+    checkin_relation = Checkin.where(:user_id => @user_id).tagged_with(drink_type).before_time(before_time).after_time(after_time)
     if session_restriction
       checkin_relation = checkin_relation.where('session_id = ?', current_session_id)
     end
