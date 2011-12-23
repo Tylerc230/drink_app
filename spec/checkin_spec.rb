@@ -27,9 +27,10 @@ describe "Checkin business logic tests" do
     checkins.should have(2).checkins
   end
 
-  it "should return checkins before specified time" do
+  it "should return 1 checkin before specified time" do
     setup_time_scope_tests
-    checkins = Checkin.before_time @date + 11.hours
+    checkins = Checkin.before_time 11.hours
+    all_checkins = checkins.all
 
     checkins.should have(1).checkin
     checkins.last.should eq(@before)
@@ -38,7 +39,7 @@ describe "Checkin business logic tests" do
 
   it "should return checkins after specified time" do
     setup_time_scope_tests
-    checkins = Checkin.after_time @date + 11.hours
+    checkins = Checkin.after_time 11.hours
 
     checkins.should have(1).checkin
     checkins.last.should eq(@after)
@@ -47,9 +48,8 @@ describe "Checkin business logic tests" do
   end
 
   def setup_time_scope_tests
-    @date = DateTime.new.beginning_of_day
-    @after = Factory.create(:checkin, :checkin_time => @date + 12.hours)
-    @before = Factory.create(:checkin, :checkin_time => @date + 10.hours)
+    @before = Factory.create(:checkin, :checkin_time => 10.hours)
+    @after = Factory.create(:checkin, :checkin_time => 12.hours)
   end
 
   it "should create checkin with same session id" do

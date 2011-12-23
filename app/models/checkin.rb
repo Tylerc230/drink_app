@@ -1,6 +1,7 @@
 class Checkin < ActiveRecord::Base
   SESSION_DIVIDER = 12.hours
-  before_save :save_session_id
+  #Must be before_save because we use the most recent checkin to do the session_id calculation
+  before_create :save_session_id
   belongs_to :drink
 
   scope :tagged_with, lambda { |tag|
@@ -12,20 +13,21 @@ class Checkin < ActiveRecord::Base
   }
   scope :before_time, lambda { |time|
     if time
-      where("checkin_time < ?", time)
+      where("checkin_time < ?", time.to_i)
     end
   }
 
   scope :after_time, lambda { |time|
     if time
-      where("checkin_time > ?", time)
+      where("checkin_time > ?", time.to_i)
     end
   }
 
   def calculate_session_id
     last_checkin = Checkin.find_last_by_user_id self.user_id
+    #last_checkin = Checkin.where(:user_id => self.user_id).order("id desc").limit(2).last
     if(last_checkin)
-      diff = created_at - last_checkin.created_at
+      diff = created_at - last_checkin.created_at.to_datetime
       if diff > SESSION_DIVIDER
         new_session_id = last_checkin.session_id + 1
       else
