@@ -25,6 +25,7 @@ end
 
 #https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
+gem 'activeadmin'
 
 # Bundle the extra gems:
 # gem 'bj'
