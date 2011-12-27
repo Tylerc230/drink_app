@@ -20,6 +20,7 @@
 #reward_csv
 def seedDBFromCSV(directory, csv_file_name)
 	csv_file_path = directory + csv_file_name
+	return if File.zero?(csv_file_path)
 	csv_file = File.open(csv_file_path, "r")
 	model_class = File.basename(csv_file_name, ".*").camelize.singularize.constantize
 	model_class.delete_all
@@ -30,7 +31,7 @@ def seedDBFromCSV(directory, csv_file_name)
 	  method_names.zip(entries).each do |method, entry|
 	  	row.send("#{method.strip}=", entry.strip)
 	  end
-      row.save
+	  row.save
 	end
 end
 
