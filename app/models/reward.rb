@@ -1,5 +1,12 @@
 class Reward < ActiveRecord::Base
   has_many :reward_conditions
+  accepts_nested_attributes_for :reward_conditions
+
+  #def reward_conditions_attributes=(attributes)
+  #  puts 'here'
+  #end
+
+
   def condition_of_type condition_type
     conditions = self.reward_conditions.where(:condition_type => condition_type)
     condition = conditions.last
