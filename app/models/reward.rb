@@ -1,9 +1,8 @@
 class Reward < ActiveRecord::Base
   has_many :reward_conditions
+  #The method below overrides this line
   accepts_nested_attributes_for :reward_conditions
-
   #def reward_conditions_attributes=(attributes)
-  #  puts 'here'
   #end
 
 

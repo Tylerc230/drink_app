@@ -1,0 +1,16 @@
+<%= semantic_form_for [:admin, @reward] do |f| %>
+    <%= f.inputs "Reward" do %>
+        <%= f.input :title %>
+        <%= f.input :text %>
+        <%= f.inputs  :for => :reward_conditions, :name => "Reward Condition" do |reward_condition| %>
+            <%= reward_condition.input :condition_type %>
+            <%= reward_condition.input :value %>
+            <%= reward_condition.input :id %>
+            <%= link_to 'Delete', :controller => 'reward_conditions', :action => 'delete', :id => reward_condition.object.id %>
+        <%  end %>
+    <%  end %>
+    <%= f.buttons do %>
+        <%= f.commit_button %>
+    <% end %>
+<% end %>
+
