@@ -6,8 +6,9 @@
             <%= reward_condition.input :condition_type %>
             <%= reward_condition.input :value %>
             <%= reward_condition.input :id %>
-            <%= link_to 'Delete', :controller => 'reward_conditions', :action => 'delete', :id => reward_condition.object.id %>
+            <%= link_to 'Delete', admin_reward_condition_path(reward_condition.object), :method => :delete, :confirm => 'Are you sure you want to delete this condition?' %>
         <%  end %>
+        <%= link_to 'New Reward Condition', new_admin_reward_condition_path  %>
     <%  end %>
     <%= f.buttons do %>
         <%= f.commit_button %>
