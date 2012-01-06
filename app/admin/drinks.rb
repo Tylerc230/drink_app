@@ -13,5 +13,12 @@ ActiveAdmin.register Drink do
     f.buttons
   end
 
+  controller do
+    def update
+      resource.tag_ids = params['drink']['tag_ids']
+      super()
+    end
+  end
+
 
 end
