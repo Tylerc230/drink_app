@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
     friends = []
     facebook_friends.each do |facebook_friend|
       fbid = facebook_friend['uid']
-      friend = User.find_or_create_by_fbid(fbid)
+      friend = User.find_or_create_by_fbid(fbid.to_s)
       friend.set_values_from_facebook(facebook_friend)
       friends << friend
     end
