@@ -16,7 +16,7 @@ gem 'rake'
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 group :development, :test do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  #gem 'sqlite3-ruby', :require => 'sqlite3'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'test-unit'
   gem 'rspec-rails'
@@ -26,6 +26,7 @@ end
 #https://github.com/mbleigh/acts-as-taggable-on
 gem 'acts-as-taggable-on'
 gem 'activeadmin'
+gem 'pg'
 
 # Bundle the extra gems:
 # gem 'bj'
