@@ -3,6 +3,11 @@ DrinkApp::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  namespace(:admin) do
+    post 'drinks/:id/new_tag', :controller => :drinks, :action => :new_tag
+    #match 'drinks/:id/new_tag' => 'drinks#new_tag', :via => :post
+  end
+
   resources :cheers
 
 	resources :checkins

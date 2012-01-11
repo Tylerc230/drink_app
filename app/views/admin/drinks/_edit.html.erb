@@ -1,0 +1,14 @@
+<%= semantic_form_for [:admin, @drink] do |f| %>
+    <%= f.inputs "Drink" do %>
+        <%= f.input :name %>
+        <%= f.input :tags, :as => :check_boxes %>
+    <% end %>
+    <%= f.buttons do %>
+        <%= f.commit_button %>
+    <%end %>
+<% end %>
+<%= form_tag("/admin/drinks/#{@drink.id}/new_tag") do %>
+    <%= label_tag(:new_tag, "New Tag:") %>
+    <%= text_field_tag(:new_tag) %>
+    <%= submit_tag("Create") %>
+<%end%>
