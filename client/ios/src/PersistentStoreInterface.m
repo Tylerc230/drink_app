@@ -117,7 +117,7 @@
 	for (NSDictionary * drinkDict in data) {
 		Drink * drink = (Drink*)[coreDataInterface_ createObjectOfType:@"Drink"];
 		drink.name = [drinkDict objectForKey:@"name"];
-		NSArray * tagNames = [[drinkDict objectForKey:@"tags"] componentsSeparatedByString:@","];
+		NSArray * tagNames = [drinkDict objectForKey:@"tag_list"];
 		drink.tags = [self createTags:tagNames];
 	}
 	[coreDataInterface_ saveContext];
