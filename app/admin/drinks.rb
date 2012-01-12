@@ -5,13 +5,6 @@ ActiveAdmin.register Drink do
     default_actions
   end
 
-  #form do |f|
-  #  f.inputs  do
-  #    f.input :name
-  #    f.input :tags, :as => :check_boxes
-  #  end
-  #  f.buttons
-  #end
   form :partial => 'edit'
 
   controller do
