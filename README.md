@@ -9,8 +9,9 @@ if the user has 3 or more mimosas before 1pm they would be awarded the
 also send a 'cheers' to any of their friends.
 
 ###How it works
-Pour Square consists of an iOS client and a Ruby on Rails backend. It 
+Pour Square consists of an iOS client and a Ruby on Rails backend. It
 utilizes the Facebook friend graphic for its social aspect. It also has a 
-administration page where admins can add new awards or drink types.
+administration page where admins can add new awards or drink types. Postgres is
+used for a database.
 
 
