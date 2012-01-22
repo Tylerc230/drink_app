@@ -19,6 +19,5 @@ test:
   database: postgres
 
 production:
-  adapter: postgresql
-  pool: 5
-  timeout: 5000
+  <<: *COMMON
+  database: postgres
